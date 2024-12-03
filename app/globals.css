@@ -61,14 +61,30 @@ body {
    background-color: var(--lightBrown);
 }
 
+h1 {
+   font-size: var(--fontsizeXXL);
+}
 
+h2 {
+   font-size: var(--fontsizeXL);
+}
+
+h3 {
+   font-size: var(--fontsizeL);
+}
 
 a:any-link {
    color: inherit;
    text-decoration: none;
 }
 
+img {
+   object-fit: contain;
+}
+
 main {
+   display: flex;
+   flex-direction: column;
    padding: 1rem;
 }
 
@@ -81,6 +97,11 @@ nav {
 /* --- header --------------------------------------------------------------------------------------------------------*/
 
 /* --- frontpage ---------------------------------------------------------------------------------------------------- */
+
+.shelf {
+   background-color: var(--darkBrown);
+   margin-block: 1rem;
+}
 
 /* --- search & sorting --------------------------------------------------------------------------------------------- */
 
