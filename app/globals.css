@@ -129,7 +129,7 @@ header {
   align-items: center;
   background-color: var(--lightBrown);
   padding: 16px 20px 0px 20px;
-  position: fixed;
+  position: sticky;
   left: 0px;
   top: 0px;
 }
@@ -150,8 +150,50 @@ header {
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
 
 /* --- boardgame ---------------------------------------------------------------------------------------------------- */
-.boardgame_image {
+.boardgame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game_lid {
+  background-color: var(--blue);
+  display: flex;
   width: 100%;
+  height: fit-content;
+  justify-content: space-between;
+  padding-right: 0.5rem;
+}
+
+.game_box {
+  background-color: var(--black);
+  width: 95%;
+  height: 10px;
+}
+
+.boardgame_image {
+  width: 60px;
+  height: 60px;
+}
+
+.game_info {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.game_info div {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.game_info div img {
+  width: 10px;
+}
+
+.game_info div p {
+  font-size: var(--fontsizeXXS);
 }
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
 
