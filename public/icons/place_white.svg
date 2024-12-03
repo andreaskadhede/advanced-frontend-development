@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1296 1296">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2ebeb;
+      }
+    </style>
+  </defs>
+  <g id="Icon">
+    <g id="PlaceWhite">
+      <path class="cls-1" d="M1256,40v1216H40V40h1216M1296,0H0v1296h1296V0h0Z"/>
+      <path class="cls-1" d="M1096,884v176H200v-176h896M1116,864H180v216h936v-216h0Z"/>
+      <path class="cls-1" d="M1132,1100v140H164v-140h968M1152,1080H144v180h1008v-180h0Z"/>
+      <path class="cls-1" d="M1023.02,668.98v173.41H272.98v-173.41h750.05M1044,648H252v215.36h792v-215.36h0Z"/>
+      <path class="cls-1" d="M988.93,235.07v177.86H307.07v-177.86h681.86M1008,216H288v216h720v-216h0Z"/>
+      <path class="cls-1" d="M1057.52,454.48v171.04H238.48v-171.04h819.04M1080,432H216v216h864v-216h0Z"/>
+    </g>
+  </g>
+</svg>
