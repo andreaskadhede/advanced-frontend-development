@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Boardgame from "./components/Boardgame";
 
 export default function Home() {
   return (
@@ -27,22 +26,24 @@ export default function Home() {
           />
         </section>
         <section className="shelf mid right">
-          <h3>Bar</h3>
+          <h4 className="box_header">Bar</h4>
           <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
         </section>
       </div>
       <div className="double_shelf">
-        <section className="shelf">
-          <h3>Skjulte perler</h3>
+        <section className="shelf bottom left">
+          <h4 className="box_header">Skjulte perler</h4>
+          <div id="per_1" className="box_header"></div>
+          <div id="per_2" className="box_header"></div>
         </section>
-        <section className="shelf">
+        <section className="shelf bottom right">
           <Image
             src="/gif/wheel_legs_low.gif"
             height={400}
             width={400}
             alt="Lykkehjul"
           />
-          <h3>Inspiration</h3>
+          <h4>Inspiration</h4>
         </section>
       </div>
     </main>

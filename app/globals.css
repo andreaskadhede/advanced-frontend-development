@@ -1,6 +1,6 @@
 /* --- root og generel styling ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/* poppins */
+/* main font: poppins */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* finger paint */
@@ -72,6 +72,10 @@ h2 {
 
 h3 {
    font-size: var(--fontsizeL);
+}
+
+h4 {
+   font-size: var(--fontsizeM);
 }
 
 a:any-link {
@@ -149,6 +153,13 @@ header {
    display: flex;
 }
 
+.shelf h2,
+.shelf h4 {
+   font-weight: var(--semiBold);
+   text-align: center;
+   text-transform: uppercase;
+}
+
 .shelf.top {
    align-items: center;
    flex-direction: column;
@@ -158,15 +169,12 @@ header {
 
 .shelf.top h2.box_header {
    background-color: var(--red);
-   font-weight: var(--semiBold);
-   padding: 0.5rem 2rem;
-   text-align: center;
-   text-transform: uppercase;
+   padding-inline: 2rem;
    width: fit-content;
 }
 
 .shelf.top .box_header {
-   min-height: 3rem;
+   min-height: 2rem;
    min-width: 60%;
 }
 
@@ -202,16 +210,70 @@ header {
 }
 
 .shelf.mid.left {
-   gap: 1rem;
    padding-top: 10%;
 }
 
-.shelf.mid.left :first-child {
+.shelf.mid.left img:first-child {
    width: 20%;
 }
 
-.shelf.mid.left :last-child {
+.shelf.mid.left img:last-child {
    width: 40%;
+}
+
+.shelf.mid.right {
+   justify-content: flex-start;
+   padding-left: .25rem;
+}
+
+.shelf.mid.right h4.box_header {
+   background-color: var(--purple);
+   letter-spacing: -.25rem;
+   padding: 2.5rem 0;
+   text-orientation: upright;
+   writing-mode: vertical-lr;
+}
+
+.shelf.mid.right img {
+   width: 70%;
+}
+
+.shelf.bottom.left {
+   align-items: flex-end;
+   justify-content: center;
+   width: 30%;
+}
+
+.shelf.bottom.left .box_header {
+   width: 1.5rem;
+}
+
+.shelf.bottom.left h4.box_header {
+   background-color: var(--darkGreen);
+   padding-inline: .75rem;
+   rotate: 180deg;
+   width: fit-content;
+   writing-mode: vertical-lr;
+}
+
+#per_1 {
+   background-color: lightskyblue;
+   height: 10rem;
+}
+
+#per_2 {
+   background-color: darkslategray;
+   height: 8rem;
+}
+
+.shelf.bottom.right {
+   align-items: center;
+   flex-direction: column;
+   width: 70%;
+}
+
+.shelf.bottom.right img {
+   width: 60%;
 }
 
 /* --- search & sorting --------------------------------------------------------------------------------------------- */
