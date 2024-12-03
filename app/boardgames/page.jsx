@@ -13,7 +13,7 @@ export default async function Boardgames() {
   return (
     <section>
       {boardgames.map((boardgame) => (
-        <Boardgame key={boardgame.id} post={boardgame} />
+        <Boardgame key={boardgame.id} boardgame={boardgame} />
       ))}
     </section>
   );
