@@ -2,9 +2,9 @@ import Image from "next/image";
 // import styles from "./page.module.css";
 
 export default function Inspiration() {
-  return (
-    <div>
-      <p>Inspiration</p>
-    </div>
-  );
+   return (
+      <main>
+         <p>Inspiration</p>
+      </main>
+   );
 }
