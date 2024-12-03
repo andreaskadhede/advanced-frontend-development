@@ -14,7 +14,7 @@ export default function Boardgame({ boardgame }) {
           alt={boardgame.title.rendered}
           width={400}
           height={200}
-          className="w-full h-48 object-cover"
+          className="boardgame_image"
         />
         <div className="p-4">
           <h2 className="text-lg text-gray-800 font-semibold">

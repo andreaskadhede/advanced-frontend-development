@@ -58,19 +58,21 @@
 /* --- general styles --- */
 
 body {
-   background-color: var(--lightBrown);
+  background-color: var(--lightBrown);
+  height: 100dvh;
+  width: 100%;
 }
 
 h1 {
-   font-size: var(--fontsizeXXL);
+  font-size: var(--fontsizeXXL);
 }
 
 h2 {
-   font-size: var(--fontsizeXL);
+  font-size: var(--fontsizeXL);
 }
 
 h3 {
-   font-size: var(--fontsizeL);
+  font-size: var(--fontsizeL);
 }
 
 a:any-link {
@@ -79,40 +81,69 @@ a:any-link {
 }
 
 img {
-   object-fit: contain;
+  object-fit: contain;
 }
 
 main {
-   display: flex;
-   flex-direction: column;
-   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 }
 
 /* --- navigation --------------------------------------------------------------------------------------------------- */
 
 nav {
-   background-color: var(--darkBrown);
+  background-color: var(--darkBrown);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  gap: 0.5rem;
+}
+
+.nav_icons {
+  width: 40px;
+  height: 40px;
 }
 
 /* --- header --------------------------------------------------------------------------------------------------------*/
 header {
-   display: flex;
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-   background-color: var(--lightBrown);
-   padding: 16px 20px 0px 20px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightBrown);
+  padding: 16px 20px 0px 20px;
+  position: fixed;
+  left: 0px;
+  top: 0px;
 }
 
 .logo {
-   width: 90px;
+  width: 90px;
+  height: fit-content;
 }
 
 /* --- frontpage ---------------------------------------------------------------------------------------------------- */
 
 .shelf {
-   background-color: var(--darkBrown);
-   margin-block: 1rem;
+  background-color: var(--darkBrown);
+  margin-block: 1rem;
 }
 
 .shelf img {
@@ -134,7 +165,9 @@ header {
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
 
 /* --- boardgame ---------------------------------------------------------------------------------------------------- */
-
+.boardgame_image {
+  width: 100%;
+}
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
 
 /* --- wheel minigame ----------------------------------------------------------------------------------------------- */
