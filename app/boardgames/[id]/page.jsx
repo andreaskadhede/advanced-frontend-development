@@ -12,7 +12,14 @@ export default async function BoardgameDetailPage({ params }) {
 
   return (
     <div>
-      <p>BoardgameDetailPage</p>
+      {boardgame.title.rendered}
+      <Image
+        src={boardgame.acf.image}
+        alt={boardgame.title.rendered}
+        width={400}
+        height={200}
+        className="w-full h-48 object-cover"
+      />
     </div>
   );
 }
