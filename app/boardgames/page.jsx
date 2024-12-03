@@ -11,10 +11,10 @@ export default async function Boardgames() {
   console.log(boardgames);
 
   return (
-    <section>
+    <main>
       {boardgames.map((boardgame) => (
         <Boardgame key={boardgame.id} boardgame={boardgame} />
       ))}
-    </section>
+    </main>
   );
 }
