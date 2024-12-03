@@ -58,9 +58,8 @@
 /* --- general styles --- */
 
 body {
-  background-color: var(--lightBrown);
-  height: 100dvh;
-  width: 100%;
+   background-color: var(--lightBrown);
+   min-height: 100dvh;
 }
 
 h1 {
@@ -165,12 +164,12 @@ header {
   padding-top: 10%;
 }
 
-.shelf.mid.left:first-child {
-  width: 20%;
+.shelf.mid.left :first-child {
+   width: 20%;
 }
 
-.shelf.mid.left:last-child {
-  width: 40%;
+.shelf.mid.left :last-child {
+   width: 40%;
 }
 
 /* --- search & sorting --------------------------------------------------------------------------------------------- */
