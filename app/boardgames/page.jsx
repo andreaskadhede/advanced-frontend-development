@@ -12,9 +12,11 @@ export default async function Boardgames() {
 
   return (
     <main>
-      {boardgames.map((boardgame) => (
-        <Boardgame key={boardgame.id} boardgame={boardgame} />
-      ))}
+      <div className="games">
+        {boardgames.map((boardgame) => (
+          <Boardgame key={boardgame.id} boardgame={boardgame} />
+        ))}
+      </div>
     </main>
   );
 }
