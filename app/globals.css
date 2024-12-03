@@ -71,6 +71,7 @@ body {
    /* width: 100dvw; */
    /* stopper den i at scrolle mere end den kan (på telefonen ligner det at den bouncer lidt) */
    overscroll-behavior: none;
+   background-color: var(--lightBrown);
 }
 
 a:any-link {
@@ -78,7 +79,15 @@ a:any-link {
    text-decoration: none;
 }
 
+main {
+   padding: 1rem;
+}
+
 /* --- navigation --------------------------------------------------------------------------------------------------- */
+
+nav {
+   background-color: var(--darkBrown);
+}
 
 /* --- header --------------------------------------------------------------------------------------------------------*/
 
