@@ -2,7 +2,7 @@ import Image from "next/image";
 import Boardgame from "../components/Boardgame";
 // import styles from "./page.module.css";
 
-export default function Boardgames() {
+export default async function Boardgames() {
   //Indsæt egen database
   const response = await fetch(
     "https://headless.cederdorff.dk/wp-json/wp/v2/posts?acf_format=standard&orderby=date&order=asc"
@@ -11,7 +11,7 @@ export default function Boardgames() {
   console.log(posts);
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section>
       {posts.map((post) => (
         <Boardgame key={post.id} post={post} />
       ))}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 // import styles from "./page.module.css";
 
-export default function BoardgameDetailPage({ params }) {
+export default async function BoardgameDetailPage({ params }) {
   const { id } = await params;
   //Indsæt egen database
   const response = await fetch(
