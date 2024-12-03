@@ -207,14 +207,14 @@ header {
 
 .boardgame_image {
   height: 100%;
-  width: 70%;
+  width: 75%;
   object-fit: cover;
 }
 
 .game_info {
   display: flex;
   flex-direction: column;
-  width: fit-content;
+  width: 60px;
   gap: 0.25rem;
 }
 
