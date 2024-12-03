@@ -88,8 +88,8 @@ img {
 main {
    display: flex;
    flex-direction: column;
+   gap: 1rem;
    padding: 1rem;
-   margin: 84.15px 0 104px;
 }
 
 /* --- navigation --------------------------------------------------------------------------------------------------- */
@@ -145,7 +145,47 @@ header {
 
 .shelf {
    background-color: var(--darkBrown);
-   margin-block: 1rem;
+   display: flex;
+}
+
+.shelf.top {
+   align-items: center;
+   flex-direction: column;
+   justify-content: flex-end;
+   padding-top: 2rem;
+}
+
+.shelf.top h2.box_header {
+   background-color: var(--red);
+   font-weight: var(--semiBold);
+   padding: 0.5rem 2rem;
+   text-align: center;
+   text-transform: uppercase;
+   width: fit-content;
+}
+
+.shelf.top .box_header {
+   min-height: 3rem;
+   min-width: 60%;
+}
+
+#pop_1 {
+   background-color: midnightblue;
+   width: 80%;
+}
+
+#pop_2 {
+   background-color: coral;
+}
+
+#pop_3 {
+   background-color: darkred;
+   width: 70%;
+}
+
+#pop_4 {
+   background-color: green;
+   width: 80%;
 }
 
 .double_shelf {
@@ -155,13 +195,13 @@ header {
 
 .shelf.mid {
    align-items: flex-end;
-   display: flex;
+   gap: 1rem;
+   justify-content: center;
    width: 50%;
 }
 
 .shelf.mid.left {
    gap: 1rem;
-   justify-content: center;
    padding-top: 10%;
 }
 

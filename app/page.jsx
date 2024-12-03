@@ -1,11 +1,15 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Boardgame from "./components/Boardgame";
 
 export default function Home() {
   return (
     <main>
-      <section className="shelf">
-        <h2>Populære spil</h2>
+      <section className="shelf top">
+        <h2 className="box_header">Populære spil</h2>
+        <div id="pop_1" className="box_header"></div>
+        <div id="pop_2" className="box_header"></div>
+        <div id="pop_3" className="box_header"></div>
+        <div id="pop_4" className="box_header"></div>
       </section>
       <div className="double_shelf">
         <section className="shelf mid left">
