@@ -1,10 +1,10 @@
 import Image from "next/image";
 // import styles from "./page.module.css";
 
-export default function Inspiration() {
+export default function Boardgame() {
   return (
     <div>
-      <p>Inspiration</p>
+      <p>Boardgame</p>
     </div>
   );
 }
