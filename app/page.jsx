@@ -7,9 +7,14 @@ export default function Home() {
       <section className="shelf">
         <h2>Populære spil</h2>
       </section>
-      <div>
-        <section className="shelf">
-          <Image src="/img/bell.svg" />
+      <div className="double_shelf">
+        <section className="shelf mid left">
+          <Image
+            src="/img/candle.svg"
+            height={400}
+            width={400}
+            alt="Sterinlys"
+          />
           <Image
             src="/img/plant1_small.svg"
             height={400}
@@ -17,8 +22,9 @@ export default function Home() {
             alt="Potteplante"
           />
         </section>
-        <section className="shelf">
+        <section className="shelf mid right">
           <h3>Bar</h3>
+          <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
         </section>
       </div>
       <div>
