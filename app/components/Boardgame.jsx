@@ -8,7 +8,8 @@ export default function Boardgame({ boardgame }) {
       <div key={boardgame.id} className="boardgame">
         <div className="game_lid">
           <Image
-            src={boardgame.acf.image}
+            src="/partners_box.jpg"
+            // {boardgame.acf.image}
             alt={boardgame.title.rendered}
             width={400}
             height={400}
