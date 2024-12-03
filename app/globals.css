@@ -1,42 +1,93 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+   /* --- color --- */
+   --red: #b3231e;
+   --yellow: #ffd12b;
+   --lightGreen: #71cc22;
+   --darkGreen: #1a993e;
+   --turquoise: #22c6cc;
+   --blue: #1a3599;
+   --purple: #4e1580;
+   --magenta: #cc229c;
+   --white: #f2ebeb;
+   --black: #0d0c0c;
+   --darkBrown: #332013;
+   --lightBrown: #664126;
+
+   /* --- font weights --- */
+   --regular: 400;
+   --medium: 500;
+   --semiBold: 600;
+
+   /* --- font sizes --- */
+   --fontsizeXXS: 0.5rem;
+   /* 8px */
+   --fontsizeXS: 0.75rem;
+   /* 12px */
+   --fontsizeS: 0.875rem;
+   /* 14px */
+   --fontsizeM: 1rem;
+   /* 16px */
+   --fontsizeL: 1.25rem;
+   /* 20px */
+   --fontsizeXL: 1.5rem;
+   /* 24px */
+   --fontsizeXXL: 2rem;
+   /* 32px */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
+/* --- reset --- */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+   border-radius: 1px;
+   box-sizing: border-box;
+   color: var(--text);
+   font-family: "Nunito", sans-serif;
+   font-weight: var(--regular);
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* --- general styles --- */
+
+html {
+   /* stopper den i at scrolle mere end den kan (på telefonen ligner det at den bouncer lidt) */
+   overscroll-behavior: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+body {
+   /* align-items: center; */
+   display: flex;
+   /* height: 100dvh; */
+   justify-content: center;
+   /* width: 100dvw; */
+   /* stopper den i at scrolle mere end den kan (på telefonen ligner det at den bouncer lidt) */
+   overscroll-behavior: none;
 }
+
+a:any-link {
+   color: inherit;
+   text-decoration: none;
+}
+
+/* --- navigation --------------------------------------------------------------------------------------------------- */
+
+/* --- header --------------------------------------------------------------------------------------------------------*/
+
+/* --- frontpage ---------------------------------------------------------------------------------------------------- */
+
+/* --- search & sorting --------------------------------------------------------------------------------------------- */
+
+/* --- boardgames --------------------------------------------------------------------------------------------------- */
+
+/* --- boardgame ---------------------------------------------------------------------------------------------------- */
+
+/* --- inspiration -------------------------------------------------------------------------------------------------- */
+
+/* --- wheel minigame ----------------------------------------------------------------------------------------------- */
+
+/* --- bar ---------------------------------------------------------------------------------------------------------- */
+
+/*--- Media queries --------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------*/
