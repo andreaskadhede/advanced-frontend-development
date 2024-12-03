@@ -7,13 +7,13 @@ export default async function Boardgames() {
   const response = await fetch(
     "https://headless.cederdorff.dk/wp-json/wp/v2/posts?acf_format=standard&orderby=date&order=asc"
   );
-  const posts = await response.json();
-  console.log(posts);
+  const boardgames = await response.json();
+  console.log(boardgames);
 
   return (
     <section>
-      {posts.map((post) => (
-        <Boardgame key={post.id} post={post} />
+      {boardgames.map((boardgame) => (
+        <Boardgame key={boardgame.id} post={boardgame} />
       ))}
     </section>
   );

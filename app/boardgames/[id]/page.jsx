@@ -7,8 +7,8 @@ export default async function BoardgameDetailPage({ params }) {
   const response = await fetch(
     `https://headless.cederdorff.dk/wp-json/wp/v2/posts/${id}?acf_format=standard`
   );
-  const post = await response.json();
-  console.log(post);
+  const boardgame = await response.json();
+  console.log(boardgame);
 
   return (
     <div>
