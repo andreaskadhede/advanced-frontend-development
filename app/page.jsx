@@ -27,7 +27,7 @@ export default function Home() {
           <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
         </section>
       </div>
-      <div>
+      <div className="double_shelf">
         <section className="shelf">
           <h3>Skjulte perler</h3>
         </section>

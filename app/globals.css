@@ -81,7 +81,9 @@ a:any-link {
 }
 
 img {
+  height: fit-content;
   object-fit: contain;
+  width: auto;
 }
 
 main {
@@ -146,17 +148,29 @@ header {
   margin-block: 1rem;
 }
 
-.shelf img {
-  max-width: 100%;
-}
-
 .double_shelf {
   display: flex;
   gap: 1rem;
 }
 
 .shelf.mid {
+  align-items: flex-end;
   display: flex;
+  width: 50%;
+}
+
+.shelf.mid.left {
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 10%;
+}
+
+.shelf.mid.left:first-child {
+  width: 20%;
+}
+
+.shelf.mid.left:last-child {
+  width: 40%;
 }
 
 /* --- search & sorting --------------------------------------------------------------------------------------------- */
@@ -214,6 +228,7 @@ header {
 .game_info div p {
   font-size: var(--fontsizeXXS);
 }
+
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
 
 /* --- wheel minigame ----------------------------------------------------------------------------------------------- */
