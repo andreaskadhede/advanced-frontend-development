@@ -7,31 +7,31 @@ export default function Nav() {
       <ul>
         <li>
           <Image
-            src="/logo.png"
+            src="/icons/inspo_white.svg"
             alt="askdn"
             width={100}
             height={70}
-            className="logo"
+            className="nav_icons"
           />
           <p>Inspiration</p>
         </li>
         <li>
           <Image
-            src="/logo.png"
+            src="/icons/dice_white.svg"
             alt="askdn"
             width={100}
             height={70}
-            className="logo"
+            className="nav_icons"
           />
           <p>Brætspil</p>
         </li>
         <li>
           <Image
-            src="/logo.png"
+            src="/icons/bar_white.svg"
             alt="askdn"
             width={100}
             height={70}
-            className="logo"
+            className="nav_icons"
           />
           <p>Bar</p>
         </li>
