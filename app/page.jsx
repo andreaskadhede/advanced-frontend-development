@@ -1,11 +1,14 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
   return (
     <main>
-      <section className="shelf">
-        <h2>Populære spil</h2>
+      <section className="shelf top">
+        <h2 className="box_header">Populære spil</h2>
+        <div id="pop_1" className="box_header"></div>
+        <div id="pop_2" className="box_header"></div>
+        <div id="pop_3" className="box_header"></div>
+        <div id="pop_4" className="box_header"></div>
       </section>
       <div className="double_shelf">
         <section className="shelf mid left">
@@ -23,22 +26,24 @@ export default function Home() {
           />
         </section>
         <section className="shelf mid right">
-          <h3>Bar</h3>
+          <h4 className="box_header">Bar</h4>
           <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
         </section>
       </div>
       <div className="double_shelf">
-        <section className="shelf">
-          <h3>Skjulte perler</h3>
+        <section className="shelf bottom left">
+          <h4 className="box_header">Skjulte perler</h4>
+          <div id="per_1" className="box_header"></div>
+          <div id="per_2" className="box_header"></div>
         </section>
-        <section className="shelf">
+        <section className="shelf bottom right">
           <Image
             src="/gif/wheel_legs_low.gif"
             height={400}
             width={400}
             alt="Lykkehjul"
           />
-          <h3>Inspiration</h3>
+          <h4>Inspiration</h4>
         </section>
       </div>
     </main>
