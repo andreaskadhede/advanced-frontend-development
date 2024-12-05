@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 // import styles from "./page.module.css";
 
 export default function Nav() {
@@ -6,34 +7,52 @@ export default function Nav() {
     <nav>
       <ul>
         <li>
-          <Image
-            src="/icons/inspo_white.svg"
-            alt="askdn"
-            width={100}
-            height={70}
-            className="nav_icons"
-          />
-          <p>Inspiration</p>
+          <Link href="/">
+            <Image
+              src="/icons/bar_white.svg"
+              alt="askdn"
+              width={100}
+              height={70}
+              className="nav_icons"
+            />
+            <p>Forside</p>
+          </Link>
         </li>
         <li>
-          <Image
-            src="/icons/dice_white.svg"
-            alt="askdn"
-            width={100}
-            height={70}
-            className="nav_icons"
-          />
-          <p>Brætspil</p>
+          <Link href="/inspiration">
+            <Image
+              src="/icons/inspo_white.svg"
+              alt="askdn"
+              width={100}
+              height={70}
+              className="nav_icons"
+            />
+            <p>Inspiration</p>
+          </Link>
         </li>
         <li>
-          <Image
-            src="/icons/bar_white.svg"
-            alt="askdn"
-            width={100}
-            height={70}
-            className="nav_icons"
-          />
-          <p>Bar</p>
+          <Link href="/boardgames">
+            <Image
+              src="/icons/dice_white.svg"
+              alt="askdn"
+              width={100}
+              height={70}
+              className="nav_icons"
+            />
+            <p>Brætspil</p>
+          </Link>
+        </li>
+        <li>
+          <Link href="/bar">
+            <Image
+              src="/icons/bar_white.svg"
+              alt="askdn"
+              width={100}
+              height={70}
+              className="nav_icons"
+            />
+            <p>Bar</p>
+          </Link>
         </li>
       </ul>
     </nav>

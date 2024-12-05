@@ -7,6 +7,7 @@ export default function Boardgame({ boardgame }) {
     <Link href={`/boardgames/${boardgame.id}`}>
       <div key={boardgame.id} className="boardgame">
         <div className="game_lid">
+          {/* <p>{boardgame.acf.name}</p> */}
           <Image
             src="/partners_box.jpg"
             // {boardgame.acf.image}
@@ -24,7 +25,7 @@ export default function Boardgame({ boardgame }) {
                 height={400}
                 className="nav_icons"
               />
-              <p>6</p>
+              <p>{boardgame.acf.players}</p>
             </div>
             <div>
               <Image
@@ -34,17 +35,17 @@ export default function Boardgame({ boardgame }) {
                 height={400}
                 className="nav_icons"
               />
-              <p>45-60 min</p>
+              <p>{`${boardgame.acf.time} min`}</p>
             </div>
             <div>
               <Image
                 src="/icons/age_white.svg"
                 alt="askdn"
-                width={100}
-                height={70}
+                width={400}
+                height={400}
                 className="nav_icons"
               />
-              <p>8+</p>
+              <p>{`${boardgame.acf.age}+`}</p>
             </div>
           </div>
         </div>
