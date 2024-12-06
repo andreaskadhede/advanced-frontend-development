@@ -12,65 +12,67 @@ export default function Inspiration() {
             alt="Inspirations lokale"
          />
 
-         {/* <Image
-            className="bowl"
-            src="/gif/bowl.gif"
-            height={400}
-            width={400}
-            alt="Lodtrækningsskål"
-         />
-         <Image
+         <div className="inspiration_grid">
+            <Image
+               className="bowl"
+               src="/gif/bowl.gif"
+               height={400}
+               width={400}
+               alt="Lodtrækningsskål"
+            />
+            {/* <Image
             className="bowl"
             src="/img/bowl.svg"
             height={400}
             width={400}
             alt="Lodtrækningsskål"
-         />
+         /> */}
 
-         <Image
-            className="pinboard"
-            src="/gif/pinboard.gif"
-            height={400}
-            width={400}
-            alt="Opslagstavle"
-         />
-         <Image
+            <Image
+               className="pinboard"
+               src="/gif/pinboard.gif"
+               height={400}
+               width={400}
+               alt="Opslagstavle"
+            />
+            {/*<Image
             className="pinboard"
             src="/img/pinboard.svg"
             height={400}
             width={400}
             alt="Opslagstavle"
-         />
+         />*/}
 
-         <Image
-            className="posters"
-            src="/gif/posters.gif"
-            height={400}
-            width={400}
-            alt="Plakater"
-         />
-         <Image
+            <Image
+               className="posters"
+               src="/gif/posters.gif"
+               height={400}
+               width={400}
+               alt="Plakater"
+            />
+            {/*<Image
             className="posters"
             src="/img/posters.svg"
             height={400}
             width={400}
             alt="Plakater"
-         />
+         />*/}
 
-         <Image
-            className="wheel_high"
-            src="/gif/wheel_legs_high.gif"
-            height={400}
-            width={400}
-            alt="Lykkehjul"
-         />
-         <Image
+            <Image
+               className="wheel_high"
+               src="/gif/wheel_legs_high.gif"
+               height={400}
+               width={400}
+               alt="Lykkehjul"
+            />
+            {/*<Image
             className="wheel_high"
             src="/img/wheel_legs_high.svg"
             height={400}
             width={400}
             alt="Lykkehjul"
          /> */}
+         </div>
       </main>
    );
 }
