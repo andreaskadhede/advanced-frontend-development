@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1296 1296">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2ebeb;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #f2ebeb;
+        stroke-miterlimit: 10;
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <g id="Icon">
+    <g id="HomeBlackFull_copy" data-name="HomeBlackFull copy">
+      <polygon class="cls-1" points="1080 216 936 117 936 72 1080 72 1080 216"/>
+      <polygon class="cls-1" points="0 468 1296 468 1296 403.2 720 0 576 0 0 403.2 0 468"/>
+      <path class="cls-1" d="M144,504v792h144v-432h216v432h648V504H144ZM1008,1080h-216v-216h216v216Z"/>
+      <line class="cls-2" x1="900" y1="864" x2="900" y2="1080"/>
+      <line class="cls-2" x1="792" y1="972" x2="1008" y2="972"/>
+      <path class="cls-1" d="M315,1062c-9.94,0-18,8.06-18,18s8.06,18,18,18,18-8.06,18-18-8.06-18-18-18h0Z"/>
+    </g>
+  </g>
+</svg>
