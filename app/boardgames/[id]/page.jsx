@@ -2,21 +2,21 @@ import Button from "@/app/components/Button";
 import Image from "next/image";
 // import styles from "./page.module.css";
 
-export default async function BoardgameDetailPage() {
-  // const { id } = await params;
-  // //Database for enkelt spil
-  // const response = await fetch(
-  //   `http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame/${id}?acf_format=standard&orderby=date&order=asc`
-  // );
-  // const boardgame = await response.json();
-  // console.log(boardgame);
+export default async function BoardgameDetailPage({ params }) {
+  const { id } = await params;
+  //Database for enkelt spil
+  const response = await fetch(
+    `http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame/${id}?acf_format=standard&orderby=date&order=asc`
+  );
+  const boardgame = await response.json();
+  console.log(boardgame);
 
   return (
     <main className="single_boardgame">
       <Button />
       <section className="boardgame_info">
         <article className="intro">
-          <h1>Partners</h1>
+          <h1>{boardgame.acf.name}</h1>
           <div className="icons">
             <div>
               <Image
