@@ -2,8 +2,12 @@ module.exports = {
   images: {
     remotePatterns: [
       {
+        protocol: "http",
+        hostname: "advanced-frontend-development.andreaskadhede.dk",
+      },
+      {
         protocol: "https",
-        hostname: "*",
+        hostname: "advanced-frontend-development.andreaskadhede.dk",
       },
     ],
   },

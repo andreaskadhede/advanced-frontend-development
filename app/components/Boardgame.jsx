@@ -6,10 +6,15 @@ export default function Boardgame({ boardgame }) {
   return (
     <Link href={`/boardgames/${boardgame.id}`}>
       <div key={boardgame.id} className="boardgame">
-        <div className="game_lid">
+        <div
+          className="game_lid"
+          style={{ backgroundColor: boardgame.acf.background_color }}
+        >
           {/* <p>{boardgame.acf.name}</p> */}
           <Image
-            src="/partners_box.jpg"
+            src={
+              boardgame.acf.cover ? boardgame.acf.cover : "/partners_box.jpg"
+            }
             // {boardgame.acf.image}
             alt={boardgame.title.rendered}
             width={400}
