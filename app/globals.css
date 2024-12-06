@@ -7,147 +7,147 @@
 @import url("https://fonts.googleapis.com/css2?family=Finger+Paint&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  /* --- color --- */
-  --red: #b3231e;
-  --yellow: #ffd12b;
-  --lightGreen: #71cc22;
-  --darkGreen: #1a993e;
-  --turquoise: #22c6cc;
-  --blue: #1a3599;
-  --purple: #4e1580;
-  --magenta: #cc229c;
-  --white: #f2ebeb;
-  --black: #0d0c0c;
-  --darkBrown: #332013;
-  --lightBrown: #664126;
+   /* --- color --- */
+   --red: #b3231e;
+   --yellow: #ffd12b;
+   --lightGreen: #71cc22;
+   --darkGreen: #1a993e;
+   --turquoise: #22c6cc;
+   --blue: #1a3599;
+   --purple: #4e1580;
+   --magenta: #cc229c;
+   --white: #f2ebeb;
+   --black: #0d0c0c;
+   --darkBrown: #332013;
+   --lightBrown: #664126;
 
-  /* --- font weights --- */
-  --regular: 400;
-  --medium: 500;
-  --semiBold: 600;
+   /* --- font weights --- */
+   --regular: 400;
+   --medium: 500;
+   --semiBold: 600;
 
-  /* --- font sizes --- */
-  --fontsizeXXS: 0.5rem;
-  /* 8px */
-  --fontsizeXS: 0.75rem;
-  /* 12px */
-  --fontsizeS: 0.875rem;
-  /* 14px */
-  --fontsizeM: 1rem;
-  /* 16px */
-  --fontsizeL: 1.25rem;
-  /* 20px */
-  --fontsizeXL: 1.5rem;
-  /* 24px */
-  --fontsizeXXL: 2rem;
-  /* 32px */
+   /* --- font sizes --- */
+   --fontsizeXXS: 0.5rem;
+   /* 8px */
+   --fontsizeXS: 0.75rem;
+   /* 12px */
+   --fontsizeS: 0.875rem;
+   /* 14px */
+   --fontsizeM: 1rem;
+   /* 16px */
+   --fontsizeL: 1.25rem;
+   /* 20px */
+   --fontsizeXL: 1.5rem;
+   /* 24px */
+   --fontsizeXXL: 2rem;
+   /* 32px */
 }
 
 /* --- reset --- */
 * {
-  box-sizing: border-box;
-  color: var(--white);
-  font-family: "poppins", sans-serif;
-  font-weight: var(--regular);
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+   box-sizing: border-box;
+   color: var(--white);
+   font-family: "poppins", sans-serif;
+   font-weight: var(--regular);
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
 }
 
 /* --- general styles --- */
 
 body {
-  background-color: var(--lightBrown);
-  min-height: 100dvh;
+   background-color: var(--lightBrown);
+   min-height: 100dvh;
 }
 
 h1 {
-  font-size: var(--fontsizeXXL);
+   font-size: var(--fontsizeXXL);
 }
 
 h2 {
-  font-size: var(--fontsizeXL);
+   font-size: var(--fontsizeXL);
 }
 
 h3 {
-  font-size: var(--fontsizeL);
+   font-size: var(--fontsizeL);
 }
 
 h4 {
-  font-size: var(--fontsizeM);
+   font-size: var(--fontsizeM);
 }
 
 a:any-link {
-  color: inherit;
-  text-decoration: none;
+   color: inherit;
+   text-decoration: none;
 }
 
 img {
-  height: fit-content;
-  object-fit: contain;
-  width: auto;
+   height: fit-content;
+   object-fit: contain;
+   width: auto;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1rem;
-  margin: 84.15px 0 104px;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   padding: 1rem;
+   margin: 84.15px 0 104px;
 }
 
 /* --- navigation --------------------------------------------------------------------------------------------------- */
 
 nav {
-  background-color: var(--darkBrown);
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
+   background-color: var(--darkBrown);
+   position: fixed;
+   bottom: 0px;
+   left: 0px;
+   width: 100%;
 }
 
 nav ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem 1rem;
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   padding: 1rem 1rem;
 }
 
 nav ul li a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  flex: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 64px;
+   flex: 1;
 }
 
 nav ul li a p {
-  font-size: var(--fontsizeXS);
+   font-size: var(--fontsizeXS);
 }
 
 .nav_icons {
-  width: 40px;
-  height: 40px;
+   width: 40px;
+   height: 40px;
 }
 
 /* --- header --------------------------------------------------------------------------------------------------------*/
 header {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--lightBrown);
-  padding: 16px 20px 0px 20px;
-  position: fixed;
-  left: 0px;
-  top: 0px;
+   display: flex;
+   width: 100%;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--lightBrown);
+   padding: 16px 20px 0px 20px;
+   position: fixed;
+   left: 0px;
+   top: 0px;
 }
 
 .logo {
-  width: 90px;
-  height: fit-content;
+   width: 90px;
+   height: fit-content;
 }
 
 /* --- frontpage ---------------------------------------------------------------------------------------------------- */
@@ -303,52 +303,53 @@ main.home {
 
 /* --- search & sorting --------------------------------------------------------------------------------------------- */
 .search_and_filter {
-  display: flex;
-  justify-content: space-between;
-  position: sticky;
-  top: 84px;
+   display: flex;
+   justify-content: space-between;
+   position: sticky;
+   top: 84px;
 }
 
 .card_icon {
-  width: 14px;
+   width: 14px;
 }
 
 .search {
-  height: 40px;
-  background-color: var(--white);
-  width: 155px;
-  border-radius: 0 0 6px 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0.5rem;
+   height: 40px;
+   background-color: var(--white);
+   width: 155px;
+   border-radius: 0 0 6px 6px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 0.5rem;
 }
 
 .card_input {
-  height: fit-content;
-  width: 100px;
-  border: none;
-  background-color: var(--white);
-  font-size: var(--fontsizeS);
-  color: var(--black);
+   height: fit-content;
+   width: 100px;
+   border: none;
+   background-color: var(--white);
+   font-size: var(--fontsizeS);
+   color: var(--black);
 }
 
 .filter {
-  height: 40px;
-  background-color: var(--white);
-  width: 155px;
-  border-radius: 0 0 6px 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 0.5rem;
+   height: 40px;
+   background-color: var(--white);
+   width: 155px;
+   border-radius: 0 0 6px 6px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 0.5rem;
 }
 
 .filter p {
-  height: fit-content;
-  font-size: var(--fontsizeS);
-  color: var(--black);
+   height: fit-content;
+   font-size: var(--fontsizeS);
+   color: var(--black);
 }
+
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
 
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
@@ -357,8 +358,7 @@ main.home {
    margin-bottom: 2rem;
 }
 
-.boardgame_info .intro>*:not(:last-child),
-.boardgame_info .rules>*:not(:last-child) {
+.boardgame_info article>*:not(:last-child) {
    padding-bottom: 1rem;
 }
 
@@ -407,95 +407,96 @@ main.home {
 
 /* --- boardgame ---------------------------------------------------------------------------------------------------- */
 .games {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background-color: var(--darkBrown);
-  padding: 0 0.5rem;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   background-color: var(--darkBrown);
+   padding: 0 0.5rem;
 }
 
 .boardgame {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .game_lid {
-  background-color: var(--blue);
-  display: flex;
-  width: 100%;
-  height: 60px;
-  justify-content: space-between;
-  padding-right: 0.5rem;
-  align-items: center;
+   background-color: var(--blue);
+   display: flex;
+   width: 100%;
+   height: 60px;
+   justify-content: space-between;
+   padding-right: 0.5rem;
+   align-items: center;
 }
 
 .game_box {
-  background-color: var(--black);
-  width: 95%;
-  height: 0.25rem;
+   background-color: var(--black);
+   width: 95%;
+   height: 0.25rem;
 }
 
 .boardgame_image {
-  height: 100%;
-  width: 75%;
-  object-fit: cover;
+   height: 100%;
+   width: 75%;
+   object-fit: cover;
 }
 
 .game_info {
-  display: flex;
-  flex-direction: column;
-  width: 60px;
-  gap: 0.25rem;
+   display: flex;
+   flex-direction: column;
+   width: 60px;
+   gap: 0.25rem;
 }
 
 .game_info div {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  height: fit-content;
+   display: flex;
+   align-items: center;
+   gap: 0.25rem;
+   height: fit-content;
 }
 
 .game_info div img {
-  width: 10px;
-  height: 10px;
+   width: 10px;
+   height: 10px;
 }
 
 .game_info div p {
-  font-size: var(--fontsizeXXS);
+   font-size: var(--fontsizeXXS);
 }
 
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
 .inspiration_main {
-  width: 100dvw;
-  height: calc(100dvh - 104px - 84.15px);
+   width: 100dvw;
+   height: calc(100dvh - 104px - 84.15px);
 }
 
 .inspiration_background {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  object-position: 50% 50%;
-  overflow: hidden;
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+   object-position: 50% 50%;
+   overflow: hidden;
 }
 
 /* --- wheel minigame ----------------------------------------------------------------------------------------------- */
 
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
 .muligheder {
-  display: flex;
-  align-items: center;
+   display: flex;
+   align-items: center;
 }
 
 .muligheder button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 10px;
-  height: 10px;
-  background-color: transparent;
-  border: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 10px;
+   height: 10px;
+   background-color: transparent;
+   border: none;
 }
+
 /*--- Media queries --------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------*/
