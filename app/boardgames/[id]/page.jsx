@@ -1,6 +1,5 @@
 import Button from "@/app/components/Button";
 import Image from "next/image";
-// import styles from "./page.module.css";
 
 export default async function BoardgameDetailPage({ params }) {
   const { id } = await params;
@@ -25,7 +24,7 @@ export default async function BoardgameDetailPage({ params }) {
                 width={100}
                 alt="Antal spillere"
               />
-              <p>4</p>
+              <p>{boardgame.acf.players}</p>
             </div>
             <div>
               <Image
@@ -34,7 +33,7 @@ export default async function BoardgameDetailPage({ params }) {
                 width={100}
                 alt="Estimeret spilletid"
               />
-              <p>45-60</p>
+              <p>{boardgame.acf.time}</p>
             </div>
             <div>
               <Image
@@ -43,7 +42,7 @@ export default async function BoardgameDetailPage({ params }) {
                 width={100}
                 alt="Anbefalet aldersgrænse"
               />
-              <p>10+</p>
+              <p>{boardgame.acf.age}</p>
             </div>
             <div>
               <Image
@@ -52,17 +51,14 @@ export default async function BoardgameDetailPage({ params }) {
                 width={100}
                 alt="Placering"
               />
-              <p>A2</p>
+              <p>{boardgame.acf.placement}</p>
             </div>
           </div>
-          <p>
-            Nogle kalder det strategisk Ludo med kort - og det er vel egentlig
-            ikke skudt helt ved siden af! 
-          </p>
+          <p>{boardgame.acf.description}</p>
         </article>
         <div className="carousel">
           <Image
-            src="/partners_box.jpg"
+            src={boardgame.acf.images}
             height={400}
             width={400}
             alt="placeholder image"
@@ -75,7 +71,7 @@ export default async function BoardgameDetailPage({ params }) {
         </div>
         <article className="rules">
           <h2>Regler</h2>
-          <p>En masse regler</p>
+          <p>{boardgame.acf.rules}</p>
         </article>
         <article className="suggestions">
           <h2>Lignende spil</h2>
@@ -106,67 +102,5 @@ export default async function BoardgameDetailPage({ params }) {
         </article>
       </section>
     </main>
-    // <main>
-    //   {boardgame.acf.name}
-
-    //   <div>
-    //     <div>
-    //       <Image
-    //         src="/icons/person_white.svg"
-    //         alt={boardgame.acf.name}
-    //         width={400}
-    //         height={400}
-    //         className="nav_icons"
-    //       />
-    //       {boardgame.acf.players}
-    //     </div>
-    //     <div>
-    //       <Image
-    //         src="/icons/time_white.svg"
-    //         alt={boardgame.acf.name}
-    //         width={400}
-    //         height={400}
-    //         className="nav_icons"
-    //       />
-    //       {boardgame.acf.time}
-    //     </div>
-    //     <div>
-    //       <Image
-    //         src="/icons/age_white.svg"
-    //         alt={boardgame.acf.name}
-    //         width={400}
-    //         height={400}
-    //         className="nav_icons"
-    //       />
-    //       {boardgame.acf.age}
-    //     </div>
-    //     <div>
-    //       <Image
-    //         src="/icons/age_white.svg"
-    //         alt={boardgame.acf.name}
-    //         width={400}
-    //         height={400}
-    //         className="nav_icons"
-    //       />
-    //       {boardgame.acf.placement}
-    //     </div>
-    //   </div>
-
-    //   <p>Describtion</p>
-    //   {boardgame.acf.description}
-
-    //   <Image
-    //     src={boardgame.acf.images}
-    //     alt={boardgame.acf.name}
-    //     width={400}
-    //     height={200}
-    //     className="w-full h-48 object-cover"
-    //   />
-
-    //   <p>Rules</p>
-    //   {boardgame.acf.rules}
-
-    //   {/* Foreslag til spil */}
-    // </main>
   );
 }

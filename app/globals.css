@@ -41,6 +41,10 @@
   /* 24px */
   --fontsizeXXL: 2rem;
   /* 32px */
+
+  /* Margin for main (header heigth and nav height */
+  --marginTop: 83px;
+  --marginBottom: 98px;
 }
 
 /* Font classes */
@@ -102,6 +106,7 @@ body {
 
 h1 {
   font-size: var(--fontsizeXXL);
+  font-weight: var(--semiBold);
 }
 
 h2 {
@@ -132,45 +137,11 @@ main {
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  margin: 84.15px 0 104px;
-}
-
-/* --- navigation --------------------------------------------------------------------------------------------------- */
-
-nav {
-  background-color: var(--darkBrown);
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  width: 100%;
-}
-
-nav ul {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem 1rem;
-}
-
-nav ul li a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 64px;
-  flex: 1;
-}
-
-nav ul li a p {
-  font-size: var(--fontsizeXS);
-}
-
-.nav_icons {
-  width: 40px;
-  height: 40px;
+  margin: var(--marginTop) 0 var(--marginBottom);
 }
 
 /* --- header --------------------------------------------------------------------------------------------------------*/
+
 header {
   display: flex;
   width: 100%;
@@ -184,17 +155,51 @@ header {
 }
 
 .logo {
-  width: 90px;
-  height: fit-content;
+  height: 67px;
+}
+
+/* --- navigation --------------------------------------------------------------------------------------------------- */
+
+nav {
+  background-color: var(--darkBrown);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav ul li a {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  opacity: 0.5;
+  width: 66px;
+}
+
+nav ul li a p {
+  font-size: var(--fontsizeXS);
+}
+
+.nav_icons {
+  height: 40px;
+  width: 40px;
 }
 
 /* --- frontpage ---------------------------------------------------------------------------------------------------- */
 
-/* --- frontpage ---------------------------------------------------------------------------------------------------- */
-
 main.home {
-  height: calc(100dvh - 90px - 84.15px);
-  margin: 84.15px 0 90px;
+  height: 100dvh;
+  margin: 0;
+  padding-top: calc(var(--marginTop) + 1rem);
+  padding-bottom: calc(var(--marginBottom) + 1rem);
 }
 
 .shelf {
@@ -340,6 +345,7 @@ main.home {
 }
 
 /* --- search & sorting --------------------------------------------------------------------------------------------- */
+
 .search_and_filter {
   display: flex;
   justify-content: space-between;
@@ -391,6 +397,7 @@ main.home {
   font-size: var(--fontsizeS);
   color: var(--black);
 }
+
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
 
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
@@ -399,8 +406,7 @@ main.home {
   margin-bottom: 2rem;
 }
 
-.boardgame_info .intro > *:not(:last-child),
-.boardgame_info .rules > *:not(:last-child) {
+.boardgame_info article > *:not(:last-child) {
   padding-bottom: 1rem;
 }
 
@@ -448,12 +454,13 @@ main.home {
 }
 
 /* --- boardgame ---------------------------------------------------------------------------------------------------- */
+
 .games {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   background-color: var(--darkBrown);
-  padding: 0 10px 10px 10px;
+  padding: 0 0.5rem;
 }
 
 .boardgame {
@@ -508,22 +515,109 @@ main.home {
 }
 
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
+
 .inspiration_main {
   width: 100dvw;
-  height: calc(100dvh - 104px - 84.15px);
+  height: calc(100dvh - var(--marginBottom) - var(--marginTop));
+  margin-bottom: 0;
+  position: fixed;
 }
 
 .inspiration_background {
   object-fit: cover;
-  height: 100%;
+  height: calc(
+    100dvh - 16px - 16px - var(--marginBottom) - var(--marginTop) - 2px
+  );
   width: 100%;
   object-position: 50% 50%;
   overflow: hidden;
+  max-width: 436px;
+  margin: auto;
+}
+
+.inspiration_grid {
+  /* background-color: red; */
+  width: 343px;
+  height: calc(
+    100dvh - 16px - 16px - var(--marginBottom) - var(--marginTop) - 2px
+  );
+  position: absolute;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.bowl {
+  width: 130px;
+  grid-area: 9 / 1 / 13 / 10;
+  align-self: end;
+  transform: translateX(calc(-343px / 24));
+}
+
+.pinboard {
+  width: 130px;
+  grid-area: 6 / 9 / 11 / 19;
+  align-self: start;
+  justify-self: center;
+}
+
+.posters {
+  width: 145px;
+  grid-area: 11 / 9 / 19 / 20;
+  align-self: start;
+}
+
+.wheel_high {
+  width: 115px;
+  grid-area: 10 / 16 / 21 / 25;
+  align-self: end;
 }
 
 /* --- wheel minigame ----------------------------------------------------------------------------------------------- */
 
+.minigame {
+  background-color: var(--darkBrown);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2.5rem;
+}
+
+.inspo_top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inspo_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.minigame h1 {
+  font-family: "finger paint", sans-serif;
+  font-size: 2.5rem;
+}
+
+.minigame section p {
+  font-size: var(--fontsizeL);
+  width: 15rem;
+}
+
+.minigame div p {
+  font-size: var(--fontsizeXL);
+}
+
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
+
 .muligheder {
   display: flex;
   align-items: center;
