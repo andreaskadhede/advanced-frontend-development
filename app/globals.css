@@ -575,6 +575,100 @@ main.home {
    font-size: var(--fontsizeXL);
 }
 
+.wheel_low {
+   width: 100%;
+}
+
+.wheelContainer {
+   width: 100%;
+   height: 100%;
+}
+
+.wheel {
+   position: absolute;
+   top: 7px;
+   width: 320px;
+   height: 320px;
+   border-radius: 50%;
+   transition: transform 5s ease-out;
+}
+
+.pointer {
+   position: absolute;
+   top: 0px;
+   left: 46.225%;
+   stroke-width: 0px;
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 42px 12px 0 12px;
+   border-color: #815230 transparent transparent transparent;
+   transform: rotate(0deg);
+}
+
+.spinButton {
+   margin-top: 20px;
+   padding: 10px 20px;
+   background: #0070f3;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+.spinButton:disabled {
+   background: gray;
+   cursor: not-allowed;
+}
+
+.result {
+   margin-top: 20px;
+   font-size: 18px;
+   font-weight: bold;
+}
+
+.wheel_animation {
+   position: relative;
+   width: 320px;
+}
+
+.cls-1 {
+   fill: #4d301c;
+}
+
+.cls-2 {
+   fill: var(--lightGreen);
+}
+
+.cls-3 {
+   fill: var(--purple);
+}
+
+.cls-4 {
+   fill: var(--blue);
+}
+
+.cls-5 {
+   fill: var(--turquoise);
+}
+
+.cls-6 {
+   fill: var(--darkGreen);
+}
+
+.cls-7 {
+   fill: var(--magenta);
+}
+
+.cls-8 {
+   fill: var(--red);
+}
+
+.cls-9 {
+   fill: var(--yellow);
+}
+
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
 .muligheder {
    display: flex;
