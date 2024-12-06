@@ -20,24 +20,7 @@
    --black: #0d0c0c;
    --darkBrown: #332013;
    --lightBrown: #664126;
-   /* --- color --- */
-   --red: #b3231e;
-   --yellow: #ffd12b;
-   --lightGreen: #71cc22;
-   --darkGreen: #1a993e;
-   --turquoise: #22c6cc;
-   --blue: #1a3599;
-   --purple: #4e1580;
-   --magenta: #cc229c;
-   --white: #f2ebeb;
-   --black: #0d0c0c;
-   --darkBrown: #332013;
-   --lightBrown: #664126;
 
-   /* --- font weights --- */
-   --regular: 400;
-   --medium: 500;
-   --semiBold: 600;
    /* --- font weights --- */
    --regular: 400;
    --medium: 500;
@@ -60,20 +43,12 @@
    /* 32px */
 
    /* Margin for main (header heigth and nav height */
-   --marginTop: 84.15px;
-   --marginBottom: 89.5px;
+   --marginTop: 83px;
+   --marginBottom: 98px;
 }
 
 /* --- reset --- */
 * {
-   box-sizing: border-box;
-   color: var(--white);
-   font-family: "poppins", sans-serif;
-   font-weight: var(--regular);
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   text-decoration: none;
    box-sizing: border-box;
    color: var(--white);
    font-family: "poppins", sans-serif;
@@ -89,41 +64,31 @@
 body {
    background-color: var(--lightBrown);
    min-height: 100dvh;
-   background-color: var(--lightBrown);
-   min-height: 100dvh;
 }
 
 h1 {
    font-size: var(--fontsizeXXL);
-   font-size: var(--fontsizeXXL);
+   font-weight: var(--semiBold);
 }
 
 h2 {
-   font-size: var(--fontsizeXL);
    font-size: var(--fontsizeXL);
 }
 
 h3 {
    font-size: var(--fontsizeL);
-   font-size: var(--fontsizeL);
 }
 
 h4 {
-   font-size: var(--fontsizeM);
    font-size: var(--fontsizeM);
 }
 
 a:any-link {
    color: inherit;
    text-decoration: none;
-   color: inherit;
-   text-decoration: none;
 }
 
 img {
-   height: fit-content;
-   object-fit: contain;
-   width: auto;
    height: fit-content;
    object-fit: contain;
    width: auto;
@@ -137,47 +102,8 @@ main {
    margin: var(--marginTop) 0 var(--marginBottom);
 }
 
-/* --- navigation --------------------------------------------------------------------------------------------------- */
-
-nav {
-   background-color: var(--darkBrown);
-   position: fixed;
-   bottom: 0px;
-   left: 0px;
-   width: 100%;
-   background-color: var(--darkBrown);
-   position: fixed;
-   bottom: 0px;
-   left: 0px;
-   width: 100%;
-}
-
-nav ul {
-   display: flex;
-   width: 100%;
-   justify-content: space-between;
-   padding: 1rem 1rem;
-}
-
-nav ul li a {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: center;
-   width: 64px;
-   flex: 1;
-}
-
-nav ul li a p {
-   font-size: var(--fontsizeXS);
-}
-
-.nav_icons {
-   width: 40px;
-   height: 40px;
-}
-
 /* --- header --------------------------------------------------------------------------------------------------------*/
+
 header {
    display: flex;
    width: 100%;
@@ -191,31 +117,60 @@ header {
 }
 
 .logo {
-   width: 90px;
-   height: fit-content;
+   height: 67px;
 }
 
-/* --- frontpage ---------------------------------------------------------------------------------------------------- */
+/* --- navigation --------------------------------------------------------------------------------------------------- */
+
+nav {
+   background-color: var(--darkBrown);
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+}
+
+nav ul {
+   display: flex;
+   justify-content: space-between;
+   padding: 1rem;
+}
+
+nav ul li a {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   gap: .5rem;
+   justify-content: center;
+   opacity: .5;
+   width: 66px;
+}
+
+nav ul li a p {
+   font-size: var(--fontsizeXS);
+}
+
+.nav_icons {
+   height: 40px;
+   width: 40px;
+}
 
 /* --- frontpage ---------------------------------------------------------------------------------------------------- */
 
 main.home {
-   height: calc(100dvh - 90px - 84.15px);
-   margin: 84.15px 0 90px;
+   height: 100dvh;
+   margin: 0;
+   padding-top: calc(var(--marginTop) + 1rem);
+   padding-bottom: calc(var(--marginBottom) + 1rem);
 }
 
 .shelf {
-   background-color: var(--darkBrown);
-   display: flex;
    background-color: var(--darkBrown);
    display: flex;
 }
 
 .shelf h2,
 .shelf h4 {
-   font-weight: var(--semiBold);
-   text-align: center;
-   text-transform: uppercase;
    font-weight: var(--semiBold);
    text-align: center;
    text-transform: uppercase;
@@ -352,6 +307,7 @@ main.home {
 }
 
 /* --- search & sorting --------------------------------------------------------------------------------------------- */
+
 .search_and_filter {
    display: flex;
    justify-content: space-between;
@@ -456,6 +412,7 @@ main.home {
 }
 
 /* --- boardgame ---------------------------------------------------------------------------------------------------- */
+
 .games {
    display: flex;
    flex-direction: column;
@@ -516,6 +473,7 @@ main.home {
 }
 
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
+
 .inspiration_main {
    width: 100dvw;
    height: calc(100dvh - var(--marginBottom) - var(--marginTop));
@@ -617,6 +575,7 @@ main.home {
 }
 
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
+
 .muligheder {
    display: flex;
    align-items: center;
