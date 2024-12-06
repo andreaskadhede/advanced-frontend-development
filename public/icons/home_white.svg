@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1296 1296">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f2ebeb;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #f2ebeb;
+        stroke-miterlimit: 10;
+        stroke-width: 20px;
+      }
+    </style>
+  </defs>
+  <g id="Icon">
+    <g id="Home_Black_copy" data-name="Home_Black copy">
+      <path class="cls-1" d="M1114.38,505.62v752.76H181.62V505.62h932.76M1152,468H144v828h1008V468h0Z"/>
+      <path class="cls-1" d="M1058.79,93.21v152.36l-38.06-28.54-63.51-47.64v-76.18h101.57M1080,72h-144v108l72,54,72,54V72h0Z"/>
+      <path class="cls-1" d="M707.39,40l548.61,384.03v39.97H40v-39.97L588.61,40h118.78M720,0h-144L0,403.2v100.8h1296v-100.8L720,0h0Z"/>
+      <path class="cls-1" d="M484,884v392h-176v-392h176M504,864h-216v432h216v-432h0Z"/>
+      <path class="cls-1" d="M988,884v176h-176v-176h176M1008,864h-216v216h216v-216h0Z"/>
+      <line class="cls-2" x1="900" y1="864" x2="900" y2="1080"/>
+      <line class="cls-2" x1="792" y1="972" x2="1008" y2="972"/>
+      <path class="cls-1" d="M333,1062c-9.94,0-18,8.06-18,18s8.06,18,18,18,18-8.06,18-18-8.06-18-18-18h0Z"/>
+    </g>
+  </g>
+</svg>

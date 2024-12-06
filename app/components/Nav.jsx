@@ -9,10 +9,10 @@ export default function Nav() {
         <li>
           <Link href="/">
             <Image
-              src="/icons/bar_white.svg"
-              alt="askdn"
+              src="/icons/home_white.svg"
+              alt="Hjem"
               width={100}
-              height={70}
+              height={100}
               className="nav_icons"
             />
             <p>Forside</p>
@@ -22,9 +22,9 @@ export default function Nav() {
           <Link href="/inspiration">
             <Image
               src="/icons/inspo_white.svg"
-              alt="askdn"
+              alt="Inspiration"
               width={100}
-              height={70}
+              height={100}
               className="nav_icons"
             />
             <p>Inspiration</p>
@@ -34,9 +34,9 @@ export default function Nav() {
           <Link href="/boardgames">
             <Image
               src="/icons/dice_white.svg"
-              alt="askdn"
+              alt="Terninger"
               width={100}
-              height={70}
+              height={100}
               className="nav_icons"
             />
             <p>Brætspil</p>
@@ -46,9 +46,9 @@ export default function Nav() {
           <Link href="/bar">
             <Image
               src="/icons/bar_white.svg"
-              alt="askdn"
+              alt="Popcorn"
               width={100}
-              height={70}
+              height={100}
               className="nav_icons"
             />
             <p>Bar</p>
