@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main>
+    <main className="home">
       <section className="shelf top">
         <h2 className="box_header">Populære spil</h2>
         <div id="pop_1" className="box_header"></div>
@@ -10,7 +10,7 @@ export default function Home() {
         <div id="pop_3" className="box_header"></div>
         <div id="pop_4" className="box_header"></div>
       </section>
-      <div className="double_shelf">
+      <div className="double_shelf mid">
         <section className="shelf mid left">
           <Image
             src="/img/candle.svg"
@@ -30,7 +30,7 @@ export default function Home() {
           <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
         </section>
       </div>
-      <div className="double_shelf">
+      <div className="double_shelf bottom">
         <section className="shelf bottom left">
           <h4 className="box_header">Skjulte perler</h4>
           <div id="per_1" className="box_header"></div>
@@ -41,9 +41,10 @@ export default function Home() {
             src="/gif/wheel_legs_low.gif"
             height={400}
             width={400}
+            unoptimized
             alt="Lykkehjul"
           />
-          <h4>Inspiration</h4>
+          <h4 className="box_header">Inspiration</h4>
         </section>
       </div>
     </main>
