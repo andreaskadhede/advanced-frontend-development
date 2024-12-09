@@ -391,6 +391,11 @@ main.home {
    padding-top: 2rem;
 }
 
+.boardgame_info .carousel img {
+   max-height: 30dvh;
+   width: 90%;
+}
+
 .boardgame_info .carousel .breadcrumbs {
    align-items: center;
    display: flex;
@@ -428,13 +433,11 @@ main.home {
 }
 
 .game_lid {
-   background-color: var(--blue);
-   display: flex;
-   width: 100%;
-   height: 60px;
-   justify-content: space-between;
-   padding-right: 0.5rem;
    align-items: center;
+   /* background-color: var(--blue); */
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
 }
 
 .game_box {
@@ -444,28 +447,29 @@ main.home {
 }
 
 .boardgame_image {
-   height: 100%;
-   width: 75%;
+   height: 50px;
+   max-width: 75%;
    object-fit: cover;
+   object-position: left center;
 }
 
 .game_info {
    display: flex;
    flex-direction: column;
-   width: 60px;
+   width: 20%;
    gap: 0.25rem;
 }
 
 .game_info div {
-   display: flex;
    align-items: center;
+   display: flex;
    gap: 0.25rem;
-   height: fit-content;
+   /* height: fit-content; */
 }
 
 .game_info div img {
-   width: 10px;
    height: 10px;
+   width: 10px;
 }
 
 .game_info div p {
