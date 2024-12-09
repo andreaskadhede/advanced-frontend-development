@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 // import styles from "./page.module.css";
 
 export default function Inspiration() {
@@ -27,7 +28,6 @@ export default function Inspiration() {
             width={400}
             alt="Lodtrækningsskål"
          /> */}
-
             <Image
                className="pinboard"
                src="/gif/pinboard.gif"
@@ -42,7 +42,6 @@ export default function Inspiration() {
             width={400}
             alt="Opslagstavle"
          />*/}
-
             <Image
                className="posters"
                src="/gif/posters.gif"
@@ -57,21 +56,24 @@ export default function Inspiration() {
             width={400}
             alt="Plakater"
          />*/}
-
-            <Image
-               className="wheel_high"
-               src="/gif/wheel_legs_high.gif"
-               height={400}
-               width={400}
-               alt="Lykkehjul"
-            />
-            {/*<Image
-            className="wheel_high"
-            src="/img/wheel_legs_high.svg"
-            height={400}
-            width={400}
-            alt="Lykkehjul"
-         /> */}
+            <Link className="wheel_high" href="/inspiration/wheelMiniGame">
+               <Image
+                  className="wheel_high"
+                  src="/gif/wheel_legs_high.gif"
+                  height={400}
+                  width={400}
+                  alt="Lykkehjul"
+               />
+            </Link>
+            {/* <Link className="wheel_high" href="/inspiration/wheelMiniGame">
+               <Image
+                  className="wheel_high"
+                  src="/img/wheel_legs_high.svg"
+                  height={400}
+                  width={400}
+                  alt="Lykkehjul"
+               />
+            </Link>*/}
          </div>
       </main>
    );
