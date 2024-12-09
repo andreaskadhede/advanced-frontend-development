@@ -615,12 +615,7 @@ main.home {
 }
 
 .minigame section p {
-   font-size: var(--fontsizeM);
    width: 17rem;
-}
-
-.minigame div p {
-   font-size: var(--fontsizeXL);
 }
 
 .wheel_low {
@@ -633,6 +628,7 @@ main.home {
    flex-direction: column;
    align-items: center;
    justify-content: space-between;
+   position: relative;
 }
 
 .wheelContainer {
@@ -729,10 +725,51 @@ main.home {
    fill: var(--yellow);
 }
 
-.wheel_result {
+/* --- card --------------------------------------------------------------------------------------------------------- */
+
+.card {
+   background-color: var(--white);
+   width: 264px;
+   border-radius: 6px;
+   display: flex;
+   flex-direction: column;
+   gap: 1.5rem;
+   justify-content: space-between;
+   align-items: center;
    position: absolute;
-   top: 0;
-   background-color: red;
+   padding: 1rem;
+}
+
+.card_top,
+.card_bottom {
+   display: flex;
+   justify-content: space-between;
+   width: 100%;
+}
+
+.card p,
+.card a,
+.card_top h2,
+.card_bottom h2 {
+   color: var(--black);
+}
+
+.width2rem {
+   width: 2rem;
+}
+
+.width2rem img {
+   width: 100%;
+}
+
+.card_middle {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.card_middle img {
+   width: 100%;
 }
 
 /* --- bar ---------------------------------------------------------------------------------------------------------- */

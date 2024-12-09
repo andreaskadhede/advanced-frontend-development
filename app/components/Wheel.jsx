@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Wheel() {
    const [isSpinning, setIsSpinning] = useState(false);
@@ -12,18 +13,19 @@ export default function Wheel() {
          const response = await fetch(
             "http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=50"
          );
-         const boardgame = await response.json();
+         const boardgames = await response.json();
 
-         // Check if 'name' or 'title' fields are present, and extract the 'rendered' content if it's an object
-         const newSegments = boardgame.map((game) => {
-            // Assuming game.name or game.title could be an object with a 'rendered' field
-            return game.acf?.name || game.title?.rendered || "Unknown";
-         });
+         const newSegments = boardgames.map((game) => ({
+            name: game.acf?.name || game.title?.rendered || "Unknown",
+            placement: game.acf?.placement || "No description available",
+            cover: game.acf?.cover || null,
+            id: game.id || "Unknown ID",
+         }));
 
          setSegments(newSegments); // Set the fetched segments
       };
       fetchResult();
-   }, []); // Empty dependency array to run only once when the component mounts
+   }, []);
 
    const spinWheel = () => {
       if (isSpinning || segments.length === 0) return; // Prevent multiple spins and check if segments exist
@@ -154,9 +156,50 @@ export default function Wheel() {
          </p>
 
          {popUp && (
-            <div className="wheel_result">
-               <p>{result}</p>
-               <button onClick={() => setPopUp(false)}>Close</button>
+            <div className="card">
+               <div className="card_top">
+                  <div className="width2rem">
+                     <Image
+                        src="/icons/heart.svg"
+                        alt="heart icon"
+                        width={400}
+                        height={400}
+                        className="card_icon"
+                     />
+                  </div>
+                  <h2>TILLYKKE</h2>
+                  <div className="width2rem">
+                     <button onClick={() => setPopUp(false)}>Close</button>
+                  </div>
+               </div>
+               <div className="card_middle">
+                  <p className="fontsize16">Vi foreslår dig at spille </p>
+                  <Image
+                     src={result.cover}
+                     height={400}
+                     width={400}
+                     alt={result.name}
+                  />
+                  <p className="fontsize16">
+                     Find spillet på {result.placement}
+                  </p>
+                  <Link href={`/boardgames/${result.id}`}>
+                     Læs mere om spillet
+                  </Link>
+               </div>
+               <div className="card_bottom">
+                  <div className="width2rem"></div>
+                  <h2>TILLYKKE</h2>
+                  <div className="width2rem">
+                     <Image
+                        src="/icons/heart.svg"
+                        alt="heart icon"
+                        width={400}
+                        height={400}
+                        className="card_icon"
+                     />
+                  </div>
+               </div>
             </div>
          )}
       </div>

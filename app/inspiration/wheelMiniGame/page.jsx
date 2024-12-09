@@ -19,7 +19,9 @@ export default function WheelMiniGame() {
                <div className="wheel_no_animation">
                   <section className="inspo_top">
                      <h1>Lykkehjulet</h1>
-                     <p>Spin hjulet og få et tilfældigt spilforslag!</p>
+                     <p className="fontsize20">
+                        Spin hjulet og få et tilfældigt spilforslag!
+                     </p>
                   </section>
                   <div className="inspo_bottom">
                      <Image
