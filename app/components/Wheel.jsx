@@ -1,25 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Wheel() {
    const [isSpinning, setIsSpinning] = useState(false);
    const [result, setResult] = useState("");
+   const [popUp, setPopUp] = useState(false);
+   const [segments, setSegments] = useState([]); // State to store fetched segments
 
-   const segments = [
-      "Partners",
-      "Sequence",
-      "Det dårlige selskab",
-      "Ticket to Ride",
-      "Unlocked",
-      "Hint",
-      "Prize 7",
-      "Prize 8",
-   ];
+   useEffect(() => {
+      const fetchResult = async () => {
+         const response = await fetch(
+            "http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=50"
+         );
+         const boardgame = await response.json();
+
+         // Check if 'name' or 'title' fields are present, and extract the 'rendered' content if it's an object
+         const newSegments = boardgame.map((game) => {
+            // Assuming game.name or game.title could be an object with a 'rendered' field
+            return game.acf?.name || game.title?.rendered || "Unknown";
+         });
+
+         setSegments(newSegments); // Set the fetched segments
+      };
+      fetchResult();
+   }, []); // Empty dependency array to run only once when the component mounts
 
    const spinWheel = () => {
-      if (isSpinning) return; // Prevent multiple spins
+      if (isSpinning || segments.length === 0) return; // Prevent multiple spins and check if segments exist
+      const extraRotation = 11.25;
 
       const randomSegment = Math.floor(Math.random() * segments.length);
-      const rotation = 360 * 5 + (360 / segments.length) * randomSegment;
+      const rotation =
+         360 * 3 + (360 / segments.length) * randomSegment + extraRotation;
 
       setIsSpinning(true);
       setResult("");
@@ -30,11 +42,20 @@ export default function Wheel() {
       setTimeout(() => {
          setIsSpinning(false);
          setResult(segments[randomSegment]);
+         setPopUp(true); // Show popup with result
       }, 5000); // Match animation duration
    };
 
    return (
       <div className="container">
+         <Image
+            onClick={spinWheel}
+            className="wheel_low"
+            src="/img/wheel_legs_low.svg"
+            height={400}
+            width={400}
+            alt="Lykkehjul"
+         />
          <div className="wheelContainer">
             <div id="wheel" className="wheel">
                <svg
@@ -121,12 +142,23 @@ export default function Wheel() {
             <div className="pointer" />
          </div>
          <button
+            id="pop_1"
             onClick={spinWheel}
             disabled={isSpinning}
             className="spinButton">
-            {isSpinning ? "Spinning..." : "Spin"}
+            {isSpinning ? "Spinning..." : "Tryk for at spinne!"}
          </button>
-         {result && <p className="result">Result: {result}</p>}
+
+         <p onClick={spinWheel} id="pop_1" className="box_header">
+            <br />
+         </p>
+
+         {popUp && (
+            <div className="wheel_result">
+               <p>{result}</p>
+               <button onClick={() => setPopUp(false)}>Close</button>
+            </div>
+         )}
       </div>
    );
 }
