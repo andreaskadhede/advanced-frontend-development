@@ -12,11 +12,11 @@ export default function Filter() {
         console.log("clicked");
       }}
       style={{
-        top: filterActive ? "50%" : "-16%",
-        right: filterActive ? "50%" : "24px",
+        top: filterActive ? "50%" : "-21.55%",
+        right: filterActive ? "50%" : "1.5rem",
         transform: filterActive
-          ? "scale(1) translate(50%, -50%)"
-          : "scale(0.5) translate(0%, 0%)",
+          ? "scale(1) translate(50%, -50%"
+          : "scale(0.58) translate(0)",
         transformOrigin: filterActive ? "top right" : "top right",
       }}
     >
@@ -28,7 +28,7 @@ export default function Filter() {
           height={400}
           style={{ height: "32px" }}
         />
-        <p className="fontcolorblack fontweightmedium fontsize24">Filrering</p>
+        <p className="fontcolorblack fontweightmedium fontsize24">Filtrering</p>
         <div
           style={{
             display: "flex",
@@ -205,7 +205,7 @@ export default function Filter() {
           height={400}
           style={{ height: "32px", opacity: "0" }}
         />
-        <p className="fontcolorblack fontweightmedium fontsize24">Filrering</p>
+        <p className="fontcolorblack fontweightmedium fontsize24">Filtrering</p>
         <Image
           src="/icons/heart.svg"
           alt="heart icon"

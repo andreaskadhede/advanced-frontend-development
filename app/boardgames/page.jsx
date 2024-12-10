@@ -35,33 +35,30 @@ export default function Boardgames() {
 
   return (
     <main>
-      <div className="games">
-        <div className="search_and_filter">
-          <div className="search">
-            <Image
-              src="/icons/search.svg"
-              alt="search icon"
-              width={400}
-              height={400}
-              className="card_icon"
-            />
-            <input
-              placeholder="Søg..."
-              className="card_input"
-              value={searchQuery}
-              onChange={handleSearchChange} // Handle input change
-            />
-            <Image
-              src="/icons/spades.svg"
-              alt="spades icon"
-              width={400}
-              height={400}
-              className="card_icon"
-            />
-          </div>
-
-          <Filter />
+      <div className="inner_bookshelf">
+        <div className="search">
+          <Image
+            src="/icons/search.svg"
+            alt="search icon"
+            width={400}
+            height={400}
+            className="card_icon"
+          />
+          <input
+            placeholder="Søg..."
+            className="card_input"
+            value={searchQuery}
+            onChange={handleSearchChange} // Handle input change
+          />
+          <Image
+            src="/icons/spades.svg"
+            alt="spades icon"
+            width={400}
+            height={400}
+            className="card_icon"
+          />
         </div>
+        <Filter />
         {/* Render filtered boardgames */}
         {filteredBoardgames.length > 0 ? (
           filteredBoardgames.map((boardgame) => (
