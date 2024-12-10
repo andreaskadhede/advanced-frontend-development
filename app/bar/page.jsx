@@ -20,7 +20,7 @@ export default function Boardgames() {
   useEffect(() => {
     const fetchBarItems = async () => {
       const response = await fetch(
-        "http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/item?acf_format=standard&orderby=date&order=asc&per_page=50"
+        "https://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/item?acf_format=standard&orderby=date&order=asc&per_page=50"
       );
       const data = await response.json();
       setBarItems(data); // Set the fetched barItems to state

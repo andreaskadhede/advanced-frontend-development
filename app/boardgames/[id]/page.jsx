@@ -5,7 +5,7 @@ export default async function BoardgameDetailPage({ params }) {
   const { id } = await params;
   //Database for enkelt spil
   const response = await fetch(
-    `http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame/${id}?acf_format=standard&orderby=date&order=asc`
+    `https://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame/${id}?acf_format=standard&orderby=date&order=asc`
   );
   const boardgame = await response.json();
   console.log(boardgame);

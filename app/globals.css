@@ -175,7 +175,7 @@ header {
 nav {
    background-color: var(--darkBrown);
    position: fixed;
-   bottom: 0;
+   bottom: -2px;
    left: 0;
    width: 100%;
 }

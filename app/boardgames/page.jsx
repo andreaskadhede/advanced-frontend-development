@@ -15,7 +15,7 @@ export default function Boardgames() {
   useEffect(() => {
     const fetchBoardgames = async () => {
       const response = await fetch(
-        "http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=15"
+        "https://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=15"
       );
       const data = await response.json();
       setBoardgames(data); // Set the fetched boardgames to state

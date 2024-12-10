@@ -4,7 +4,7 @@ import Boardgame from "./components/Boardgame";
 export default async function Home() {
   // Database over alle spil
   const response = await fetch(
-    "http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=15"
+    "https://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=15"
   );
   const boardgames = await response.json();
   console.log(boardgames);
