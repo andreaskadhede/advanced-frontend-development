@@ -41,19 +41,19 @@ export default function Boardgames() {
   // Categories (corresponding to <p> text)
   const categories = [
     "Varme drikke",
-    "Fadøl, Øl & Cider",
+    "Fadøl, øl og cider",
     "Alkoholiske drikke",
     "Kolde drikke",
-    "Snacks & slik",
+    "Snacks og slik",
   ];
 
   // Color mapping for categories
   const categoryColors = {
     "Varme drikke": "var(--black)",
-    "Fadøl, Øl & Cider": "var(--darkGreen)",
+    "Fadøl, øl og cider": "var(--darkGreen)",
     "Alkoholiske drikke": "var(--purple)",
     "Kolde drikke": "var(--blue)",
-    "Snacks & slik": "var(--red)",
+    "Snacks og slik": "var(--red)",
   };
 
   // Toggle the open/closed state for a specific category
@@ -66,41 +66,44 @@ export default function Boardgames() {
 
   return (
     <main>
-      {categories.map((category) => (
-        <div className="bar_dropdown" key={category}>
-          <div
-            className="bar_overskrifter"
-            onClick={() => toggleCategory(category)} // Toggle visibility on click
-          >
-            <p>{category}</p>
-            <Image
-              src="/icons/arrow_right.svg"
-              height={100}
-              width={100}
-              alt={category}
-              style={{
-                transition: "all 0.3s ease-in-out",
-                rotate: openCategories[category] ? "90deg" : "0deg",
-              }}
-            />
-          </div>
-          <div
-            className={`bar_items ${openCategories[category] ? "" : "lukket"}`} // Apply "lukket" class based on state
-          >
-            {/* Render filtered items for the current category */}
-            {filterBarItemsByCategory(category).map((barItem) => (
-              <BarItem
-                key={barItem.id}
-                barItem={barItem}
-                categoryColors={categoryColors}
-                category={category}
+      <div className="bar">
+        {categories.map((category) => (
+          <div className="bar_dropdown" key={category}>
+            <div
+              className="bar_overskrifter"
+              onClick={() => toggleCategory(category)} // Toggle visibility on click
+            >
+              <p>{category}</p>
+              <Image
+                src="/icons/arrow_right.svg"
+                height={100}
+                width={100}
+                alt={category}
+                style={{
+                  transition: "all 0.3s ease-in-out",
+                  rotate: openCategories[category] ? "90deg" : "0deg",
+                }}
               />
-            ))}
+            </div>
+            <div
+              className={`bar_items ${
+                openCategories[category] ? "" : "lukket"
+              }`} // Apply "lukket" class based on state
+            >
+              {/* Render filtered items for the current category */}
+              {filterBarItemsByCategory(category).map((barItem) => (
+                <BarItem
+                  key={barItem.id}
+                  barItem={barItem}
+                  categoryColors={categoryColors}
+                  category={category}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-
+        ))}
       <Bestilling />
+      </div>
     </main>
   );
 }

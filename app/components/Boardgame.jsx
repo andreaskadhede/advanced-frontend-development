@@ -23,33 +23,68 @@ export default function Boardgame({ boardgame }) {
           <div className="game_info">
             <div>
               <Image
-                src="/icons/person_white.svg"
-                alt="askdn"
+                src={
+                  boardgame.acf.info_color === "hvid"
+                    ? "/icons/person_white.svg"
+                    : "/icons/person_black.svg"
+                }
+                alt="Antal personer"
                 width={400}
                 height={400}
                 className="nav_icons"
               />
-              <p>{boardgame.acf.players}</p>
+              <p
+                style={{
+                  color:
+                    boardgame.acf.info_color === "hvid"
+                      ? "var(--white)"
+                      : "var(--black)",
+                }}
+              >
+                {boardgame.acf.players}
+              </p>
             </div>
             <div>
               <Image
-                src="/icons/time_white.svg"
-                alt="askdn"
+                src={
+                  boardgame.acf.info_color === "hvid"
+                    ? "/icons/time_white.svg"
+                    : "/icons/time_black.svg"
+                }
+                alt="Estimeret spilletid"
                 width={400}
                 height={400}
                 className="nav_icons"
               />
-              <p>{`${boardgame.acf.time} min`}</p>
+              <p
+                style={{
+                  color:
+                    boardgame.acf.info_color === "hvid"
+                      ? "var(--white)"
+                      : "var(--black)",
+                }}
+              >{`${boardgame.acf.time} min`}</p>
             </div>
             <div>
               <Image
-                src="/icons/age_white.svg"
-                alt="askdn"
+                src={
+                  boardgame.acf.info_color === "hvid"
+                    ? "/icons/age_white.svg"
+                    : "/icons/age_black.svg"
+                }
+                alt="Anbefalet aldersgrænse"
                 width={400}
                 height={400}
                 className="nav_icons"
               />
-              <p>{`${boardgame.acf.age}+`}</p>
+              <p
+                style={{
+                  color:
+                    boardgame.acf.info_color === "hvid"
+                      ? "var(--white)"
+                      : "var(--black)",
+                }}
+              >{`${boardgame.acf.age}+`}</p>
             </div>
           </div>
         </div>

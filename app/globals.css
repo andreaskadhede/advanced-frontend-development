@@ -43,8 +43,9 @@
    /* 32px */
 
    /* Margin for main (header heigth and nav height */
+   /* -2px because nav is positioned 2px below viewport bottom */
    --marginTop: 99px;
-   --marginBottom: 113.5px;
+   --marginBottom: calc(113.5px - 2px);
 }
 
 /* Font classes */
@@ -248,8 +249,7 @@ main.home {
    width: 80%;
 }
 
-#pop_2 {
-}
+#pop_2 {}
 
 #pop_3 {
    width: 70%;
@@ -484,11 +484,11 @@ main.home {
 
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
 
-.boardgame_info > *:not(:last-child) {
+.boardgame_info>*:not(:last-child) {
    margin-bottom: 2rem;
 }
 
-.boardgame_info article > *:not(:last-child) {
+.boardgame_info article>*:not(:last-child) {
    padding-bottom: 1rem;
 }
 
@@ -497,12 +497,12 @@ main.home {
    justify-content: space-between;
 }
 
-.boardgame_info .icons > div {
+.boardgame_info .icons>div {
    display: flex;
    gap: 0.5rem;
 }
 
-.boardgame_info .icons > div > img {
+.boardgame_info .icons>div>img {
    width: 1.5rem;
 }
 
@@ -528,7 +528,7 @@ main.home {
    padding: 2rem 0 1rem;
 }
 
-.boardgame_info .carousel .breadcrumbs > div {
+.boardgame_info .carousel .breadcrumbs>div {
    background-color: var(--white);
    border-radius: 999px;
    height: 1rem;
@@ -551,9 +551,7 @@ main.home {
 
 .inspiration_background {
    object-fit: cover;
-   height: calc(
-      100dvh - 16px - 16px - var(--marginBottom) - var(--marginTop) - 2px
-   );
+   height: calc(100dvh - 16px - 16px - var(--marginBottom) - var(--marginTop) - 2px);
    width: 100%;
    object-position: 50% 50%;
    overflow: hidden;
@@ -564,9 +562,7 @@ main.home {
 .inspiration_grid {
    /* background-color: red; */
    width: 343px;
-   height: calc(
-      100dvh - 16px - 16px - var(--marginBottom) - var(--marginTop) - 2px
-   );
+   height: calc(100dvh - 16px - 16px - var(--marginBottom) - var(--marginTop) - 2px);
    position: absolute;
    margin: auto;
    display: grid;
@@ -800,6 +796,11 @@ main.home {
 
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
 
+.bar {
+   background-color: var(--darkBrown);
+   min-height: calc(100dvh - var(--marginTop) - var(--marginBottom));
+}
+
 .muligheder {
    display: flex;
    align-items: center;
@@ -824,7 +825,7 @@ main.home {
    display: flex;
    flex-direction: column;
    gap: 0.5rem;
-   padding: 10px 10px;
+   padding: .5rem;
 }
 
 .bar_overskrifter {
@@ -840,14 +841,14 @@ main.home {
    flex-direction: column;
    gap: 0.5rem;
    background-color: var(--darkBrown);
-   padding: 10px 10px;
+   padding: .5rem;
    height: fit-content;
    overflow: hidden;
    transition: all 0.3s ease-in-out;
 }
 
 .lukket {
-   padding: 10px 10px 0px 10px;
+   padding: .5rem .5rem 0px .5rem;
    height: 3px;
    transition: all 0.3s ease-in-out;
 }
@@ -855,16 +856,16 @@ main.home {
 .bestilling {
    background-color: var(--white);
    width: 264px;
-   border-radius: 6px;
+   border-radius: 10px;
    display: flex;
    flex-direction: column;
    gap: 1.5rem;
    justify-content: space-between;
    align-items: center;
    position: fixed;
-   top: 682px;
+   bottom: 2px;
    /*viewport heigth-nav heigth-den øverste del af kortet*/
-   right: 26px;
+   right: 1.5rem;
    padding: 1rem;
    transition: all 1s ease-in-out;
 }
