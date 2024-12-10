@@ -1,20 +1,22 @@
 import Image from "next/image";
+import Boardgame from "./components/Boardgame";
 
 export default async function Home() {
-  //Database over alle spil
+  // Database over alle spil
   const response = await fetch(
     "http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=15"
   );
   const boardgames = await response.json();
   console.log(boardgames);
+
   return (
     <main className="home">
       <section className="shelf top">
         <h2 className="box_header">Populære spil</h2>
-        <div id="pop_1" className="box_header"></div>
-        <div id="pop_2" className="box_header"></div>
-        <div id="pop_3" className="box_header"></div>
-        <div id="pop_4" className="box_header"></div>
+        <Boardgame id="pop_1" boardgame={boardgames[3]} />
+        <Boardgame id="pop_2" boardgame={boardgames[7]} />
+        <Boardgame id="pop_3" boardgame={boardgames[12]} />
+        <Boardgame id="pop_4" boardgame={boardgames[0]} />
       </section>
       <div className="double_shelf mid">
         <section className="shelf mid left">
@@ -39,8 +41,8 @@ export default async function Home() {
       <div className="double_shelf bottom">
         <section className="shelf bottom left">
           <h4 className="box_header">Skjulte perler</h4>
-          <div id="per_1" className="box_header"></div>
-          <div id="per_2" className="box_header"></div>
+          <Boardgame id="per_1" boardgame={boardgames[2]} />
+          <Boardgame id="per_2" boardgame={boardgames[4]} />
         </section>
         <section className="shelf bottom right">
           <Image

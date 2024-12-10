@@ -245,21 +245,18 @@ main.home {
 }
 
 #pop_1 {
-   background-color: midnightblue;
+   height: 44px;
    width: 80%;
 }
 
 #pop_2 {
-   background-color: coral;
 }
 
 #pop_3 {
-   background-color: darkred;
    width: 70%;
 }
 
 #pop_4 {
-   background-color: green;
    width: 80%;
 }
 
