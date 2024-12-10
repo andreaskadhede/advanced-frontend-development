@@ -1,9 +1,24 @@
 import Image from "next/image";
+import { useState } from "react"; // Import useState and useEffect for managing state and side effects
 // import styles from "./page.module.css";
 
 export default function Bestilling() {
+  const [bestillingActive, setBestillingActive] = useState(false); // State to hold the barItems
   return (
-    <div className="bestilling centrum">
+    <div
+      className="bestilling"
+      onClick={() => {
+        setBestillingActive(!bestillingActive);
+        console.log("clicked");
+      }}
+      style={{
+        top: bestillingActive ? "50%" : "80%",
+        right: bestillingActive ? "50%" : "26px",
+        transform: bestillingActive
+          ? "translate(50%, -50%)"
+          : "translate(0%, 0%)",
+      }}
+    >
       <div className="bestilling_flex_row">
         <Image
           src="/icons/heart.svg"
@@ -14,11 +29,11 @@ export default function Bestilling() {
         />
         <p className="fontcolorblack fontweightmedium fontsize24">Bestilling</p>
         <Image
-          src="/icons/heart.svg"
-          alt="heart icon"
+          src="/icons/close_btn.svg"
+          alt="person icon"
           width={400}
           height={400}
-          style={{ height: "32px" }}
+          style={{ height: "1rem" }}
         />
       </div>
 
@@ -65,7 +80,7 @@ export default function Bestilling() {
           alt="heart icon"
           width={400}
           height={400}
-          style={{ height: "32px" }}
+          style={{ height: "32px", opacity: "0" }}
         />
         <p className="fontcolorblack fontweightmedium fontsize24">Bestilling</p>
         <Image

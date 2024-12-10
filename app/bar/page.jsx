@@ -6,6 +6,7 @@ import Bestilling from "../components/Bestilling";
 import Image from "next/image";
 
 export default function Boardgames() {
+  // const [bestilling, setBestilling] = useState({}); // State to hold your order
   const [barItems, setBarItems] = useState([]); // State to hold the barItems
   const [openCategories, setOpenCategories] = useState({
     "Varme drikke": false,

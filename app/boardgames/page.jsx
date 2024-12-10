@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Boardgame from "../components/Boardgame";
+import Filter from "../components/Filter";
 // import styles from "./page.module.css";
 
 export default function Boardgames() {
@@ -59,16 +60,7 @@ export default function Boardgames() {
             />
           </div>
 
-          <div className="filter">
-            <p>Filtrering</p>
-            <Image
-              src="/icons/heart.svg"
-              alt="heart icon"
-              width={400}
-              height={400}
-              className="card_icon"
-            />
-          </div>
+          <Filter />
         </div>
         {/* Render filtered boardgames */}
         {filteredBoardgames.length > 0 ? (

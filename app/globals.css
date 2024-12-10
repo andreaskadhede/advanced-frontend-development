@@ -152,6 +152,7 @@ header {
   position: fixed;
   left: 0px;
   top: 0px;
+  z-index: 999;
 }
 
 .logo {
@@ -382,20 +383,39 @@ main.home {
 }
 
 .filter {
-  height: 40px;
   background-color: var(--white);
-  width: 155px;
-  border-radius: 0 0 6px 6px;
+  width: 264px;
+  border-radius: 6px;
   display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0.5rem;
+  position: fixed;
+  padding: 1.5rem;
+  transition: all 1s ease-in-out;
 }
 
-.filter p {
-  height: fit-content;
-  font-size: var(--fontsizeS);
-  color: var(--black);
+.filter_flex_row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+.space {
+  justify-content: space-between;
+}
+
+.filter_button {
+  background-color: var(--red);
+  border: none;
+  width: 65px;
+  height: 25px;
+}
+
+.filter_kategori_button {
+  width: 106px;
 }
 
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
@@ -617,97 +637,97 @@ main.home {
 }
 
 .wheel_low {
-   width: 100%;
+  width: 100%;
 }
 
 .wheelContainer {
-   width: 100%;
-   height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .wheel {
-   position: absolute;
-   top: 7px;
-   width: 320px;
-   height: 320px;
-   border-radius: 50%;
-   transition: transform 5s ease-out;
+  position: absolute;
+  top: 7px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  transition: transform 5s ease-out;
 }
 
 .pointer {
-   position: absolute;
-   top: 0px;
-   left: 46.225%;
-   stroke-width: 0px;
-   width: 0px;
-   height: 0px;
-   border-style: solid;
-   border-width: 42px 12px 0 12px;
-   border-color: #815230 transparent transparent transparent;
-   transform: rotate(0deg);
+  position: absolute;
+  top: 0px;
+  left: 46.225%;
+  stroke-width: 0px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 42px 12px 0 12px;
+  border-color: #815230 transparent transparent transparent;
+  transform: rotate(0deg);
 }
 
 .spinButton {
-   margin-top: 20px;
-   padding: 10px 20px;
-   background: #0070f3;
-   color: white;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 16px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .spinButton:disabled {
-   background: gray;
-   cursor: not-allowed;
+  background: gray;
+  cursor: not-allowed;
 }
 
 .result {
-   margin-top: 20px;
-   font-size: 18px;
-   font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .wheel_animation {
-   position: relative;
-   width: 320px;
+  position: relative;
+  width: 320px;
 }
 
 .cls-1 {
-   fill: #4d301c;
+  fill: #4d301c;
 }
 
 .cls-2 {
-   fill: var(--lightGreen);
+  fill: var(--lightGreen);
 }
 
 .cls-3 {
-   fill: var(--purple);
+  fill: var(--purple);
 }
 
 .cls-4 {
-   fill: var(--blue);
+  fill: var(--blue);
 }
 
 .cls-5 {
-   fill: var(--turquoise);
+  fill: var(--turquoise);
 }
 
 .cls-6 {
-   fill: var(--darkGreen);
+  fill: var(--darkGreen);
 }
 
 .cls-7 {
-   fill: var(--magenta);
+  fill: var(--magenta);
 }
 
 .cls-8 {
-   fill: var(--red);
+  fill: var(--red);
 }
 
 .cls-9 {
-   fill: var(--yellow);
+  fill: var(--yellow);
 }
 
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
@@ -715,6 +735,7 @@ main.home {
 .muligheder {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .muligheder button {
@@ -776,12 +797,7 @@ main.home {
   top: 682px; /*viewport heigth-nav heigth-den øverste del af kortet*/
   right: 26px;
   padding: 1rem;
-}
-
-.centrum {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transition: all 1s ease-in-out;
 }
 
 /*Bestilling component*/
