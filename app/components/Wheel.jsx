@@ -1,25 +1,39 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Wheel() {
    const [isSpinning, setIsSpinning] = useState(false);
    const [result, setResult] = useState("");
+   const [popUp, setPopUp] = useState(false);
+   const [segments, setSegments] = useState([]); // State to store fetched segments
 
-   const segments = [
-      "Partners",
-      "Sequence",
-      "Det dårlige selskab",
-      "Ticket to Ride",
-      "Unlocked",
-      "Hint",
-      "Prize 7",
-      "Prize 8",
-   ];
+   useEffect(() => {
+      const fetchResult = async () => {
+         const response = await fetch(
+            "http://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=50"
+         );
+         const boardgames = await response.json();
+
+         const newSegments = boardgames.map((game) => ({
+            name: game.acf?.name || game.title?.rendered || "Unknown",
+            placement: game.acf?.placement || "No description available",
+            cover: game.acf?.cover || null,
+            id: game.id || "Unknown ID",
+         }));
+
+         setSegments(newSegments); // Set the fetched segments
+      };
+      fetchResult();
+   }, []);
 
    const spinWheel = () => {
-      if (isSpinning) return; // Prevent multiple spins
+      if (isSpinning || segments.length === 0) return; // Prevent multiple spins and check if segments exist
+      const extraRotation = 11.25;
 
       const randomSegment = Math.floor(Math.random() * segments.length);
-      const rotation = 360 * 5 + (360 / segments.length) * randomSegment;
+      const rotation =
+         360 * 3 + (360 / segments.length) * randomSegment + extraRotation;
 
       setIsSpinning(true);
       setResult("");
@@ -30,11 +44,20 @@ export default function Wheel() {
       setTimeout(() => {
          setIsSpinning(false);
          setResult(segments[randomSegment]);
+         setPopUp(true); // Show popup with result
       }, 5000); // Match animation duration
    };
 
    return (
       <div className="container">
+         <Image
+            onClick={spinWheel}
+            className="wheel_low"
+            src="/img/wheel_legs_low.svg"
+            height={400}
+            width={400}
+            alt="Lykkehjul"
+         />
          <div className="wheelContainer">
             <div id="wheel" className="wheel">
                <svg
@@ -121,12 +144,64 @@ export default function Wheel() {
             <div className="pointer" />
          </div>
          <button
+            id="pop_1"
             onClick={spinWheel}
             disabled={isSpinning}
             className="spinButton">
-            {isSpinning ? "Spinning..." : "Spin"}
+            {isSpinning ? "Spinning..." : "Tryk for at spinne!"}
          </button>
-         {result && <p className="result">Result: {result}</p>}
+
+         <p onClick={spinWheel} id="pop_1" className="box_header">
+            <br />
+         </p>
+
+         {popUp && (
+            <div className="card">
+               <div className="card_top">
+                  <div className="width2rem">
+                     <Image
+                        src="/icons/heart.svg"
+                        alt="heart icon"
+                        width={400}
+                        height={400}
+                        className="card_icon"
+                     />
+                  </div>
+                  <h2>TILLYKKE</h2>
+                  <div className="width2rem">
+                     <button onClick={() => setPopUp(false)}>Close</button>
+                  </div>
+               </div>
+               <div className="card_middle">
+                  <p className="fontsize16">Vi foreslår dig at spille </p>
+                  <Image
+                     src={result.cover}
+                     height={400}
+                     width={400}
+                     alt={result.name}
+                  />
+                  <p className="fontsize16">
+                     Find spillet på {result.placement}
+                  </p>
+                  <Link href={`/boardgames/${result.id}`}>
+                     Læs mere om spillet
+                  </Link>
+               </div>
+               <div className="card_bottom">
+                  <div className="width2rem"></div>
+                  <h2>TILLYKKE</h2>
+                  <div className="width2rem">
+                     <Image
+                        src="/icons/heart.svg"
+                        alt="heart icon"
+                        width={400}
+                        height={400}
+                        className="card_icon"
+                     />
+                  </div>
+               </div>
+            </div>
+         )}
       </div>
    );
 }

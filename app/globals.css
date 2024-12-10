@@ -51,36 +51,47 @@
 .fontsize8 {
   font-size: var(--fontsizeXXS);
 }
+
 .fontsize12 {
   font-size: var(--fontsizeXS);
 }
+
 .fontsize14 {
   font-size: var(--fontsizeS);
 }
+
 .fontsize16 {
   font-size: var(--fontsizeM);
 }
+
 .fontsize20 {
   font-size: var(--fontsizeL);
 }
+
 .fontsize24 {
   font-size: var(--fontsizeXL);
 }
+
 .fontsize32 {
   font-size: var(--fontsizeXXL);
 }
+
 .fontweightregular {
   font-weight: var(--regular);
 }
+
 .fontweightmedium {
   font-weight: var(--medium);
 }
+
 .fontweightsemibold {
   font-weight: var(--semiBold);
 }
+
 .fontcolorwhite {
   color: var(--white);
 }
+
 .fontcolorblack {
   color: var(--black);
 }
@@ -420,6 +431,64 @@ main.home {
 
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
 
+.games {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--darkBrown);
+  padding: 0 0.5rem;
+}
+
+.boardgame {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game_lid {
+  align-items: center;
+  /* background-color: var(--blue); */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.game_box {
+  background-color: var(--black);
+  width: 95%;
+  height: 0.25rem;
+}
+
+.boardgame_image {
+  height: 50px;
+  max-width: 75%;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.game_info {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 0.25rem;
+}
+
+.game_info div {
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
+  /* height: fit-content; */
+}
+
+.game_info div img {
+  height: 10px;
+  width: 10px;
+}
+
+.game_info div p {
+  font-size: var(--fontsizeXXS);
+}
+
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
 
 .boardgame_info > *:not(:last-child) {
@@ -453,6 +522,11 @@ main.home {
   padding-top: 2rem;
 }
 
+.boardgame_info .carousel img {
+  max-height: 30dvh;
+  width: 90%;
+}
+
 .boardgame_info .carousel .breadcrumbs {
   align-items: center;
   display: flex;
@@ -471,67 +545,6 @@ main.home {
 .boardgame_info .suggestions .games {
   gap: 0;
   padding-top: 1rem;
-}
-
-/* --- boardgame ---------------------------------------------------------------------------------------------------- */
-
-.games {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  background-color: var(--darkBrown);
-  padding: 0 0.5rem;
-}
-
-.boardgame {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.game_lid {
-  background-color: var(--blue);
-  display: flex;
-  width: 100%;
-  height: 60px;
-  justify-content: space-between;
-  padding-right: 0.5rem;
-  align-items: center;
-}
-
-.game_box {
-  background-color: var(--black);
-  width: 95%;
-  height: 0.25rem;
-}
-
-.boardgame_image {
-  height: 100%;
-  width: 75%;
-  object-fit: cover;
-}
-
-.game_info {
-  display: flex;
-  flex-direction: column;
-  width: 60px;
-  gap: 0.25rem;
-}
-
-.game_info div {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  height: fit-content;
-}
-
-.game_info div img {
-  width: 10px;
-  height: 10px;
-}
-
-.game_info div p {
-  font-size: var(--fontsizeXXS);
 }
 
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
@@ -605,7 +618,7 @@ main.home {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   padding-top: 2.5rem;
 }
 
@@ -614,6 +627,13 @@ main.home {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+.wheel_no_animation {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .inspo_bottom {
@@ -628,16 +648,20 @@ main.home {
 }
 
 .minigame section p {
-  font-size: var(--fontsizeL);
-  width: 15rem;
-}
-
-.minigame div p {
-  font-size: var(--fontsizeXL);
+  width: 17rem;
 }
 
 .wheel_low {
-  width: 100%;
+  width: 90%;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .wheelContainer {
@@ -668,7 +692,6 @@ main.home {
 }
 
 .spinButton {
-  margin-top: 20px;
   padding: 10px 20px;
   background: #0070f3;
   color: white;
@@ -692,6 +715,11 @@ main.home {
 .wheel_animation {
   position: relative;
   width: 320px;
+  justify-self: flex-end;
+}
+
+.wheel_animation .wheel_low {
+  width: 100%;
 }
 
 .cls-1 {
@@ -728,6 +756,53 @@ main.home {
 
 .cls-9 {
   fill: var(--yellow);
+}
+
+/* --- card --------------------------------------------------------------------------------------------------------- */
+
+.card {
+  background-color: var(--white);
+  width: 264px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  padding: 1rem;
+}
+
+.card_top,
+.card_bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card p,
+.card a,
+.card_top h2,
+.card_bottom h2 {
+  color: var(--black);
+}
+
+.width2rem {
+  width: 2rem;
+}
+
+.width2rem img {
+  width: 100%;
+}
+
+.card_middle {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card_middle img {
+  width: 100%;
 }
 
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
@@ -817,6 +892,7 @@ main.home {
   background-color: var(--darkBrown);
   padding: 6px 8px;
 }
+
 .bestilling_plus_minus button {
   display: flex;
   align-items: center;
