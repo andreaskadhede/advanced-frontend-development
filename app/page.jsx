@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Boardgame from "./components/Boardgame";
-import Link from "next/link";
 import Button from "./components/Button";
 
 export default async function Home() {
@@ -54,14 +53,11 @@ export default async function Home() {
       <div className="double_shelf bottom">
         <section className="shelf bottom left">
           {/* indsæt link til skjulte perler: */}
-          <Link href="#">
-            <article className="boardgame">
-              <div className="game_lid">
-                <h4>Skjulte perler</h4>
-              </div>
-              <div className="game_box"></div>
-            </article>
-          </Link>
+          <Button
+            destination="/boardgames/#"
+            text="Skjulte perler"
+            fontSize="var(--fontsizeM)"
+          />
           <Boardgame boardgame={boardgames[2]} />
           <Boardgame boardgame={boardgames[4]} />
         </section>
@@ -73,14 +69,12 @@ export default async function Home() {
             unoptimized
             alt="Lykkehjul"
           />
-          <Link href="/inspiration">
-            <article className="boardgame">
-              <div className="game_lid">
-                <h4>Inspiration</h4>
-              </div>
-              <div className="game_box"></div>
-            </article>
-          </Link>
+          <Button
+            destination="/inspiration"
+            text="Inspiration"
+            fillColor="var(--blue)"
+            fontSize="var(--fontsizeM)"
+          />
         </section>
       </div>
     </main>

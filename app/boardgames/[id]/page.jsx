@@ -12,7 +12,8 @@ export default async function BoardgameDetailPage({ params }) {
 
   return (
     <main className="single_boardgame">
-      <Button />
+      {/* opdatér link til at navigere ét step tilbage i stedet */}
+      <Button destination="/boardgames" />
       <section className="boardgame_info">
         <article className="intro">
           <h1>{boardgame.acf.name}</h1>
@@ -58,11 +59,23 @@ export default async function BoardgameDetailPage({ params }) {
         </article>
         <div className="carousel">
           <Image
+            src={boardgame.acf.images.front}
+            height={400}
+            width={400}
+            alt={boardgame.acf.name}
+          />
+          {/* <Image
             src={boardgame.acf.images.opened}
             height={400}
             width={400}
-            alt="placeholder image"
+            alt={boardgame.acf.name}
           />
+          <Image
+            src={boardgame.acf.images.back}
+            height={400}
+            width={400}
+            alt={boardgame.acf.name}
+          /> */}
           <div className="breadcrumbs">
             <div></div>
             <div></div>

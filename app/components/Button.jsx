@@ -4,7 +4,7 @@ export default function Button({
   destination = "#",
   fillColor = "var(--red)",
   text = "Tilbage",
-  fontSize = "var(--fontsizeS)",
+  fontSize = "var(--fontsizeXS)",
   fontColor = "var(--white)",
 }) {
   return (
