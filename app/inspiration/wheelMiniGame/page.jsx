@@ -1,4 +1,5 @@
 "use client";
+import Button from "@/app/components/Button";
 import Wheel from "@/app/components/Wheel";
 import Image from "next/image";
 import { useState } from "react";
@@ -39,13 +40,11 @@ export default function WheelMiniGame() {
                         </div>
                         <div className="game_box"></div>
                      </div>
-
-                     <div className="boardgame">
-                        <div className="game_lid">
-                           <br />
-                        </div>
-                        <div className="game_box"></div>
-                     </div>
+                     <Button
+                        disabled
+                        fillColor="var(--blue)"
+                        fontColor="var(--blue)"
+                     />
                   </div>
                </div>
             )}

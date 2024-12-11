@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react"; // Import useState and useEffect for managing state and side effects
+import Button from "./Button";
 // import styles from "./page.module.css";
 
 export default function CardGame({ result, resetWheel }) {
@@ -30,22 +31,20 @@ export default function CardGame({ result, resetWheel }) {
          </div>
 
          <div className="card_middle">
-            <p className="fontsize16">Vi foreslår dig at spille </p>
+            <p>Vi foreslår dig at spille </p>
             <Image
                src={result.cover}
                height={400}
                width={400}
                alt={result.name}
             />
-            <p className="fontsize16">Find spillet på {result.placement}</p>
-            <div className="boardgame">
-               <div className="game_lid">
-                  <Link href={`/boardgames/${result.id}`}>
-                     Læs mere om spillet
-                  </Link>
-               </div>
-               <div className="game_box"></div>
-            </div>
+            <p>Find spillet på {result.placement}</p>
+            <Button
+               destination={`/boardgames/${result.id}`}
+               text="Læs mere om spillet"
+               fillColor="var(--darkGreen)"
+               fontSize="var(--fontsizeM)"
+            />
          </div>
 
          <div className="card_bottom">

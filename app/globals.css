@@ -685,12 +685,6 @@ main.home {
    justify-content: space-between;
 }
 
-.wheel_no_animation .boardgame,
-.container .boardgame {
-   background-color: var(--darkGreen);
-   width: 75%;
-}
-
 .wheel_no_animation .game_lid,
 .container .game_lid {
    height: 45px;

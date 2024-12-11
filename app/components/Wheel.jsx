@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import CardGame from "./CardGame";
+import Button from "./Button";
 
 export default function Wheel() {
    const [isSpinning, setIsSpinning] = useState(false);
@@ -160,12 +161,7 @@ export default function Wheel() {
             <div className="game_box"></div>
          </div>
 
-         <div className="boardgame">
-            <div className="game_lid">
-               <br />
-            </div>
-            <div className="game_box"></div>
-         </div>
+         <Button disabled fillColor="var(--blue)" fontColor="var(--blue)" />
 
          {/* Popup window with suggested game */}
          {popUp && <CardGame result={result} resetWheel={resetWheel} />}
