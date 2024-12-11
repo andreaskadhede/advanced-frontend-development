@@ -223,8 +223,7 @@ main.home {
    display: flex;
 }
 
-.shelf h2,
-.shelf h4 {
+.shelf p {
    font-weight: var(--semiBold);
    text-align: center;
    text-transform: uppercase;
@@ -239,8 +238,7 @@ main.home {
    justify-content: flex-end;
 }
 
-.shelf.top .game_lid h2 {
-   background-color: var(--darkGreen);
+.shelf.top .button p {
    padding-block: 0.125rem;
    width: 100%;
 }
@@ -330,30 +328,27 @@ main.home {
 .shelf.mid.right {
    justify-content: flex-start;
    padding: 0.25rem 0 0 0.25rem;
+
+   /* header */
+   .button {
+      height: 100%;
+   }
+
+   .boardgame {
+      align-items: stretch;
+      flex-direction: row;
+      height: 100%;
+   }
+
+   .game_lid p {
+      letter-spacing: -0.25rem;
+      text-orientation: upright;
+      writing-mode: vertical-lr;
+   }
 }
 
-/* header */
-.shelf.mid.right a {
-   height: 100%;
-}
 
-.shelf.mid.right .boardgame {
-   align-items: stretch;
-   flex-direction: row;
-   height: 100%;
-}
-
-.shelf.mid.right .game_lid {
-   background-color: var(--purple);
-}
-
-.shelf.mid.right .game_lid h4 {
-   letter-spacing: -0.25rem;
-   text-orientation: upright;
-   writing-mode: vertical-lr;
-}
-
-.shelf.mid.right .game_box {
+.shelf.mid.right .shelf.mid.right .game_box {
    align-self: center;
    height: 95%;
    width: 0.15rem;
@@ -619,11 +614,11 @@ main.home {
 
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
 
-.boardgame_info > *:not(:last-child) {
+.boardgame_info>*:not(:last-child) {
    margin-bottom: 2rem;
 }
 
-.boardgame_info article > *:not(:last-child) {
+.boardgame_info article>*:not(:last-child) {
    padding-bottom: 1rem;
 }
 
@@ -632,12 +627,12 @@ main.home {
    justify-content: space-between;
 }
 
-.boardgame_info .icons > div {
+.boardgame_info .icons>div {
    display: flex;
    gap: 0.5rem;
 }
 
-.boardgame_info .icons > div > img {
+.boardgame_info .icons>div>img {
    width: 1.5rem;
 }
 
@@ -663,7 +658,7 @@ main.home {
    padding: 2rem 0 1rem;
 }
 
-.boardgame_info .carousel .breadcrumbs > div {
+.boardgame_info .carousel .breadcrumbs>div {
    background-color: var(--white);
    border-radius: 999px;
    height: 1rem;
@@ -886,6 +881,7 @@ main.home {
    -moz-box-shadow: 0px 0px 40px 16px var(--yellow);
    box-shadow: 0px 0px 40px 16px var(--yellow);
 }
+
 /* --- card --------------------------------------------------------------------------------------------------------- */
 
 .card {

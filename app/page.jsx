@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Boardgame from "./components/Boardgame";
 import Link from "next/link";
+import Button from "./components/Button";
 
 export default async function Home() {
   // Database over alle spil
@@ -14,14 +15,12 @@ export default async function Home() {
     <main className="home">
       <section className="shelf top">
         {/* indsæt link til populære spil: */}
-        <Link href="#">
-          <article className="boardgame">
-            <div className="game_lid">
-              <h2>Populære spil</h2>
-            </div>
-            <div className="game_box"></div>
-          </article>
-        </Link>
+        <Button
+          destination="/boardgames/#"
+          fillColor="var(--darkGreen)"
+          text="Populære spil"
+          fontSize="var(--fontsizeXL)"
+        />
         <Boardgame boardgame={boardgames[7]} />
         <Boardgame boardgame={boardgames[9]} />
         <Boardgame boardgame={boardgames[3]} />
@@ -43,14 +42,12 @@ export default async function Home() {
           />
         </section>
         <section className="shelf mid right">
-          <Link href="/bar">
-            <article className="boardgame">
-              <div className="game_lid">
-                <h4>Bar</h4>
-              </div>
-              <div className="game_box"></div>
-            </article>
-          </Link>
+          <Button
+            destination="/bar"
+            text="Bar"
+            fillColor="var(--purple)"
+            fontSize="var(--fontsizeM)"
+          />
           <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
         </section>
       </div>
