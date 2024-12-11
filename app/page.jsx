@@ -76,7 +76,14 @@ export default async function Home() {
             unoptimized
             alt="Lykkehjul"
           />
-          <h4 className="box_header">Inspiration</h4>
+          <Link href="/inspiration">
+            <article className="boardgame">
+              <div className="game_lid">
+                <h4>Inspiration</h4>
+              </div>
+              <div className="game_box"></div>
+            </article>
+          </Link>
         </section>
       </div>
     </main>

@@ -215,7 +215,7 @@ nav ul li a p {
 
 main.home {
    height: calc(100dvh - var(--marginTop) - var(--marginBottom));
-   margin: var(--marginTop) 0 var(--marginBottom);
+   position: fixed;
 }
 
 .shelf {
@@ -386,16 +386,27 @@ main.home {
       width: .15rem;
    }
 
+   /* header */
    & a:first-child {
       height: 90%;
    }
 
+   /* unlock */
    & a:nth-child(2) {
       height: 85%;
+
+      .boardgame_image {
+         bottom: 2.75rem;
+      }
    }
 
+   /* pandemic */
    & a:nth-child(3) {
       height: 95%;
+
+      .boardgame_image {
+         bottom: 3.25rem;
+      }
    }
 }
 
@@ -418,6 +429,7 @@ main.home {
    }
 }
 
+/* games */
 .shelf.bottom.left a:not(:first-child) .boardgame {
 
    .game_lid {
@@ -428,7 +440,7 @@ main.home {
    }
 
    .game_lid .boardgame_image {
-      bottom: 3rem;
+      /* bottom: 3rem; */
       height: 1.75rem;
       min-width: fit-content;
       position: absolute;
@@ -454,21 +466,29 @@ main.home {
    }
 }
 
-
+/* bottom right shelf */
 .shelf.bottom.right {
    align-items: center;
    flex-direction: column;
    justify-content: flex-end;
    padding-top: 2rem;
-}
 
-.shelf.bottom.right img {
-   width: 60%;
-}
+   & img {
+      max-height: 150%;
+      width: 60%;
+   }
 
-.shelf.bottom.right h4.box_header {
-   background-color: var(--blue);
-   width: 70%;
+   & a {
+      width: 75%;
+   }
+
+   .boardgame .game_lid {
+      background-color: var(--blue);
+   }
+
+   .boardgame .game_lid h4 {
+      width: 100%;
+   }
 }
 
 /* --- search & sorting --------------------------------------------------------------------------------------------- */
