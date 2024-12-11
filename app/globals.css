@@ -154,6 +154,7 @@ main {
    gap: 1rem;
    padding: 0 1rem;
    margin: var(--marginTop) 0 var(--marginBottom);
+   overflow: hidden;
 }
 
 /* --- header --------------------------------------------------------------------------------------------------------*/
@@ -347,7 +348,6 @@ main.home {
    }
 }
 
-
 .shelf.mid.right .shelf.mid.right .game_box {
    align-self: center;
    height: 95%;
@@ -484,38 +484,6 @@ main.home {
    }
 }
 
-/* --- search & sorting --------------------------------------------------------------------------------------------- */
-
-.card_icon {
-   width: 14px;
-}
-
-.search {
-   background-color: var(--white);
-   height: 40px;
-   width: 155px;
-   border-radius: 0 0 6px 6px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 0 0.5rem;
-   position: fixed;
-   top: var(--marginTop);
-}
-
-.card_input {
-   height: fit-content;
-   width: 100px;
-   border: none;
-   background-color: var(--white);
-   font-size: var(--fontsizeS);
-   color: var(--black);
-}
-
-.card_input:focus {
-   outline: none;
-}
-
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
 
 .inner_bookshelf {
@@ -524,6 +492,7 @@ main.home {
    flex-direction: column;
    gap: 1rem;
    padding: 3.5rem 0.5rem 0;
+   min-height: calc(100dvh - var(--marginBottom) - var(--marginTop));
 }
 
 .boardgame {
@@ -576,11 +545,11 @@ main.home {
 
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
 
-.boardgame_info>*:not(:last-child) {
+.boardgame_info > *:not(:last-child) {
    margin-bottom: 2rem;
 }
 
-.boardgame_info article>*:not(:last-child) {
+.boardgame_info article > *:not(:last-child) {
    padding-bottom: 1rem;
 }
 
@@ -589,12 +558,12 @@ main.home {
    justify-content: space-between;
 }
 
-.boardgame_info .icons>div {
+.boardgame_info .icons > div {
    display: flex;
    gap: 0.5rem;
 }
 
-.boardgame_info .icons>div>img {
+.boardgame_info .icons > div > img {
    width: 1.5rem;
 }
 
@@ -620,7 +589,7 @@ main.home {
    padding: 2rem 0 1rem;
 }
 
-.boardgame_info .carousel .breadcrumbs>div {
+.boardgame_info .carousel .breadcrumbs > div {
    background-color: var(--white);
    border-radius: 999px;
    height: 1rem;
@@ -834,12 +803,6 @@ main.home {
    fill: var(--yellow);
 }
 
-.glow {
-   -webkit-box-shadow: 0px 0px 40px 16px var(--yellow);
-   -moz-box-shadow: 0px 0px 40px 16px var(--yellow);
-   box-shadow: 0px 0px 40px 16px var(--yellow);
-}
-
 /* --- card --------------------------------------------------------------------------------------------------------- */
 
 .card {
@@ -875,6 +838,9 @@ main.home {
 
 .width2rem {
    width: 2rem;
+   display: flex;
+   justify-content: end;
+   align-items: end;
 }
 
 .width2rem img {
@@ -977,44 +943,80 @@ main.home {
 }
 
 /* --- Specifik to filter --- */
-.filter_element {
+.card_filter_element {
    display: flex;
    flex-direction: column;
    gap: 0.5rem;
    width: 100%;
 }
 
-.filter_element img {
+.card_filter_element img {
    width: auto;
 }
 
-.filter_element .title {
+.card_filter_element .title {
    display: flex;
    gap: 0.5rem;
    align-items: center;
    width: 100%;
 }
 
-.filter_element .options {
+.card_filter_element .options {
    display: flex;
    justify-content: space-between;
 }
 
-.filter_element h4 {
+.card_filter_element h4 {
    color: var(--black);
 }
 
-.filter_element button {
+.card_filter_element button {
    background-color: var(--red);
    border: none;
    width: 65px;
    height: 25px;
 }
 
-.filter_element .kategori {
+.card_filter_element .kategori {
    width: 106px;
 }
 
+/* --- Specifik to search --- */
+
+#search_icon {
+   width: 25px;
+}
+
+#spades_icon {
+   width: 17px;
+}
+
+.search {
+   background-color: var(--white);
+   height: 2.25rem;
+   width: 155px;
+   border-radius: 0 0 6px 6px;
+   display: flex;
+   justify-content: space-between;
+   align-items: end;
+   padding: 0 0.5rem 0.5rem;
+   position: fixed;
+   top: var(--marginTop);
+   gap: 0.5rem;
+}
+
+.card_input {
+   height: fit-content;
+   width: 100%;
+   border: none;
+   background-color: var(--white);
+   font-size: var(--fontsizeS);
+   color: var(--black);
+}
+
+.card_input:focus {
+   outline: none;
+}
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
 
 .bar {

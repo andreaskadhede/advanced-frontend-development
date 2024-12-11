@@ -13,7 +13,6 @@ export default function CardGame({ result, resetWheel }) {
                   alt="heart icon"
                   width={400}
                   height={400}
-                  className="card_icon"
                />
             </div>
             <h2>TILLYKKE</h2>
@@ -58,7 +57,6 @@ export default function CardGame({ result, resetWheel }) {
                   alt="heart icon"
                   width={400}
                   height={400}
-                  className="card_icon"
                />
             </div>
          </div>

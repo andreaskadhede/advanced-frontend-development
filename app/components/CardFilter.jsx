@@ -12,7 +12,7 @@ export default function CardFilter() {
             console.log("clicked");
          }}
          style={{
-            top: filterActive ? "50%" : "-18.4%",
+            top: filterActive ? "50%" : "-18.65%",
             right: filterActive ? "50%" : "1.5rem",
             transform: filterActive
                ? "scale(1) translate(50%, -50%"
@@ -26,7 +26,6 @@ export default function CardFilter() {
                   alt="heart icon"
                   width={400}
                   height={400}
-                  className="card_icon"
                />
             </div>
             <h2>Filtrering</h2>
@@ -42,7 +41,7 @@ export default function CardFilter() {
          </div>
 
          <div className="card_middle">
-            <div className="filter_element">
+            <div className=" card_filter_element">
                <div className="title">
                   <Image
                      src="/icons/person_black.svg"
@@ -61,7 +60,7 @@ export default function CardFilter() {
                </div>
             </div>
 
-            <div className="filter_element">
+            <div className=" card_filter_element">
                <div className="title">
                   <Image
                      src="/icons/time_black.svg"
@@ -80,7 +79,7 @@ export default function CardFilter() {
                </div>
             </div>
 
-            <div className="filter_element">
+            <div className="card_filter_element">
                <div className="title">
                   <Image
                      src="/icons/age_black.svg"
@@ -99,7 +98,7 @@ export default function CardFilter() {
                </div>
             </div>
 
-            <div className="filter_element">
+            <div className=" card_filter_element">
                <div className="title">
                   <Image
                      src="/icons/dice_black.svg"
@@ -138,7 +137,6 @@ export default function CardFilter() {
                   alt="heart icon"
                   width={400}
                   height={400}
-                  className="card_icon"
                />
             </div>
          </div>

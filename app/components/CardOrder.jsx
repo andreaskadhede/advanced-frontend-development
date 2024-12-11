@@ -26,7 +26,6 @@ export default function CardOrder() {
                   alt="heart icon"
                   width={400}
                   height={400}
-                  className="card_icon"
                />
             </div>
             <h2>Bestilling</h2>
@@ -86,7 +85,6 @@ export default function CardOrder() {
                   alt="heart icon"
                   width={400}
                   height={400}
-                  className="card_icon"
                />
             </div>
          </div>
