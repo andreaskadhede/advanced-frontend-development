@@ -12,7 +12,7 @@ export default function CardOrder() {
             console.log("clicked");
          }}
          style={{
-            top: orderActive ? "50%" : "66.5%",
+            top: orderActive ? "50%" : "64%",
             right: orderActive ? "50%" : "1.5rem",
             transform: orderActive
                ? "scale(1) translate(50%, -50%)"

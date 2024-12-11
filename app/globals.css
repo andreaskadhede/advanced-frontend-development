@@ -521,44 +521,6 @@ main.home {
    outline: none;
 }
 
-.filter {
-   background-color: var(--white);
-   width: 264px;
-   border-radius: 10px;
-   display: flex;
-   flex-direction: column;
-   gap: 1.5rem;
-   justify-content: space-between;
-   align-items: center;
-   position: fixed;
-   padding: 1.5rem;
-   margin: auto;
-   transition: all 1s ease-in-out;
-   z-index: 99;
-}
-
-.filter_flex_row {
-   display: flex;
-   gap: 0.5rem;
-   align-items: center;
-   width: 100%;
-}
-
-.space {
-   justify-content: space-between;
-}
-
-.filter_button {
-   background-color: var(--red);
-   border: none;
-   width: 65px;
-   height: 25px;
-}
-
-.filter_kategori_button {
-   width: 106px;
-}
-
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
 
 .inner_bookshelf {
@@ -893,9 +855,10 @@ main.home {
    gap: 1.5rem;
    justify-content: space-between;
    align-items: center;
-   position: absolute;
+   position: fixed;
    padding: 1rem;
    transition: all 1s ease-in-out;
+   min-height: 350px;
 }
 
 .card_top,
@@ -951,7 +914,6 @@ main.home {
 
 /* --- Specifik to order --- */
 .card_order_element {
-   display: flex;
    height: 40px;
    display: flex;
    justify-content: space-between;
@@ -1017,6 +979,46 @@ main.home {
 .card_order_plus_minus button p {
    color: var(--white);
 }
+
+/* --- Specifik to filter --- */
+.filter_element {
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+   width: 100%;
+}
+
+.filter_element img {
+   width: auto;
+}
+
+.filter_element .title {
+   display: flex;
+   gap: 0.5rem;
+   align-items: center;
+   width: 100%;
+}
+
+.filter_element .options {
+   display: flex;
+   justify-content: space-between;
+}
+
+.filter_element h4 {
+   color: var(--black);
+}
+
+.filter_element button {
+   background-color: var(--red);
+   border: none;
+   width: 65px;
+   height: 25px;
+}
+
+.filter_element .kategori {
+   width: 106px;
+}
+
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
 
 .bar {
