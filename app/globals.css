@@ -551,22 +551,17 @@ main.home {
 
 .inspiration_background {
    object-fit: cover;
-   height: calc(
-      100dvh - 16px - 16px - var(--marginBottom) - var(--marginTop) - 2px
-   );
+   height: calc(100dvh - var(--marginBottom) - var(--marginTop) - 2px);
    width: 100%;
    object-position: 50% 50%;
    overflow: hidden;
    max-width: 436px;
-   margin: auto;
 }
 
 .inspiration_grid {
    /* background-color: red; */
    width: 343px;
-   height: calc(
-      100dvh - 16px - 16px - var(--marginBottom) - var(--marginTop) - 2px
-   );
+   height: calc(100dvh - var(--marginBottom) - var(--marginTop) - 2px);
    position: absolute;
    margin: auto;
    display: grid;
@@ -751,6 +746,11 @@ main.home {
    fill: var(--yellow);
 }
 
+.glow {
+   -webkit-box-shadow: 0px 0px 40px 16px var(--yellow);
+   -moz-box-shadow: 0px 0px 40px 16px var(--yellow);
+   box-shadow: 0px 0px 40px 16px var(--yellow);
+}
 /* --- card --------------------------------------------------------------------------------------------------------- */
 
 .card {
