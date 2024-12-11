@@ -127,6 +127,15 @@ body {
    min-height: 100dvh;
 }
 
+main {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   padding: 0 1rem;
+   margin: var(--marginTop) 0 var(--marginBottom);
+   overflow: hidden;
+}
+
 h1 {
    font-size: var(--fontsizeXXL);
    font-weight: var(--semiBold);
@@ -155,13 +164,12 @@ img {
    width: auto;
 }
 
-main {
-   display: flex;
-   flex-direction: column;
-   gap: 1rem;
-   padding: 0 1rem;
-   margin: var(--marginTop) 0 var(--marginBottom);
-   overflow: hidden;
+.button {
+   width: fit-content;
+
+   & p {
+      padding: .125rem .25rem;
+   }
 }
 
 /* --- header --------------------------------------------------------------------------------------------------------*/
@@ -547,6 +555,10 @@ main.home {
 }
 
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
+
+.single_boardgame .button .game_box {
+   height: .125rem;
+}
 
 .boardgame_info>*:not(:last-child) {
    margin-bottom: 2rem;
