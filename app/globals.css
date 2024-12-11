@@ -27,6 +27,10 @@
    --semiBold: 600;
 
    /* --- font sizes --- */
+   --fontsize4XS: 0.25rem;
+   /* 4px */
+   --fontsize3XS: 0.375rem;
+   /* 6px */
    --fontsizeXXS: 0.5rem;
    /* 8px */
    --fontsizeXS: 0.75rem;
@@ -43,8 +47,9 @@
    /* 32px */
 
    /* Margin for main (header heigth and nav height */
+   /* -2px because nav is positioned 2px below viewport bottom */
    --marginTop: 99px;
-   --marginBottom: 113.5px;
+   --marginBottom: calc(113.5px - 2px);
 }
 
 /* Font classes */
@@ -209,8 +214,8 @@ nav ul li a p {
 /* --- frontpage ---------------------------------------------------------------------------------------------------- */
 
 main.home {
-   height: 100dvh;
-   margin: 0;
+   height: calc(100dvh - var(--marginTop) - var(--marginBottom));
+   margin: var(--marginTop) 0 var(--marginBottom);
 }
 
 .shelf {
@@ -225,6 +230,8 @@ main.home {
    text-transform: uppercase;
 }
 
+/* --- top shelf --- */
+
 .shelf.top {
    align-items: center;
    flex-direction: column;
@@ -232,32 +239,64 @@ main.home {
    justify-content: flex-end;
 }
 
-.shelf.top h2.box_header {
+.shelf.top .game_lid h2 {
    background-color: var(--darkGreen);
-   padding: 0.25rem 2.25rem;
-   width: fit-content;
+   padding-block: 0.125rem;
+   width: 100%;
 }
 
-.shelf.top .box_header {
-   min-height: 2.25rem;
-   min-width: 60%;
+.shelf.top .boardgame_image {
+   height: 2.5rem;
 }
 
-#pop_1 {
-   height: 44px;
-   width: 80%;
+.shelf.top .game_info {
+   gap: 0.125rem;
 }
 
-#pop_2 {
+.shelf.top .game_info div img {
+   height: 0.5rem;
+   width: 0.5rem;
 }
 
-#pop_3 {
+.shelf.top .game_info div p {
+   font-size: var(--fontsize3XS);
+}
+
+/* header */
+
+.shelf.top a:first-child {
    width: 70%;
 }
 
-#pop_4 {
+/* partners */
+.shelf.top a:nth-child(2) {
+   width: 75%;
+}
+
+/* det dårlige selskab */
+.shelf.top a:nth-child(3) {
+   max-width: 65%;
+}
+
+.shelf.top a:nth-child(3) .boardgame_image {
+   max-width: 70%;
+}
+
+.shelf.top a:nth-child(3) .game_info {
+   width: 25%;
+}
+
+/* ticket to ride */
+.shelf.top a:nth-child(4) {
+   width: 70%;
+}
+
+/* sequence */
+.shelf.top a:nth-child(5) {
    width: 80%;
 }
+
+/* --- mid shelfs --- */
 
 .double_shelf {
    display: flex;
@@ -275,6 +314,7 @@ main.home {
    width: 50%;
 }
 
+/* decorative shelf */
 .shelf.mid.left {
    padding-top: 10%;
 }
@@ -292,48 +332,124 @@ main.home {
    padding: 0.25rem 0 0 0.25rem;
 }
 
-.shelf.mid.right h4.box_header {
-   background-color: var(--purple);
+/* header */
+.shelf.mid.right a {
    height: 100%;
+}
+
+.shelf.mid.right .boardgame {
+   align-items: stretch;
+   flex-direction: row;
+   height: 100%;
+}
+
+.shelf.mid.right .game_lid {
+   background-color: var(--purple);
+}
+
+.shelf.mid.right .game_lid h4 {
    letter-spacing: -0.25rem;
    text-orientation: upright;
    writing-mode: vertical-lr;
 }
 
+.shelf.mid.right .game_box {
+   align-self: center;
+   height: 95%;
+   width: 0.15rem;
+}
+
+/* bell */
 .shelf.mid.right img {
    width: 60%;
 }
 
-.shelf.bottom.left {
-   align-items: flex-end;
-   justify-content: center;
-   padding-inline: 1rem;
-}
-
-.shelf.bottom.left .box_header {
-   width: 1.5rem;
-}
-
-.shelf.bottom.left h4.box_header {
-   background-color: var(--red);
-   padding-inline: 0.75rem;
-   rotate: 180deg;
-   width: fit-content;
-   writing-mode: vertical-lr;
-}
-
-#per_1 {
-   background-color: lightskyblue;
-   height: 10rem;
-}
-
-#per_2 {
-   background-color: darkslategray;
-   height: 8rem;
-}
+/* --- bottom shelfs --- */
 
 .double_shelf.bottom {
    height: 35%;
+}
+
+.shelf.bottom.left {
+   align-items: flex-end;
+   padding-inline: 1rem;
+
+   .boardgame {
+      align-items: stretch;
+      flex-direction: row;
+      height: 100%;
+   }
+
+   .boardgame .game_box {
+      align-self: center;
+      height: 95%;
+      width: 0.15rem;
+   }
+
+   & a:first-child {
+      height: 90%;
+   }
+
+   & a:nth-child(2) {
+      height: 85%;
+   }
+
+   & a:nth-child(3) {
+      height: 95%;
+   }
+}
+
+/* header */
+.shelf.bottom.left a:first-child .boardgame {
+   .game_lid {
+      background-color: var(--red);
+   }
+
+   .game_lid h4 {
+      rotate: 180deg;
+      writing-mode: vertical-lr;
+   }
+
+   .game_box {
+      align-self: center;
+      height: 95%;
+      width: 0.15rem;
+   }
+}
+
+.shelf.bottom.left a:not(:first-child) .boardgame {
+   .game_lid {
+      height: 100%;
+      flex-direction: column-reverse;
+      position: relative;
+      width: 1.75rem;
+   }
+
+   .game_lid .boardgame_image {
+      bottom: 3rem;
+      height: 1.75rem;
+      min-width: fit-content;
+      position: absolute;
+      rotate: -90deg;
+   }
+
+   .game_lid .game_info {
+      gap: 0.125rem;
+      min-width: fit-content;
+      position: absolute;
+      rotate: -90deg;
+      top: 0.5rem;
+      white-space: nowrap;
+   }
+
+   .game_info div img {
+      height: 0.375rem;
+      width: 0.375rem;
+   }
+
+   .game_info div p {
+      font-size: var(--fontsize4XS);
+   }
 }
 
 .shelf.bottom.right {
@@ -433,14 +549,13 @@ main.home {
 }
 
 .boardgame {
+   align-items: center;
    display: flex;
    flex-direction: column;
-   align-items: center;
 }
 
 .game_lid {
    align-items: center;
-   /* background-color: var(--blue); */
    display: flex;
    justify-content: space-between;
    width: 100%;
@@ -470,7 +585,6 @@ main.home {
    align-items: center;
    display: flex;
    gap: 0.25rem;
-   /* height: fit-content; */
 }
 
 .game_info div img {
@@ -800,6 +914,11 @@ main.home {
 
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
 
+.bar {
+   background-color: var(--darkBrown);
+   min-height: calc(100dvh - var(--marginTop) - var(--marginBottom));
+}
+
 .muligheder {
    display: flex;
    align-items: center;
@@ -824,7 +943,7 @@ main.home {
    display: flex;
    flex-direction: column;
    gap: 0.5rem;
-   padding: 10px 10px;
+   padding: 0.5rem;
 }
 
 .bar_overskrifter {
@@ -840,14 +959,14 @@ main.home {
    flex-direction: column;
    gap: 0.5rem;
    background-color: var(--darkBrown);
-   padding: 10px 10px;
+   padding: 0.5rem;
    height: fit-content;
    overflow: hidden;
    transition: all 0.3s ease-in-out;
 }
 
 .lukket {
-   padding: 10px 10px 0px 10px;
+   padding: 0.5rem 0.5rem 0px 0.5rem;
    height: 3px;
    transition: all 0.3s ease-in-out;
 }
@@ -855,16 +974,16 @@ main.home {
 .bestilling {
    background-color: var(--white);
    width: 264px;
-   border-radius: 6px;
+   border-radius: 10px;
    display: flex;
    flex-direction: column;
    gap: 1.5rem;
    justify-content: space-between;
    align-items: center;
    position: fixed;
-   top: 682px;
+   bottom: 2px;
    /*viewport heigth-nav heigth-den øverste del af kortet*/
-   right: 26px;
+   right: 1.5rem;
    padding: 1rem;
    transition: all 1s ease-in-out;
 }

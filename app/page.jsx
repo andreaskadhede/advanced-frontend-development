@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Boardgame from "./components/Boardgame";
+import Link from "next/link";
 
 export default async function Home() {
   // Database over alle spil
@@ -12,11 +13,19 @@ export default async function Home() {
   return (
     <main className="home">
       <section className="shelf top">
-        <h2 className="box_header">Populære spil</h2>
-        <Boardgame id="pop_1" boardgame={boardgames[3]} />
-        <Boardgame id="pop_2" boardgame={boardgames[7]} />
-        <Boardgame id="pop_3" boardgame={boardgames[12]} />
-        <Boardgame id="pop_4" boardgame={boardgames[0]} />
+        {/* indsæt link til populære spil: */}
+        <Link href="#">
+          <article className="boardgame">
+            <div className="game_lid">
+              <h2>Populære spil</h2>
+            </div>
+            <div className="game_box"></div>
+          </article>
+        </Link>
+        <Boardgame boardgame={boardgames[7]} />
+        <Boardgame boardgame={boardgames[9]} />
+        <Boardgame boardgame={boardgames[3]} />
+        <Boardgame boardgame={boardgames[0]} />
       </section>
       <div className="double_shelf mid">
         <section className="shelf mid left">
@@ -34,15 +43,30 @@ export default async function Home() {
           />
         </section>
         <section className="shelf mid right">
-          <h4 className="box_header">Bar</h4>
+          <Link href="/bar">
+            <article className="boardgame">
+              <div className="game_lid">
+                <h4>Bar</h4>
+              </div>
+              <div className="game_box"></div>
+            </article>
+          </Link>
           <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
         </section>
       </div>
       <div className="double_shelf bottom">
         <section className="shelf bottom left">
-          <h4 className="box_header">Skjulte perler</h4>
-          <Boardgame id="per_1" boardgame={boardgames[2]} />
-          <Boardgame id="per_2" boardgame={boardgames[4]} />
+          {/* indsæt link til skjulte perler: */}
+          <Link href="#">
+            <article className="boardgame">
+              <div className="game_lid">
+                <h4>Skjulte perler</h4>
+              </div>
+              <div className="game_box"></div>
+            </article>
+          </Link>
+          <Boardgame boardgame={boardgames[2]} />
+          <Boardgame boardgame={boardgames[4]} />
         </section>
         <section className="shelf bottom right">
           <Image

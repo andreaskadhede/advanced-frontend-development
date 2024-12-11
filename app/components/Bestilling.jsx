@@ -13,7 +13,7 @@ export default function Bestilling() {
       }}
       style={{
         top: bestillingActive ? "50%" : "80%",
-        right: bestillingActive ? "50%" : "26px",
+        right: bestillingActive ? "50%" : "1.5rem",
         transform: bestillingActive
           ? "translate(50%, -50%)"
           : "translate(0%, 0%)",
@@ -25,7 +25,6 @@ export default function Bestilling() {
           alt="heart icon"
           width={400}
           height={400}
-          style={{ height: "32px" }}
         />
         <p className="fontcolorblack fontweightmedium fontsize24">Bestilling</p>
         <Image
