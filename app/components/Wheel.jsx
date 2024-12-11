@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import CardGame from "./CardGame";
 
 export default function Wheel() {
    const [isSpinning, setIsSpinning] = useState(false);
@@ -153,67 +153,22 @@ export default function Wheel() {
             </div>
             <div className="pointer" />
          </div>
-         <button
-            id="pop_1"
-            onClick={spinWheel}
-            disabled={isSpinning}
-            className="spinButton">
-            {isSpinning ? "Spinning..." : "Tryk for at spinne!"}
-         </button>
-
-         <p onClick={spinWheel} id="pop_1" className="box_header">
-            <br />
-         </p>
-
-         {popUp && (
-            <div className="card">
-               <div className="card_top">
-                  <div className="width2rem">
-                     <Image
-                        src="/icons/heart.svg"
-                        alt="heart icon"
-                        width={400}
-                        height={400}
-                        className="card_icon"
-                     />
-                  </div>
-                  <h2>TILLYKKE</h2>
-                  <div className="width2rem">
-                     <button onClick={() => resetWheel()}>Close</button>
-                  </div>
-               </div>
-
-               <div className="card_middle">
-                  <p className="fontsize16">Vi foreslår dig at spille </p>
-                  <Image
-                     src={result.cover}
-                     height={400}
-                     width={400}
-                     alt={result.name}
-                  />
-                  <p className="fontsize16">
-                     Find spillet på {result.placement}
-                  </p>
-                  <Link href={`/boardgames/${result.id}`}>
-                     Læs mere om spillet
-                  </Link>
-               </div>
-
-               <div className="card_bottom">
-                  <div className="width2rem"></div>
-                  <h2>TILLYKKE</h2>
-                  <div className="width2rem">
-                     <Image
-                        src="/icons/heart.svg"
-                        alt="heart icon"
-                        width={400}
-                        height={400}
-                        className="card_icon"
-                     />
-                  </div>
-               </div>
+         <div onClick={spinWheel} disabled={isSpinning} className="boardgame">
+            <div className="game_lid">
+               {isSpinning ? "Spinning..." : "Tryk for at spinne!"}
             </div>
-         )}
+            <div className="game_box"></div>
+         </div>
+
+         <div className="boardgame">
+            <div className="game_lid">
+               <br />
+            </div>
+            <div className="game_box"></div>
+         </div>
+
+         {/* Popup window with suggested game */}
+         {popUp && <CardGame result={result} resetWheel={resetWheel} />}
       </div>
    );
 }
