@@ -738,6 +738,17 @@ main.home {
    justify-content: space-between;
 }
 
+.wheel_no_animation .boardgame,
+.container .boardgame {
+   background-color: var(--darkGreen);
+   width: 75%;
+}
+
+.wheel_no_animation .game_lid,
+.container .game_lid {
+   height: 45px;
+}
+
 .inspo_bottom {
    display: flex;
    flex-direction: column;
@@ -791,21 +802,6 @@ main.home {
    border-width: 42px 12px 0 12px;
    border-color: #815230 transparent transparent transparent;
    transform: rotate(0deg);
-}
-
-.spinButton {
-   padding: 10px 20px;
-   background: #0070f3;
-   color: white;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   font-size: 16px;
-}
-
-.spinButton:disabled {
-   background: gray;
-   cursor: not-allowed;
 }
 
 .result {
@@ -870,7 +866,7 @@ main.home {
 .card {
    background-color: var(--white);
    width: 264px;
-   border-radius: 6px;
+   border-radius: 10px;
    display: flex;
    flex-direction: column;
    gap: 1.5rem;
@@ -878,6 +874,7 @@ main.home {
    align-items: center;
    position: absolute;
    padding: 1rem;
+   transition: all 1s ease-in-out;
 }
 
 .card_top,
@@ -888,10 +885,12 @@ main.home {
 }
 
 .card p,
-.card a,
-.card_top h2,
-.card_bottom h2 {
+.card h2 {
    color: var(--black);
+}
+
+.card h2 {
+   font-weight: var(--medium);
 }
 
 .width2rem {
@@ -906,12 +905,97 @@ main.home {
    display: flex;
    flex-direction: column;
    gap: 1rem;
+   align-items: center;
+   width: 100%;
 }
 
 .card_middle img {
    width: 100%;
 }
 
+.card_middle p {
+   color: var(--black);
+}
+
+.close_button {
+   display: flex;
+   justify-content: end;
+   align-items: start;
+}
+
+.close_button button {
+   background-color: none;
+   border: none;
+}
+
+/* --- Specifik to order --- */
+.card_order_element {
+   display: flex;
+   height: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+
+.card_order_element :first-child {
+   font-size: var(--fontsizeS);
+}
+
+.card_order_element :last-child {
+   font-size: var(--fontsizeXS);
+}
+
+.card_order_total {
+   display: flex;
+   height: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+
+.card_order_send {
+   display: flex;
+   height: 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+}
+
+.card_order_send p {
+   background-color: var(--darkGreen);
+   color: var(--white);
+}
+
+.card_order_send img {
+   width: 53px;
+   height: auto;
+}
+
+.card_order_plus_minus {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   background-color: var(--darkBrown);
+   padding: 6px 8px;
+}
+
+.card_order_plus_minus button,
+.card_order_plus_minus p {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   background-color: transparent;
+   border: none;
+   font-size: var(--fontsizeXXS);
+}
+
+.card_order_plus_minus p,
+.card_order_plus_minus button p {
+   color: var(--white);
+}
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
 
 .bar {
@@ -969,49 +1053,6 @@ main.home {
    padding: 0.5rem 0.5rem 0px 0.5rem;
    height: 3px;
    transition: all 0.3s ease-in-out;
-}
-
-.bestilling {
-   background-color: var(--white);
-   width: 264px;
-   border-radius: 10px;
-   display: flex;
-   flex-direction: column;
-   gap: 1.5rem;
-   justify-content: space-between;
-   align-items: center;
-   position: fixed;
-   bottom: 2px;
-   /*viewport heigth-nav heigth-den øverste del af kortet*/
-   right: 1.5rem;
-   padding: 1rem;
-   transition: all 1s ease-in-out;
-}
-
-/*Bestilling component*/
-.bestilling_flex_row {
-   display: flex;
-   height: 40px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
-}
-
-.bestilling_plus_minus {
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   background-color: var(--darkBrown);
-   padding: 6px 8px;
-}
-
-.bestilling_plus_minus button {
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   background-color: transparent;
-   border: none;
 }
 
 /*--- Media queries --------------------------------------------------------------------------------------------------
