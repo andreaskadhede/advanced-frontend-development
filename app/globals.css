@@ -53,35 +53,35 @@
 }
 
 /* Font classes */
-.fontsize8 {
+/* .fontsize8 {
    font-size: var(--fontsizeXXS);
 }
 
 .fontsize12 {
    font-size: var(--fontsizeXS);
-}
+} */
 
-.fontsize14 {
+/* .fontsize14 {
    font-size: var(--fontsizeS);
-}
+} */
 
-.fontsize16 {
+/* .fontsize16 {
    font-size: var(--fontsizeM);
-}
+} */
 
-.fontsize20 {
+/* .fontsize20 {
    font-size: var(--fontsizeL);
-}
+} */
 
-.fontsize24 {
+/* .fontsize24 {
    font-size: var(--fontsizeXL);
-}
+} */
 
-.fontsize32 {
+/* .fontsize32 {
    font-size: var(--fontsizeXXL);
-}
+} */
 
-.fontweightregular {
+/* .fontweightregular {
    font-weight: var(--regular);
 }
 
@@ -91,15 +91,15 @@
 
 .fontweightsemibold {
    font-weight: var(--semiBold);
-}
+} */
 
-.fontcolorwhite {
+/* .fontcolorwhite {
    color: var(--white);
 }
 
 .fontcolorblack {
    color: var(--black);
-}
+} */
 
 /* --- reset --- */
 * {
@@ -678,6 +678,10 @@ main.home {
    gap: 1rem;
 }
 
+.inspo_top p {
+   font-size: var(--fontsizeL);
+}
+
 .wheel_no_animation {
    height: 100%;
    display: flex;
@@ -894,7 +898,7 @@ main.home {
    width: 100%;
 }
 
-.card_order_send {
+.card_order_sent {
    display: flex;
    height: 40px;
    display: flex;
@@ -903,12 +907,12 @@ main.home {
    width: 100%;
 }
 
-.card_order_send p {
+.card_order_sent p {
    background-color: var(--darkGreen);
    color: var(--white);
 }
 
-.card_order_send img {
+.card_order_sent img {
    width: 53px;
    height: auto;
 }
@@ -1018,13 +1022,13 @@ main.home {
    min-height: calc(100dvh - var(--marginTop) - var(--marginBottom));
 }
 
-.muligheder {
+.add {
    display: flex;
    align-items: center;
    gap: 12px;
 }
 
-.muligheder button {
+.add button {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -1036,6 +1040,14 @@ main.home {
 
 .bar_lid {
    padding: 15px 10px;
+}
+
+.bar_lid p {
+   font-size: var(--fontsizeS);
+}
+
+.bar_lid .name {
+   font-size: var(--fontsizeL);
 }
 
 .bar_dropdown {
@@ -1068,6 +1080,27 @@ main.home {
    padding: 0.5rem 0.5rem 0px 0.5rem;
    height: 3px;
    transition: all 0.3s ease-in-out;
+}
+
+.confirmation {
+   background-color: var(--white);
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   text-align: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: calc(264px - 264px / 8);
+   min-height: 300px;
+   border-radius: 10px;
+   padding: 1rem;
+   transition: all 1s ease-in-out;
+   position: fixed;
+}
+
+.confirmation h2 {
+   color: var(--black);
 }
 
 /*--- Media queries --------------------------------------------------------------------------------------------------

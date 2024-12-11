@@ -2,8 +2,13 @@ import Image from "next/image";
 import { useState } from "react"; // Import useState and useEffect for managing state and side effects
 // import styles from "./page.module.css";
 
-export default function CardOrder() {
+export default function CardOrder({ confirmation, setConfirmation }) {
    const [orderActive, setOrderActive] = useState(false); // State to hold the barItems
+
+   function sentOrder() {
+      setConfirmation(true);
+      setOrderActive(false);
+   }
    return (
       <div
          className="card"
@@ -60,7 +65,7 @@ export default function CardOrder() {
                <p>{`280 kr`}</p>
             </div>
 
-            <div className="card_order_send">
+            <div onClick={sentOrder} className="card_order_sent">
                <div className="boardgame">
                   <div className="game_lid">
                      <p>Send bestilling</p>

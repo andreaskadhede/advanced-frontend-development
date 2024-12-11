@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"; // Import useState and useEffect fo
 import BarItem from "../components/BarItem";
 import CardOrder from "../components/CardOrder";
 import Image from "next/image";
+import Confirmation from "../components/Confirmation";
 
 export default function Boardgames() {
    // const [bestilling, setBestilling] = useState({}); // State to hold your order
@@ -15,6 +16,7 @@ export default function Boardgames() {
       "Kolde drikke": false,
       "Snacks & slik": false,
    }); // State for tracking which categories are open/closed
+   const [confirmation, setConfirmation] = useState(false);
 
    // Fetch data from the API when the component mounts
    useEffect(() => {
@@ -64,6 +66,14 @@ export default function Boardgames() {
       }));
    };
 
+   useEffect(() => {
+      const timer = setTimeout(() => {
+         setConfirmation(false); // Toggle the delay state
+      }, 2000);
+
+      return () => clearTimeout(timer); // Clean up the timer
+   }, [confirmation]);
+
    return (
       <main>
          <div className="bar">
@@ -102,8 +112,17 @@ export default function Boardgames() {
                   </div>
                </div>
             ))}
-            <CardOrder />
+            <CardOrder
+               confirmation={confirmation}
+               setConfirmation={setConfirmation}
+            />
          </div>
+
+         {confirmation && (
+            <div>
+               <Confirmation />
+            </div>
+         )}
       </main>
    );
 }

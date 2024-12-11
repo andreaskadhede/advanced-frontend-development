@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react"; // Import useState and useEffect for managing state and side effects
 import Button from "./Button";
+import Boardgame from "./Boardgame";
 // import styles from "./page.module.css";
 
 export default function CardGame({ result, resetWheel }) {
@@ -32,6 +33,7 @@ export default function CardGame({ result, resetWheel }) {
 
          <div className="card_middle">
             <p>Vi foreslår dig at spille </p>
+            {/* <Boardgame boardgame={result} /> */}
             <Image
                src={result.cover}
                height={400}
