@@ -267,7 +267,7 @@ export default function CardFilter({
                      onClick={() => applyFilter("category", "quiz")}
                      style={{
                         backgroundColor:
-                           activeButton === "category skjulte quiz"
+                           activeButton === "category quiz"
                               ? "var(--darkGreen)"
                               : "var(--red)",
                      }}>
