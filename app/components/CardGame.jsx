@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function CardGame({ result, resetWheel }) {
    return (
-      <div className="card">
+      <div className="card card_game">
          <div className="card_top">
             <div className="width2rem">
                <Image
