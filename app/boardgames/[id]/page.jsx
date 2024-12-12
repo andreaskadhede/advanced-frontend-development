@@ -1,10 +1,10 @@
-import Button from "@/app/components/Button";
+import ButtonBack from "@/app/components/ButtonBack";
 import Boardgame from "@/app/components/Boardgame";
 import Image from "next/image";
 
 export default async function BoardgameDetailPage({ params }) {
   const { id } = await params;
-  //Database for enkelt spil
+  // Database for enkelt spil
   const response = await fetch(
     `https://advanced-frontend-development.andreaskadhede.dk/wp-json/wp/v2/boardgame?acf_format=standard&orderby=date&order=asc&per_page=15`
   );
@@ -47,7 +47,7 @@ export default async function BoardgameDetailPage({ params }) {
   return (
     <main className="single_boardgame">
       {/* opdatér link til at navigere ét step tilbage i stedet */}
-      <Button destination="/boardgames" />
+      <ButtonBack destination="/boardgames" />
       <section className="boardgame_info">
         <article className="intro">
           <h1>{boardgame.acf.name}</h1>

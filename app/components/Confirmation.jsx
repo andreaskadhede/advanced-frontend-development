@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { useState } from "react"; // Import useState and useEffect for managing state and side effects
-// import styles from "./page.module.css";
 
 export default function Confirmation() {
    return (
@@ -18,7 +16,7 @@ export default function Confirmation() {
          </div>
 
          <div className="card_middle">
-            <h2>Bestilling er sendt til baren!</h2>
+            <h2>Din bestilling er sendt til baren!</h2>
          </div>
          <div className="card_bottom">
             <div className="width2rem"></div>

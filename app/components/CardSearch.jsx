@@ -1,6 +1,4 @@
 import Image from "next/image";
-import { useState } from "react"; // Import useState and useEffect for managing state and side effects
-// import styles from "./page.module.css";
 
 export default function CardSearch({ searchQuery, handleSearchChange }) {
    return (

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-// import styles from "./page.module.css";
 
 export default function Inspiration() {
    const [delayBowl, setDelayBowl] = useState(true);
