@@ -707,6 +707,7 @@ main.home {
    align-items: center;
    display: flex;
    flex-direction: column;
+   justify-content: flex-end;
    width: 100%;
 
    .boardgame.button {
@@ -1147,6 +1148,28 @@ main.home {
 
    .inspiration_grid {
       margin-top: -1.5rem;
+   }
+
+   .inspo_bottom {
+      max-height: 50%;
+   }
+
+   .wheel_no_animation {
+      .wheel_low {
+         max-height: 75%;
+      }
+   }
+
+   .wheel_animation {
+      .wheelContainer {
+         position: absolute;
+         scale: .75;
+         top: -300px;
+      }
+      
+      .wheel_low {
+         display: none;
+      }
    }
 }
 
