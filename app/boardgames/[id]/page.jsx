@@ -16,30 +16,40 @@ export default async function BoardgameDetailPage({ params }) {
   // Ensure id is compared as a number
   const boardgame = boardgames.find((game) => game.id === Number(id));
 
-  // Filter board games with the same category
+  // Filter board games with the same category, excluding the current game's id
+  const numericId = Number(id); // Ensure `id` is a number for comparison
+  // Exclude the game with ID 33 and filter by category
   const sameCategoryGames = boardgames
-    .filter((game) =>
-      game.acf.category.some((category) =>
-        boardgame.acf.category.includes(category)
-      )
+    .filter(
+      (game) =>
+        game.id !== numericId && // Ensure ID is excluded
+        game.acf.category.some((category) =>
+          boardgame.acf.category.includes(category)
+        )
     )
     .slice(0, 3); // Limit to 3 games
 
+  console.log("Filtered games:", sameCategoryGames);
+
   // Filter board games with the same players
   const samePlayerGames = boardgames
-    .filter((game) =>
-      game.acf.players_category.some((players) =>
-        boardgame.acf.players_category.includes(players)
-      )
+    .filter(
+      (game) =>
+        game.id !== numericId && // Ensure ID is excluded
+        game.acf.players_category.some((players) =>
+          boardgame.acf.players_category.includes(players)
+        )
     )
     .slice(0, 3); // Limit to 3 games
 
   // Filter board games with the same time
   const sameTimeGames = boardgames
-    .filter((game) =>
-      game.acf.time_category.some((time) =>
-        boardgame.acf.time_category.includes(time)
-      )
+    .filter(
+      (game) =>
+        game.id !== numericId && // Ensure ID is excluded
+        game.acf.time_category.some((time) =>
+          boardgame.acf.time_category.includes(time)
+        )
     )
     .slice(0, 3); // Limit to 3 games
 
