@@ -93,7 +93,7 @@
 }
 
 .fontweightmedium {
-   font-weight: var(--medium);
+  font-weight: var(--medium);
 }
 
 .fontweightsemibold {
@@ -555,6 +555,10 @@ main.home {
 }
 
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
+
+.single_boardgame .button .game_box {
+   height: 0.125rem;
+}
 
 .single_boardgame .button .game_box {
    height: 0.125rem;
