@@ -1,27 +1,26 @@
 "use client";
+import Button from "@/app/components/Button";
 import Wheel from "@/app/components/Wheel";
 import Image from "next/image";
 import { useState } from "react";
 
 export default function WheelMiniGame() {
-   const [isWheelNoGame, setIsWheelNoGame] = useState(true);
-   const [isWheelGame, setIsWheelGame] = useState(false);
+   const [wheelNoGame, setWheelNoGame] = useState(true);
+   const [wheelGame, setWheelGame] = useState(false);
 
    function gameStart() {
-      setIsWheelNoGame(false); // Hide the no-animation section
-      setIsWheelGame(true); // Show the animation section
+      setWheelNoGame(false); // Hide the no-animation section
+      setWheelGame(true); // Show the animation section
    }
 
    return (
       <main className="inspiration_main">
          <div className="minigame">
-            {isWheelNoGame && (
+            {wheelNoGame && (
                <div className="wheel_no_animation">
                   <section className="inspo_top">
                      <h1>Lykkehjulet</h1>
-                     <p className="fontsize20">
-                        Spin hjulet og få et tilfældigt spilforslag!
-                     </p>
+                     <p>Spin hjulet og få et tilfældigt spilforslag!</p>
                   </section>
                   <div className="inspo_bottom">
                      <Image
@@ -32,17 +31,23 @@ export default function WheelMiniGame() {
                         width={400}
                         alt="Lykkehjul"
                      />
-                     <p onClick={gameStart} id="pop_1" className="box_header">
-                        Start spil
-                     </p>
-                     <p id="pop_1" className="box_header">
-                        <br />
-                     </p>
+
+                     <div onClick={gameStart} className="boardgame">
+                        <div className="game_lid">
+                           <h2>Start spil</h2>
+                        </div>
+                        <div className="game_box"></div>
+                     </div>
+                     <Button
+                        disabled
+                        fillColor="var(--blue)"
+                        fontColor="var(--blue)"
+                     />
                   </div>
                </div>
             )}
 
-            {isWheelGame && (
+            {wheelGame && (
                <div className="wheel_animation">
                   <Wheel />
                </div>

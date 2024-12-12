@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Boardgame from "./components/Boardgame";
+import Button from "./components/Button";
 
 export default async function Home() {
   // Database over alle spil
@@ -12,11 +13,17 @@ export default async function Home() {
   return (
     <main className="home">
       <section className="shelf top">
-        <h2 className="box_header">Populære spil</h2>
-        <Boardgame id="pop_1" boardgame={boardgames[3]} />
-        <Boardgame id="pop_2" boardgame={boardgames[7]} />
-        <Boardgame id="pop_3" boardgame={boardgames[12]} />
-        <Boardgame id="pop_4" boardgame={boardgames[0]} />
+        {/* indsæt link til populære spil: */}
+        <Button
+          destination="/boardgames/#"
+          fillColor="var(--darkGreen)"
+          text="Populære spil"
+          fontSize="var(--fontsizeXL)"
+        />
+        <Boardgame boardgame={boardgames[7]} />
+        <Boardgame boardgame={boardgames[9]} />
+        <Boardgame boardgame={boardgames[3]} />
+        <Boardgame boardgame={boardgames[0]} />
       </section>
       <div className="double_shelf mid">
         <section className="shelf mid left">
@@ -34,15 +41,25 @@ export default async function Home() {
           />
         </section>
         <section className="shelf mid right">
-          <h4 className="box_header">Bar</h4>
+          <Button
+            destination="/bar"
+            text="Bar"
+            fillColor="var(--purple)"
+            fontSize="var(--fontsizeM)"
+          />
           <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
         </section>
       </div>
       <div className="double_shelf bottom">
         <section className="shelf bottom left">
-          <h4 className="box_header">Skjulte perler</h4>
-          <Boardgame id="per_1" boardgame={boardgames[2]} />
-          <Boardgame id="per_2" boardgame={boardgames[4]} />
+          {/* indsæt link til skjulte perler: */}
+          <Button
+            destination="/boardgames/#"
+            text="Skjulte perler"
+            fontSize="var(--fontsizeM)"
+          />
+          <Boardgame boardgame={boardgames[2]} />
+          <Boardgame boardgame={boardgames[4]} />
         </section>
         <section className="shelf bottom right">
           <Image
@@ -52,7 +69,12 @@ export default async function Home() {
             unoptimized
             alt="Lykkehjul"
           />
-          <h4 className="box_header">Inspiration</h4>
+          <Button
+            destination="/inspiration"
+            text="Inspiration"
+            fillColor="var(--blue)"
+            fontSize="var(--fontsizeM)"
+          />
         </section>
       </div>
     </main>

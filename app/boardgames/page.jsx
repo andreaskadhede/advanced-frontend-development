@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Boardgame from "../components/Boardgame";
-import Filter from "../components/Filter";
+import CardFilter from "../components/CardFilter";
+import CardSearch from "../components/CardSearch";
 // import styles from "./page.module.css";
 
 export default function Boardgames() {
@@ -40,29 +41,11 @@ export default function Boardgames() {
   return (
     <main>
       <div className="inner_bookshelf">
-        <div className="search">
-          <Image
-            src="/icons/search.svg"
-            alt="search icon"
-            width={400}
-            height={400}
-            className="card_icon"
-          />
-          <input
-            placeholder="Søg..."
-            className="card_input"
-            value={searchQuery}
-            onChange={handleSearchChange} // Handle input change
-          />
-          <Image
-            src="/icons/spades.svg"
-            alt="spades icon"
-            width={400}
-            height={400}
-            className="card_icon"
-          />
-        </div>
-        <Filter
+        <CardSearch
+          searchQuery={searchQuery}
+          handleSearchChange={handleSearchChange}
+        />
+        <CardFilter
           setFilteredGames={setFilteredGames}
           filteredGames={filteredGames}
           boardgames={boardgames}
