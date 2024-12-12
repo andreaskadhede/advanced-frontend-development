@@ -10,6 +10,7 @@ export default function Boardgames() {
   const [boardgames, setBoardgames] = useState([]); // State to hold the barItems
   // Local state for the search query
   const [searchQuery, setSearchQuery] = useState("");
+  const [filteredGames, setFilteredGames] = useState([]); // State to hold the filtered games
 
   // Fetch data from the API when the component mounts
   useEffect(() => {
@@ -19,12 +20,15 @@ export default function Boardgames() {
       );
       const data = await response.json();
       setBoardgames(data); // Set the fetched boardgames to state
+      setFilteredGames(data);
     };
     fetchBoardgames();
   }, []); // Empty dependency array to run only once when the component mounts
+  // console.log(boardgames);
 
+  console.log(filteredGames);
   // Filter the boardgames based on the search query
-  const filteredBoardgames = boardgames.filter((boardgame) =>
+  const filteredBoardgames = filteredGames.filter((boardgame) =>
     boardgame.title.rendered.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -58,14 +62,18 @@ export default function Boardgames() {
             className="card_icon"
           />
         </div>
-        <Filter />
+        <Filter
+          setFilteredGames={setFilteredGames}
+          filteredGames={filteredGames}
+          boardgames={boardgames}
+        />
         {/* Render filtered boardgames */}
         {filteredBoardgames.length > 0 ? (
           filteredBoardgames.map((boardgame) => (
             <Boardgame key={boardgame.id} boardgame={boardgame} />
           ))
         ) : (
-          <p>Vi har desværre ikke et brætspil med dette navn.</p> // Show this if no games match
+          <p>Vi har desværre ikke et brætspil med dette navn.</p>
         )}
       </div>
     </main>

@@ -32,7 +32,11 @@ export default function Bestilling() {
           alt="person icon"
           width={400}
           height={400}
-          style={{ height: "1rem" }}
+          style={{
+            height: "1rem",
+            opacity: bestillingActive ? "1" : "0",
+            transition: "all 1s ease",
+          }}
         />
       </div>
 
