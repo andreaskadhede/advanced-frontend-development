@@ -220,7 +220,7 @@ export default function CardFilter({
 
           <div className="options">
             <button
-              className="kategori"
+              className="category"
               onClick={() => applyFilter("category", "populære")}
               style={{
                 backgroundColor:
@@ -232,7 +232,7 @@ export default function CardFilter({
               Populære
             </button>
             <button
-              className="kategori"
+              className="category"
               onClick={() => applyFilter("category", "skjulte perler")}
               style={{
                 backgroundColor:
@@ -246,7 +246,7 @@ export default function CardFilter({
           </div>
           <div className="options">
             <button
-              className="kategori"
+              className="category"
               onClick={() => applyFilter("category", "klassikere")}
               style={{
                 backgroundColor:
@@ -258,7 +258,7 @@ export default function CardFilter({
               Klassikere
             </button>
             <button
-              className="kategori"
+              className="category"
               onClick={() => applyFilter("category", "selskabsspil")}
               style={{
                 backgroundColor:
@@ -272,7 +272,7 @@ export default function CardFilter({
           </div>
           <div className="options">
             <button
-              className="kategori"
+              className="category"
               onClick={() => applyFilter("category", "quiz")}
               style={{
                 backgroundColor:
@@ -284,7 +284,7 @@ export default function CardFilter({
               Quiz
             </button>
             <button
-              className="kategori"
+              className="category"
               onClick={() => applyFilter("category", "strategi")}
               style={{
                 backgroundColor:
