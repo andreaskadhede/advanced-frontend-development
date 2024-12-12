@@ -59,7 +59,7 @@ export default async function Home() {
             text="Skjulte perler"
             fontSize="var(--fontsizeM)"
           />
-          <Boardgame boardgame={boardgames[2]} />
+          <Boardgame boardgame={boardgames[10]} />
           <Boardgame boardgame={boardgames[4]} />
         </section>
         <section className="shelf bottom right">
