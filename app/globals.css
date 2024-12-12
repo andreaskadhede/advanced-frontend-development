@@ -319,7 +319,7 @@ main.home {
 
    .game_lid p {
       letter-spacing: -0.25rem;
-      padding: 0 .125rem;
+      padding: 0 0.125rem;
       text-orientation: upright;
       writing-mode: vertical-lr;
    }
@@ -529,11 +529,11 @@ main.home {
    height: 0.125rem;
 }
 
-.boardgame_info>*:not(:last-child) {
+.boardgame_info > *:not(:last-child) {
    margin-bottom: 2rem;
 }
 
-.boardgame_info article>*:not(:last-child) {
+.boardgame_info article > *:not(:last-child) {
    padding-bottom: 1rem;
 }
 
@@ -542,12 +542,12 @@ main.home {
    justify-content: space-between;
 }
 
-.boardgame_info .icons>div {
+.boardgame_info .icons > div {
    display: flex;
    gap: 0.5rem;
 }
 
-.boardgame_info .icons>div>img {
+.boardgame_info .icons > div > img {
    width: 1.5rem;
 }
 
@@ -573,7 +573,7 @@ main.home {
    padding: 2rem 0 1rem;
 }
 
-.boardgame_info .carousel .breadcrumbs>div {
+.boardgame_info .carousel .breadcrumbs > div {
    background-color: var(--white);
    border-radius: 999px;
    height: 1rem;
@@ -582,7 +582,7 @@ main.home {
 
 .boardgame_info .suggestions .games {
    flex-direction: column;
-   gap: .5rem;
+   gap: 0.5rem;
    padding: 1rem;
 }
 
@@ -592,7 +592,7 @@ main.home {
    width: 100dvw;
    margin-bottom: 0;
    position: fixed;
-   height: 100%;
+   height: calc(100dvh - var(--marginBottom) - var(--marginTop));
 }
 
 .inspiration_background {
@@ -1094,3 +1094,15 @@ main.home {
 /*--- Media queries --------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-height: 750px) {
+   .inspiration_grid {
+      margin-top: -1.5rem;
+   }
+}
+
+@media (max-height: 700px) {
+   .inspiration_grid {
+      margin-top: -2.25rem;
+   }
+}
