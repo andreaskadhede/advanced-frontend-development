@@ -1,5 +1,6 @@
 import ButtonBack from "@/app/components/ButtonBack";
 import Boardgame from "@/app/components/Boardgame";
+import TextToggle from "@/app/components/TextToggle";
 import Image from "next/image";
 
 export default async function BoardgameDetailPage({ params }) {
@@ -118,7 +119,8 @@ export default async function BoardgameDetailPage({ params }) {
         </div>
         <article className="rules">
           <h2>Regler</h2>
-          <p>{boardgame.acf.rules}</p>
+          <TextToggle rules={boardgame.acf.rules}></TextToggle>
+          {/* <p rules={boardgame.acf.rules}></p> */}
         </article>
         <article className="suggestions">
           <h2>Lignende spil</h2>
