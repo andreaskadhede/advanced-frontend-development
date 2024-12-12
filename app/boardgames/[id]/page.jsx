@@ -122,7 +122,7 @@ export default async function BoardgameDetailPage({ params }) {
         </article>
         <article className="suggestions">
           <h2>Lignende spil</h2>
-          <div className="games shelf top">
+          <div className="games shelf">
             {/* Render filtered boardgames */}
             {sameCategoryGames.map((boardgame) => (
               <Boardgame key={boardgame.id} boardgame={boardgame} />
@@ -131,7 +131,7 @@ export default async function BoardgameDetailPage({ params }) {
         </article>
         <article className="suggestions">
           <h2>Samme antal spillere</h2>
-          <div className="games shelf top">
+          <div className="games shelf">
             {/* Render filtered boardgames */}
             {samePlayerGames.map((boardgame) => (
               <Boardgame key={boardgame.id} boardgame={boardgame} />
@@ -140,7 +140,7 @@ export default async function BoardgameDetailPage({ params }) {
         </article>
         <article className="suggestions">
           <h2>Samme spilletid</h2>
-          <div className="games shelf top">
+          <div className="games shelf">
             {/* Render filtered boardgames */}
             {sameTimeGames.map((boardgame) => (
               <Boardgame key={boardgame.id} boardgame={boardgame} />
