@@ -1,4 +1,4 @@
-import Button from "@/app/components/Button";
+import ButtonBack from "@/app/components/ButtonBack";
 import Boardgame from "@/app/components/Boardgame";
 import Image from "next/image";
 
@@ -47,7 +47,7 @@ export default async function BoardgameDetailPage({ params }) {
   return (
     <main className="single_boardgame">
       {/* opdatér link til at navigere ét step tilbage i stedet */}
-      <Button destination="/boardgames" />
+      <ButtonBack destination="/boardgames" />
       <section className="boardgame_info">
         <article className="intro">
           <h1>{boardgame.acf.name}</h1>

@@ -15,7 +15,7 @@ export default async function Home() {
       <section className="shelf top">
         {/* indsæt link til populære spil: */}
         <Button
-          destination="/boardgames/#"
+          // destination="/boardgames/#"
           fillColor="var(--darkGreen)"
           text="Populære spil"
           fontSize="var(--fontsizeXL)"
