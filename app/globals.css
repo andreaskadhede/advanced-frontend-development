@@ -291,11 +291,13 @@ main.home {
    /* candle */
    & img:first-child {
       max-height: 50%;
+      min-height: 45px;
    }
 
    /* plant */
    & img:last-child {
       max-height: 100%;
+      min-height: 85px;
    }
 }
 
@@ -447,10 +449,12 @@ main.home {
 
    & a:not(:last-child) {
       display: flex;
+      max-height: 90%;
       width: 60%;
    }
 
    & a img {
+      height: 100%;
       width: 100%;
    }
 
@@ -536,11 +540,11 @@ main.home {
    height: 0.125rem;
 }
 
-.boardgame_info > *:not(:last-child) {
+.boardgame_info>*:not(:last-child) {
    margin-bottom: 2rem;
 }
 
-.boardgame_info article > *:not(:last-child) {
+.boardgame_info article>*:not(:last-child) {
    padding-bottom: 1rem;
 }
 
@@ -549,12 +553,12 @@ main.home {
    justify-content: space-between;
 }
 
-.boardgame_info .icons > div {
+.boardgame_info .icons>div {
    display: flex;
    gap: 0.5rem;
 }
 
-.boardgame_info .icons > div > img {
+.boardgame_info .icons>div>img {
    width: 1.5rem;
 }
 
@@ -580,7 +584,7 @@ main.home {
    padding: 2rem 0 1rem;
 }
 
-.boardgame_info .carousel .breadcrumbs > div {
+.boardgame_info .carousel .breadcrumbs>div {
    background-color: var(--white);
    border-radius: 999px;
    height: 1rem;
