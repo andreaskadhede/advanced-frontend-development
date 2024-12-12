@@ -32,7 +32,7 @@ export default function WheelMiniGame() {
                         alt="Lykkehjul"
                      />
 
-                     <div onClick={gameStart} className="boardgame">
+                     <div onClick={gameStart} className="boardgame button">
                         <div className="game_lid">
                            <h2>Start spil</h2>
                         </div>
@@ -41,7 +41,7 @@ export default function WheelMiniGame() {
                      <Button
                         disabled
                         fillColor="var(--blue)"
-                        fontColor="var(--blue)"
+                        text=""
                      />
                   </div>
                </div>
