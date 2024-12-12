@@ -168,7 +168,7 @@ img {
    width: fit-content;
 
    & p {
-      padding: .125rem .25rem;
+      padding: 0.125rem 0.25rem;
    }
 }
 
@@ -423,7 +423,7 @@ main.home {
 /* header */
 .shelf.bottom.left .button {
    .game_lid p {
-      padding-block: .125rem .125rem;
+      padding-block: 0.125rem 0.125rem;
       rotate: 180deg;
       writing-mode: vertical-lr;
    }
@@ -557,14 +557,14 @@ main.home {
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
 
 .single_boardgame .button .game_box {
-   height: .125rem;
+   height: 0.125rem;
 }
 
-.boardgame_info>*:not(:last-child) {
+.boardgame_info > *:not(:last-child) {
    margin-bottom: 2rem;
 }
 
-.boardgame_info article>*:not(:last-child) {
+.boardgame_info article > *:not(:last-child) {
    padding-bottom: 1rem;
 }
 
@@ -573,12 +573,12 @@ main.home {
    justify-content: space-between;
 }
 
-.boardgame_info .icons>div {
+.boardgame_info .icons > div {
    display: flex;
    gap: 0.5rem;
 }
 
-.boardgame_info .icons>div>img {
+.boardgame_info .icons > div > img {
    width: 1.5rem;
 }
 
@@ -604,7 +604,7 @@ main.home {
    padding: 2rem 0 1rem;
 }
 
-.boardgame_info .carousel .breadcrumbs>div {
+.boardgame_info .carousel .breadcrumbs > div {
    background-color: var(--white);
    border-radius: 999px;
    height: 1rem;
@@ -632,6 +632,9 @@ main.home {
    object-position: 50% 50%;
    overflow: hidden;
    max-width: 436px;
+   grid-area: 1 / 1 / -1 / -1;
+   justify-content: center;
+   align-self: center;
 }
 
 .inspiration_grid {
@@ -645,6 +648,7 @@ main.home {
    grid-template-rows: repeat(24, 1fr);
    left: 50%;
    transform: translate(-50%);
+   overflow: hidden;
 }
 
 .bowl {

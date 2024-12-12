@@ -48,7 +48,7 @@ export default function Inspiration() {
    }, [delayWheel]);
 
    return (
-      <main className="inspiration_main">
+      <main className="inspiration_main inspiration_grid">
          <Image
             className="inspiration_background"
             src="/img/inspiration_background.svg"
@@ -57,83 +57,81 @@ export default function Inspiration() {
             alt="Inspirations lokale"
          />
 
-         <div className="inspiration_grid">
-            {delayBowl ? (
-               <Image
-                  className="bowl"
-                  src="/gif/bowl.gif"
-                  height={400}
-                  width={400}
-                  alt="Lodtrækningsskål"
-               />
-            ) : (
-               <Image
-                  className="bowl"
-                  src="/img/bowl.svg"
-                  height={400}
-                  width={400}
-                  alt="Lodtrækningsskål"
-               />
-            )}
+         {delayBowl ? (
+            <Image
+               className="bowl"
+               src="/gif/bowl.gif"
+               height={400}
+               width={400}
+               alt="Lodtrækningsskål"
+            />
+         ) : (
+            <Image
+               className="bowl"
+               src="/img/bowl.svg"
+               height={400}
+               width={400}
+               alt="Lodtrækningsskål"
+            />
+         )}
 
-            {delayPinboard ? (
-               <Image
-                  className="pinboard"
-                  src="/gif/pinboard.gif"
-                  height={400}
-                  width={400}
-                  alt="Opslagstavle"
-               />
-            ) : (
-               <Image
-                  className="pinboard"
-                  src="/img/pinboard.svg"
-                  height={400}
-                  width={400}
-                  alt="Opslagstavle"
-               />
-            )}
+         {delayPinboard ? (
+            <Image
+               className="pinboard"
+               src="/gif/pinboard.gif"
+               height={400}
+               width={400}
+               alt="Opslagstavle"
+            />
+         ) : (
+            <Image
+               className="pinboard"
+               src="/img/pinboard.svg"
+               height={400}
+               width={400}
+               alt="Opslagstavle"
+            />
+         )}
 
-            {delayPosters ? (
-               <Image
-                  className="posters"
-                  src="/gif/posters.gif"
-                  height={400}
-                  width={400}
-                  alt="Plakater"
-               />
-            ) : (
-               <Image
-                  className="posters"
-                  src="/img/posters.svg"
-                  height={400}
-                  width={400}
-                  alt="Plakater"
-               />
-            )}
+         {delayPosters ? (
+            <Image
+               className="posters"
+               src="/gif/posters.gif"
+               height={400}
+               width={400}
+               alt="Plakater"
+            />
+         ) : (
+            <Image
+               className="posters"
+               src="/img/posters.svg"
+               height={400}
+               width={400}
+               alt="Plakater"
+            />
+         )}
 
-            {delayWheel ? (
-               <Link className="wheel_high" href="/inspiration/wheelMiniGame">
-                  <Image
-                     className="wheel_high"
-                     src="/gif/wheel_legs_high.gif"
-                     height={400}
-                     width={400}
-                     alt="Lykkehjul"
-                  />
-               </Link>
-            ) : (
-               <Link className="wheel_high" href="/inspiration/wheelMiniGame">
-                  <Image
-                     className="wheel_high"
-                     src="/img/wheel_legs_high.svg"
-                     height={400}
-                     width={400}
-                     alt="Lykkehjul"
-                  />
-               </Link>
-            )}
-         </div>
+         {delayWheel ? (
+            <Link className="wheel_high" href="/inspiration/wheelMiniGame">
+               <Image
+                  className="wheel_high"
+                  src="/gif/wheel_legs_high.gif"
+                  height={400}
+                  width={400}
+                  alt="Lykkehjul"
+               />
+            </Link>
+         ) : (
+            <Link className="wheel_high" href="/inspiration/wheelMiniGame">
+               <Image
+                  className="wheel_high"
+                  src="/img/wheel_legs_high.svg"
+                  height={400}
+                  width={400}
+                  alt="Lykkehjul"
+               />
+            </Link>
+         )}
       </main>
    );
 }
