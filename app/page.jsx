@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Boardgame from "./components/Boardgame";
 import Button from "./components/Button";
+import Link from "next/link";
 
 export default async function Home() {
   // Database over alle spil
@@ -47,7 +48,9 @@ export default async function Home() {
             fillColor="var(--purple)"
             fontSize="var(--fontsizeM)"
           />
-          <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
+          <Link href="/bar">
+            <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
+          </Link>
         </section>
       </div>
       <div className="double_shelf bottom">
@@ -62,13 +65,15 @@ export default async function Home() {
           <Boardgame boardgame={boardgames[4]} />
         </section>
         <section className="shelf bottom right">
-          <Image
-            src="/gif/wheel_legs_low.gif"
-            height={400}
-            width={400}
-            unoptimized
-            alt="Lykkehjul"
-          />
+          <Link href="/inspiration">
+            <Image
+              src="/gif/wheel_legs_low.gif"
+              height={400}
+              width={400}
+              unoptimized
+              alt="Lykkehjul"
+            />
+          </Link>
           <Button
             destination="/inspiration"
             text="Inspiration"

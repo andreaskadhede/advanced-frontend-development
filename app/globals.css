@@ -59,55 +59,6 @@
    --marginBottom: calc(113.5px - 2px);
 }
 
-/* Font classes */
-/* .fontsize8 {
-   font-size: var(--fontsizeXXS);
-}
-
-.fontsize12 {
-   font-size: var(--fontsizeXS);
-} */
-
-/* .fontsize14 {
-   font-size: var(--fontsizeS);
-} */
-
-/* .fontsize16 {
-   font-size: var(--fontsizeM);
-} */
-
-/* .fontsize20 {
-   font-size: var(--fontsizeL);
-} */
-
-/* .fontsize24 {
-   font-size: var(--fontsizeXL);
-} */
-
-/* .fontsize32 {
-   font-size: var(--fontsizeXXL);
-} */
-
-/* .fontweightregular {
-   font-weight: var(--regular);
-}
-
-.fontweightmedium {
-  font-weight: var(--medium);
-}
-
-.fontweightsemibold {
-   font-weight: var(--semiBold);
-} */
-
-/* .fontcolorwhite {
-   color: var(--white);
-}
-
-.fontcolorblack {
-   color: var(--black);
-} */
-
 /* --- reset --- */
 * {
    box-sizing: border-box;
@@ -362,15 +313,25 @@ main.home {
       width: 0.15rem;
    }
 
+   .game_lid {
+      width: fit-content;
+   }
+
    .game_lid p {
       letter-spacing: -0.25rem;
+      padding: 0 .125rem;
       text-orientation: upright;
       writing-mode: vertical-lr;
    }
 
    /* bell */
+   & a {
+      align-items: flex-end;
+      display: flex;
+   }
+
    & img {
-      width: 60%;
+      align-self: flex-end;
    }
 }
 
@@ -477,12 +438,16 @@ main.home {
    justify-content: flex-end;
    padding-top: 2rem;
 
-   & img {
-      max-height: 150%;
+   & a:not(:last-child) {
+      display: flex;
       width: 60%;
    }
 
-   & a {
+   & a img {
+      width: 100%;
+   }
+
+   & .button {
       width: 75%;
    }
 
@@ -564,11 +529,11 @@ main.home {
    height: 0.125rem;
 }
 
-.boardgame_info > *:not(:last-child) {
+.boardgame_info>*:not(:last-child) {
    margin-bottom: 2rem;
 }
 
-.boardgame_info article > *:not(:last-child) {
+.boardgame_info article>*:not(:last-child) {
    padding-bottom: 1rem;
 }
 
@@ -577,12 +542,12 @@ main.home {
    justify-content: space-between;
 }
 
-.boardgame_info .icons > div {
+.boardgame_info .icons>div {
    display: flex;
    gap: 0.5rem;
 }
 
-.boardgame_info .icons > div > img {
+.boardgame_info .icons>div>img {
    width: 1.5rem;
 }
 
@@ -608,7 +573,7 @@ main.home {
    padding: 2rem 0 1rem;
 }
 
-.boardgame_info .carousel .breadcrumbs > div {
+.boardgame_info .carousel .breadcrumbs>div {
    background-color: var(--white);
    border-radius: 999px;
    height: 1rem;
@@ -616,8 +581,9 @@ main.home {
 }
 
 .boardgame_info .suggestions .games {
-   gap: 0;
-   padding-top: 1rem;
+   flex-direction: column;
+   gap: .5rem;
+   padding: 1rem;
 }
 
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
@@ -895,7 +861,7 @@ main.home {
    border: none;
 }
 
-/* --- Specifik to order --- */
+/* --- specific to bar order --- */
 .card_order_element {
    height: 40px;
    display: flex;
@@ -963,7 +929,7 @@ main.home {
    color: var(--white);
 }
 
-/* --- Specifik to filter --- */
+/* --- specific to filter --- */
 .card_filter_element {
    display: flex;
    flex-direction: column;
@@ -998,11 +964,11 @@ main.home {
    height: 25px;
 }
 
-.card_filter_element .kategori {
+.card_filter_element .category {
    width: 106px;
 }
 
-/* --- Specifik to search --- */
+/* --- specific to search --- */
 
 #search_icon {
    width: 25px;
