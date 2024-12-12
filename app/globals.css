@@ -109,6 +109,12 @@ a:any-link {
    text-decoration: none;
 }
 
+button {
+   background-color: transparent;
+   border: none;
+   outline: none;
+}
+
 img {
    height: fit-content;
    object-fit: contain;

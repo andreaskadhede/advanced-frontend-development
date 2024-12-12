@@ -15,7 +15,7 @@ export default function ButtonBack({
   };
 
   return (
-    <a
+    <button
       className="button"
       onClick={handleClick}
       style={{
@@ -28,6 +28,6 @@ export default function ButtonBack({
         </div>
         <div className="game_box"></div>
       </article>
-    </a>
+    </button>
   );
 }
