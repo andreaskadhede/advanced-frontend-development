@@ -16,10 +16,10 @@ export default function CardOrder({ confirmation, setConfirmation }) {
         console.log("clicked");
       }}
       style={{
-        top: orderActive ? "50%" : "64%",
+        bottom: orderActive ? "50%" : "-51.5px",
         right: orderActive ? "50%" : "1.5rem",
         transform: orderActive
-          ? "scale(1) translate(50%, -50%)"
+          ? "scale(1) translate(50%, 50%)"
           : "scale(0.58) translate(0%, 0%)",
         transformOrigin: orderActive ? "bottom right" : "bottom right",
       }}
