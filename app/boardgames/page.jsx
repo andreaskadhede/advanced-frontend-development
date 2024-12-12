@@ -1,11 +1,9 @@
 "use client"; // This makes sure the component is client-side rendered
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import Boardgame from "../components/Boardgame";
 import CardFilter from "../components/CardFilter";
 import CardSearch from "../components/CardSearch";
-// import styles from "./page.module.css";
 
 export default function Boardgames() {
   const [boardgames, setBoardgames] = useState([]); // State to hold the barItems
