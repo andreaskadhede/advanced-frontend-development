@@ -20,7 +20,7 @@ export default function ButtonBack({ rules }) {
           setTextOpen(!textOpen), console.log(rules);
         }}
       >
-        Læs mere
+        {textOpen ? "Vis mindre" : "Læs mere"}
       </h4>
     </div>
   );
