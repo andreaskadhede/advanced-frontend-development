@@ -14,9 +14,8 @@ export default async function Home() {
   return (
     <main className="home">
       <section className="shelf top">
-        {/* indsæt link til populære spil: */}
         <Button
-          destination="/boardgames/#"
+          destination="/boardgames"
           fillColor="var(--darkGreen)"
           text="Populære spil"
           fontSize="var(--fontsizeXL)"
@@ -55,9 +54,8 @@ export default async function Home() {
       </div>
       <div className="double_shelf bottom">
         <section className="shelf bottom left">
-          {/* indsæt link til skjulte perler: */}
           <Button
-            destination="/boardgames/#"
+            destination="/boardgames"
             text="Skjulte perler"
             fontSize="var(--fontsizeM)"
           />
