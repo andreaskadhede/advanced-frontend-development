@@ -15,11 +15,7 @@ export default async function Home() {
     <main className="home">
       <section className="shelf top">
         <Button
-<<<<<<< HEAD
-          // destination="/boardgames/#"
-=======
           destination="/boardgames"
->>>>>>> 30060964274322ba7b4a3e91e7c4d0332a4a72fa
           fillColor="var(--darkGreen)"
           text="Populære spil"
           fontSize="var(--fontsizeXL)"
