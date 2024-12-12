@@ -590,27 +590,25 @@ main.home {
 
 .inspiration_main {
    width: 100dvw;
-   height: calc(100dvh - var(--marginBottom) - var(--marginTop));
    margin-bottom: 0;
    position: fixed;
+   height: 100%;
 }
 
 .inspiration_background {
    object-fit: cover;
-   height: calc(100dvh - var(--marginBottom) - var(--marginTop) - 2px);
    width: 100%;
    object-position: 50% 50%;
    overflow: hidden;
-   max-width: 436px;
    grid-area: 1 / 1 / -1 / -1;
-   justify-content: center;
+   justify-self: center;
    align-self: center;
+   height: 100%;
+   max-width: 520px;
 }
 
 .inspiration_grid {
-   /* background-color: red; */
-   width: 343px;
-   height: calc(100dvh - var(--marginBottom) - var(--marginTop) - 2px);
+   min-width: 343px;
    position: absolute;
    margin: auto;
    display: grid;
@@ -630,20 +628,20 @@ main.home {
 
 .pinboard {
    width: 130px;
-   grid-area: 6 / 9 / 11 / 19;
+   grid-area: 6 / 9 / -1 / 19;
    align-self: start;
    justify-self: center;
 }
 
 .posters {
    width: 145px;
-   grid-area: 11 / 9 / 19 / 20;
+   grid-area: 11 / 9 / -1 / 20;
    align-self: start;
 }
 
 .wheel_high {
    width: 115px;
-   grid-area: 10 / 16 / 21 / 25;
+   grid-area: 1 / 16 / 21 / 25;
    align-self: end;
 }
 
