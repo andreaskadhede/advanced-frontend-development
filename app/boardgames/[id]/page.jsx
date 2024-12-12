@@ -103,29 +103,29 @@ export default async function BoardgameDetailPage({ params }) {
           <p>{boardgame.acf.description}</p>
         </article>
         <div className="carousel">
-          <Image
+          {/* <Image
             src={boardgame.acf.images.front}
             height={400}
             width={400}
             alt={boardgame.acf.name}
-          />
-          {/* <Image
+          /> */}
+          <Image
             src={boardgame.acf.images.opened}
             height={400}
             width={400}
             alt={boardgame.acf.name}
           />
-          <Image
+          {/* <Image
             src={boardgame.acf.images.back}
             height={400}
             width={400}
             alt={boardgame.acf.name}
           /> */}
-          <div className="breadcrumbs">
+          {/* <div className="breadcrumbs">
             <div></div>
             <div></div>
             <div></div>
-          </div>
+          </div> */}
         </div>
         <article className="rules">
           <h2>Regler</h2>
