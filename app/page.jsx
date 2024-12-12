@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Boardgame from "./components/Boardgame";
 import Button from "./components/Button";
+import Link from "next/link";
 
 export default async function Home() {
   // Database over alle spil
@@ -13,9 +14,12 @@ export default async function Home() {
   return (
     <main className="home">
       <section className="shelf top">
-        {/* indsæt link til populære spil: */}
         <Button
+<<<<<<< HEAD
           // destination="/boardgames/#"
+=======
+          destination="/boardgames"
+>>>>>>> 30060964274322ba7b4a3e91e7c4d0332a4a72fa
           fillColor="var(--darkGreen)"
           text="Populære spil"
           fontSize="var(--fontsizeXL)"
@@ -47,14 +51,15 @@ export default async function Home() {
             fillColor="var(--purple)"
             fontSize="var(--fontsizeM)"
           />
-          <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
+          <Link href="/bar">
+            <Image src="/img/bell.svg" height={400} width={400} alt="Klokke" />
+          </Link>
         </section>
       </div>
       <div className="double_shelf bottom">
         <section className="shelf bottom left">
-          {/* indsæt link til skjulte perler: */}
           <Button
-            destination="/boardgames/#"
+            destination="/boardgames"
             text="Skjulte perler"
             fontSize="var(--fontsizeM)"
           />
@@ -62,13 +67,15 @@ export default async function Home() {
           <Boardgame boardgame={boardgames[4]} />
         </section>
         <section className="shelf bottom right">
-          <Image
-            src="/gif/wheel_legs_low.gif"
-            height={400}
-            width={400}
-            unoptimized
-            alt="Lykkehjul"
-          />
+          <Link href="/inspiration">
+            <Image
+              src="/gif/wheel_legs_low.gif"
+              height={400}
+              width={400}
+              unoptimized
+              alt="Lykkehjul"
+            />
+          </Link>
           <Button
             destination="/inspiration"
             text="Inspiration"
