@@ -568,7 +568,8 @@ main.home {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   padding-top: 2rem;
+   padding-block: 2rem;
+   /* padding-top: 2rem; */
 }
 
 .boardgame_info .carousel img {
@@ -1166,7 +1167,7 @@ main.home {
          scale: .75;
          top: -300px;
       }
-      
+
       .wheel_low {
          display: none;
       }
