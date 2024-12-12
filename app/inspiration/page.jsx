@@ -87,7 +87,7 @@ export default function Inspiration() {
             ) : (
                <Image
                   className="pinboard"
-                  src="/img/pinboard.svg"
+                  src="/img/pinboard.png"
                   height={400}
                   width={400}
                   alt="Opslagstavle"
