@@ -52,19 +52,22 @@ export default function Inspiration() {
             <Image
                className="inspiration_background"
                src="/img/inspiration_background.svg"
-               height={1000}
-               width={1000}
+               height={800}
+               width={800}
                alt="Inspirations lokale"
             />
 
             {delayBowl ? (
-               <Image
+               <video
+                  autoPlay
+                  muted
+                  loop
+                  type="video/webm"
                   className="bowl"
-                  src="/gif/bowl.gif"
+                  src="/gif/bowl.webm"
                   height={400}
                   width={400}
-                  alt="Lodtrækningsskål"
-               />
+                  alt="Lodtrækningsskål"></video>
             ) : (
                <Image
                   className="bowl"
@@ -76,13 +79,16 @@ export default function Inspiration() {
             )}
 
             {delayPinboard ? (
-               <Image
+               <video
+                  autoPlay
+                  muted
+                  loop
+                  type="video/webm"
                   className="pinboard"
-                  src="/gif/pinboard.gif"
+                  src="/gif/pinboard.webm"
                   height={400}
                   width={400}
-                  alt="Opslagstavle"
-               />
+                  alt="Opslagstavle"></video>
             ) : (
                <Image
                   className="pinboard"
@@ -94,13 +100,16 @@ export default function Inspiration() {
             )}
 
             {delayPosters ? (
-               <Image
+               <video
+                  autoPlay
+                  muted
+                  loop
+                  type="video/webm"
                   className="posters"
-                  src="/gif/posters.gif"
+                  src="/gif/posters.webm"
                   height={400}
                   width={400}
-                  alt="Plakater"
-               />
+                  alt="Plakater"></video>
             ) : (
                <Image
                   className="posters"
@@ -113,13 +122,16 @@ export default function Inspiration() {
 
             {delayWheel ? (
                <Link className="wheel_high" href="/inspiration/wheelMiniGame">
-                  <Image
+                  <video
+                     autoPlay
+                     muted
+                     loop
+                     type="video/webm"
                      className="wheel_high"
-                     src="/gif/wheel_legs_high.gif"
+                     src="/gif/wheel_legs_high.webm"
                      height={400}
                      width={400}
-                     alt="Lykkehjul"
-                  />
+                     alt="Lykkehjul"></video>
                </Link>
             ) : (
                <Link className="wheel_high" href="/inspiration/wheelMiniGame">

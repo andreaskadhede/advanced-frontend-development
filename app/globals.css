@@ -115,7 +115,8 @@ button {
   outline: none;
 }
 
-img {
+img,
+video {
   height: fit-content;
   object-fit: contain;
   width: auto;
