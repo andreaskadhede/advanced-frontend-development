@@ -19,8 +19,9 @@ export default function CardFilter({
         return game.acf.time_category.includes(value);
       } else if (criteria === "age") {
         return game.acf.age >= parseInt(value);
-      } else criteria === "category";
-      return game.acf.category.includes(value);
+      } else if (criteria === "category") {
+        return game.acf.category.includes(value);
+      } else return game.acf.category;
     });
     setFilteredGames(newFilteredGames);
     console.log(filteredGames);
@@ -82,7 +83,11 @@ export default function CardFilter({
 
           <div className="options">
             <button
-              onClick={() => applyFilter("players", "2")}
+              onClick={() => {
+                activeButton === "players 2"
+                  ? applyFilter("", "")
+                  : applyFilter("players", "2");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "players 2"
@@ -93,7 +98,11 @@ export default function CardFilter({
               2
             </button>
             <button
-              onClick={() => applyFilter("players", "3-5")}
+              onClick={() => {
+                activeButton === "players 3-5"
+                  ? applyFilter("", "")
+                  : applyFilter("players", "3-5");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "players 3-5"
@@ -104,7 +113,11 @@ export default function CardFilter({
               3-5
             </button>
             <button
-              onClick={() => applyFilter("players", "6+")}
+              onClick={() => {
+                activeButton === "players 6+"
+                  ? applyFilter("", "")
+                  : applyFilter("players", "6+");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "players 6+"
@@ -131,7 +144,11 @@ export default function CardFilter({
 
           <div className="options">
             <button
-              onClick={() => applyFilter("time", "10-30")}
+              onClick={() => {
+                activeButton === "time 10-30"
+                  ? applyFilter("", "")
+                  : applyFilter("time", "10-30");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "time 10-30"
@@ -142,7 +159,11 @@ export default function CardFilter({
               10-30
             </button>
             <button
-              onClick={() => applyFilter("time", "30-60")}
+              onClick={() => {
+                activeButton === "time 30-60"
+                  ? applyFilter("", "")
+                  : applyFilter("time", "30-60");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "time 30-60"
@@ -153,7 +174,11 @@ export default function CardFilter({
               30-60
             </button>
             <button
-              onClick={() => applyFilter("time", "60+")}
+              onClick={() => {
+                activeButton === "time 60+"
+                  ? applyFilter("", "")
+                  : applyFilter("time", "60+");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "time 60+"
@@ -180,7 +205,11 @@ export default function CardFilter({
 
           <div className="options">
             <button
-              onClick={() => applyFilter("age", "6")}
+              onClick={() => {
+                activeButton === "age 6"
+                  ? applyFilter("", "")
+                  : applyFilter("age", "6");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "age 6" ? "var(--darkGreen)" : "var(--red)",
@@ -189,7 +218,11 @@ export default function CardFilter({
               6+
             </button>
             <button
-              onClick={() => applyFilter("age", "8")}
+              onClick={() => {
+                activeButton === "age 8"
+                  ? applyFilter("", "")
+                  : applyFilter("age", "8");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "age 8" ? "var(--darkGreen)" : "var(--red)",
@@ -198,7 +231,11 @@ export default function CardFilter({
               8+
             </button>
             <button
-              onClick={() => applyFilter("age", "10")}
+              onClick={() => {
+                activeButton === "age 10"
+                  ? applyFilter("", "")
+                  : applyFilter("age", "10");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "age 10" ? "var(--darkGreen)" : "var(--red)",
@@ -224,7 +261,11 @@ export default function CardFilter({
           <div className="options">
             <button
               className="category"
-              onClick={() => applyFilter("category", "populære")}
+              onClick={() => {
+                activeButton === "category populære"
+                  ? applyFilter("", "")
+                  : applyFilter("category", "populære");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "category populære"
@@ -236,7 +277,11 @@ export default function CardFilter({
             </button>
             <button
               className="category"
-              onClick={() => applyFilter("category", "skjulte perler")}
+              onClick={() => {
+                activeButton === "category skjulte perler"
+                  ? applyFilter("", "")
+                  : applyFilter("category", "skjulte perler");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "category skjulte perler"
@@ -250,7 +295,11 @@ export default function CardFilter({
           <div className="options">
             <button
               className="category"
-              onClick={() => applyFilter("category", "klassikere")}
+              onClick={() => {
+                activeButton === "category klassikere"
+                  ? applyFilter("", "")
+                  : applyFilter("category", "klassikere");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "category klassikere"
@@ -262,7 +311,11 @@ export default function CardFilter({
             </button>
             <button
               className="category"
-              onClick={() => applyFilter("category", "selskabsspil")}
+              onClick={() => {
+                activeButton === "category selskabsspil"
+                  ? applyFilter("", "")
+                  : applyFilter("category", "selskabsspil");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "category selskabsspil"
@@ -276,7 +329,11 @@ export default function CardFilter({
           <div className="options">
             <button
               className="category"
-              onClick={() => applyFilter("category", "quiz")}
+              onClick={() => {
+                activeButton === "category quiz"
+                  ? applyFilter("", "")
+                  : applyFilter("category", "quiz");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "category quiz"
@@ -288,7 +345,11 @@ export default function CardFilter({
             </button>
             <button
               className="category"
-              onClick={() => applyFilter("category", "strategi")}
+              onClick={() => {
+                activeButton === "category strategi"
+                  ? applyFilter("", "")
+                  : applyFilter("category", "strategi");
+              }}
               style={{
                 backgroundColor:
                   activeButton === "category strategi"
