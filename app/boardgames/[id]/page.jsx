@@ -111,7 +111,7 @@ export default async function BoardgameDetailPage({ params }) {
           </div>
           <p>{boardgame.acf.description}</p>
         </article>
-        <Slider></Slider>
+        <Slider boardgame={boardgame}></Slider>
         <article className="rules">
           <h2>Regler</h2>
           <TextToggle rules={boardgame.acf.rules}></TextToggle>
