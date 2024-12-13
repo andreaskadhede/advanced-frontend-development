@@ -6,1143 +6,1169 @@
 @import url("https://fonts.googleapis.com/css2?family=Finger+Paint&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-   /* --- color --- */
-   --red: #b3231e;
-   --yellow: #ffd12b;
-   --lightGreen: #71cc22;
-   --darkGreen: #1a993e;
-   --turquoise: #22c6cc;
-   --blue: #1a3599;
-   --purple: #4e1580;
-   --magenta: #cc229c;
-   --white: #f2ebeb;
-   --black: #0d0c0c;
-   --darkBrown: #332013;
-   --lightBrown: #664126;
+  /* --- color --- */
+  --red: #b3231e;
+  --yellow: #ffd12b;
+  --lightGreen: #71cc22;
+  --darkGreen: #1a993e;
+  --turquoise: #22c6cc;
+  --blue: #1a3599;
+  --purple: #4e1580;
+  --magenta: #cc229c;
+  --white: #f2ebeb;
+  --black: #0d0c0c;
+  --darkBrown: #332013;
+  --lightBrown: #664126;
 
-   /* --- font weights --- */
-   --regular: 400;
-   --medium: 500;
-   --semiBold: 600;
+  /* --- font weights --- */
+  --regular: 400;
+  --medium: 500;
+  --semiBold: 600;
 
-   /* --- font sizes --- */
-   /* 4px */
-   --fontsize4XS: 0.25rem;
+  /* --- font sizes --- */
+  /* 4px */
+  --fontsize4XS: 0.25rem;
 
-   /* 6px */
-   --fontsize3XS: 0.375rem;
+  /* 6px */
+  --fontsize3XS: 0.375rem;
 
-   /* 8px */
-   --fontsizeXXS: 0.5rem;
+  /* 8px */
+  --fontsizeXXS: 0.5rem;
 
-   /* 12px */
-   --fontsizeXS: 0.75rem;
+  /* 12px */
+  --fontsizeXS: 0.75rem;
 
-   /* 14px */
-   --fontsizeS: 0.875rem;
+  /* 14px */
+  --fontsizeS: 0.875rem;
 
-   /* 16px */
-   --fontsizeM: 1rem;
+  /* 16px */
+  --fontsizeM: 1rem;
 
-   /* 20px */
-   --fontsizeL: 1.25rem;
+  /* 20px */
+  --fontsizeL: 1.25rem;
 
-   /* 24px */
-   --fontsizeXL: 1.5rem;
+  /* 24px */
+  --fontsizeXL: 1.5rem;
 
-   /* 32px */
-   --fontsizeXXL: 2rem;
+  /* 32px */
+  --fontsizeXXL: 2rem;
 
-   /* Margin for main (header heigth and nav height */
-   /* -2px because nav is positioned 2px below viewport bottom */
-   --marginTop: 99px;
-   --marginBottom: calc(113.5px - 2px);
+  /* Margin for main (header heigth and nav height */
+  /* -2px because nav is positioned 2px below viewport bottom */
+  --marginTop: 99px;
+  --marginBottom: calc(113.5px - 2px);
 }
 
 /* --- reset --- */
 * {
-   box-sizing: border-box;
-   color: var(--white);
-   font-family: "poppins", sans-serif;
-   font-weight: var(--regular);
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   text-decoration: none;
+  box-sizing: border-box;
+  color: var(--white);
+  font-family: "poppins", sans-serif;
+  font-weight: var(--regular);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 /* --- general styles --- */
 
 body {
-   background-color: var(--lightBrown);
-   min-height: 100dvh;
+  background-color: var(--lightBrown);
+  min-height: 100dvh;
 }
 
 main {
-   display: flex;
-   flex-direction: column;
-   gap: 1rem;
-   padding: 0 1rem;
-   margin: var(--marginTop) 0 var(--marginBottom);
-   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+  margin: var(--marginTop) 0 var(--marginBottom);
+  overflow: hidden;
 }
 
 h1 {
-   font-size: var(--fontsizeXXL);
-   font-weight: var(--semiBold);
+  font-size: var(--fontsizeXXL);
+  font-weight: var(--semiBold);
 }
 
 h2 {
-   font-size: var(--fontsizeXL);
+  font-size: var(--fontsizeXL);
 }
 
 h3 {
-   font-size: var(--fontsizeL);
+  font-size: var(--fontsizeL);
 }
 
 h4 {
-   font-size: var(--fontsizeM);
+  font-size: var(--fontsizeM);
 }
 
 a:any-link {
-   color: inherit;
-   text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 button {
-   background-color: transparent;
-   border: none;
-   outline: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 img {
-   height: fit-content;
-   object-fit: contain;
-   width: auto;
+  height: fit-content;
+  object-fit: contain;
+  width: auto;
 }
 
 .button {
-   width: fit-content;
+  width: fit-content;
 
-   & p {
-      padding: 0.125rem 0.25rem;
-      width: 100%;
-   }
+  & p {
+    padding: 0.125rem 0.25rem;
+    width: 100%;
+  }
 }
 
 /* --- header --------------------------------------------------------------------------------------------------------*/
 
 header {
-   display: flex;
-   width: 100%;
-   justify-content: center;
-   align-items: center;
-   background-color: var(--lightBrown);
-   padding: 1rem;
-   position: fixed;
-   left: 0px;
-   top: 0px;
-   z-index: 999;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lightBrown);
+  padding: 1rem;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
 }
 
 .logo {
-   height: 67px;
+  height: 67px;
 }
 
 /* --- navigation --------------------------------------------------------------------------------------------------- */
 
 nav {
-   background-color: var(--darkBrown);
-   border-top: 1rem solid var(--lightBrown);
-   position: fixed;
-   bottom: -2px;
-   left: 0;
-   width: 100%;
+  background-color: var(--darkBrown);
+  border-top: 1rem solid var(--lightBrown);
+  position: fixed;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
 }
 
 nav ul {
-   display: flex;
-   justify-content: space-between;
-   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
 
 nav ul li a {
-   align-items: center;
-   display: flex;
-   flex-direction: column;
-   gap: 0.5rem;
-   justify-content: center;
-   transition: all 0.5s ease-in-out;
-   width: 66px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  width: 66px;
 }
 
 nav ul li a p {
-   font-size: var(--fontsizeXS);
+  font-size: var(--fontsizeXS);
 }
 
 .nav_icons {
-   height: 40px;
-   width: 40px;
+  height: 40px;
+  width: 40px;
 }
 
 /* --- frontpage ---------------------------------------------------------------------------------------------------- */
 
 main.home {
-   height: calc(100dvh - var(--marginTop) - var(--marginBottom));
-   position: fixed;
+  height: calc(100dvh - var(--marginTop) - var(--marginBottom));
+  position: fixed;
 }
 
 .shelf {
-   background-color: var(--darkBrown);
-   display: flex;
+  background-color: var(--darkBrown);
+  display: flex;
 }
 
 .shelf .button p {
-   font-weight: var(--semiBold);
-   text-align: center;
-   text-transform: uppercase;
+  font-weight: var(--semiBold);
+  text-align: center;
+  text-transform: uppercase;
 }
 
 /* --- top shelf --- */
 
 .shelf.top {
-   align-items: center;
-   flex-direction: column;
-   height: 45%;
-   justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 45%;
+  justify-content: flex-end;
 
-   .button p {
-      padding-block: 0.125rem;
-      width: 100%;
-   }
+  .button p {
+    padding-block: 0.125rem;
+    width: 100%;
+  }
 
-   .boardgame_image {
-      height: 2.5rem;
-   }
+  .boardgame_image {
+    height: 2.5rem;
+  }
 
-   .game_info {
-      gap: 0.125rem;
-   }
+  .game_info {
+    gap: 0.125rem;
+  }
 
-   .game_info div img {
-      height: 0.5rem;
-      width: 0.5rem;
-   }
+  .game_info div img {
+    height: 0.5rem;
+    width: 0.5rem;
+  }
 
-   .game_info div p {
-      font-size: var(--fontsize3XS);
-   }
+  .game_info div p {
+    font-size: var(--fontsize3XS);
+  }
 
-   /* header */
-   & a:first-child {
-      width: 70%;
-   }
+  /* header */
+  & a:first-child {
+    width: 70%;
+  }
 
-   /* partners */
-   & a:nth-child(2) {
-      width: 75%;
-   }
+  /* partners */
+  & a:nth-child(2) {
+    width: 75%;
+  }
 
-   /* det dårlige selskab */
-   & a:nth-child(3) {
-      max-width: 65%;
-   }
+  /* det dårlige selskab */
+  & a:nth-child(3) {
+    max-width: 65%;
+  }
 
-   & a:nth-child(3) .boardgame_image {
-      max-width: 70%;
-   }
+  & a:nth-child(3) .boardgame_image {
+    max-width: 70%;
+  }
 
-   & a:nth-child(3) .game_info {
-      width: 25%;
-   }
+  & a:nth-child(3) .game_info {
+    width: 25%;
+  }
 
-   /* ticket to ride */
-   & a:nth-child(4) {
-      width: 70%;
-   }
+  /* ticket to ride */
+  & a:nth-child(4) {
+    width: 70%;
+  }
 
-   /* sequence */
-   & a:nth-child(5) {
-      width: 80%;
-   }
+  /* sequence */
+  & a:nth-child(5) {
+    width: 80%;
+  }
 }
 
 /* --- mid shelfs --- */
 
 .double_shelf {
-   display: flex;
-   gap: 1rem;
+  display: flex;
+  gap: 1rem;
 }
 
 .double_shelf.mid {
-   height: 20%;
+  height: 20%;
 }
 
 .shelf.mid {
-   align-items: flex-end;
-   gap: 1rem;
-   justify-content: center;
-   width: 50%;
+  align-items: flex-end;
+  gap: 1rem;
+  justify-content: center;
+  width: 50%;
 }
 
 .shelf.mid.left {
-   padding-top: 10%;
+  padding-top: 10%;
 
-   /* candle */
-   & img:first-child {
-      max-height: 50%;
-      min-height: 45px;
-   }
+  /* candle */
+  & img:first-child {
+    max-height: 50%;
+    min-height: 45px;
+  }
 
-   /* plant */
-   & img:last-child {
-      max-height: 100%;
-      min-height: 85px;
-   }
+  /* plant */
+  & img:last-child {
+    max-height: 100%;
+    min-height: 85px;
+  }
 }
 
 .shelf.mid.right {
-   justify-content: flex-start;
-   padding: 0.25rem 0 0 0.25rem;
+  justify-content: flex-start;
+  padding: 0.25rem 0 0 0.25rem;
 
-   /* header */
-   .button {
-      height: 100%;
-   }
+  /* header */
+  .button {
+    height: 100%;
+  }
 
-   .boardgame {
-      align-items: stretch;
-      flex-direction: row;
-      height: 100%;
-   }
+  .boardgame {
+    align-items: stretch;
+    flex-direction: row;
+    height: 100%;
+  }
 
-   .game_box {
-      align-self: center;
-      height: 95%;
-      width: 0.15rem;
-   }
+  .game_box {
+    align-self: center;
+    height: 95%;
+    width: 0.15rem;
+  }
 
-   .game_lid {
-      width: fit-content;
-   }
+  .game_lid {
+    width: fit-content;
+  }
 
-   .game_lid p {
-      letter-spacing: -0.25rem;
-      padding: 0 0.125rem;
-      text-orientation: upright;
-      writing-mode: vertical-lr;
-   }
+  .game_lid p {
+    letter-spacing: -0.25rem;
+    padding: 0 0.125rem;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
+  }
 
-   /* bell */
-   & a {
-      align-items: flex-end;
-      display: flex;
-   }
+  /* bell */
+  & a {
+    align-items: flex-end;
+    display: flex;
+  }
 
-   & img {
-      align-self: flex-end;
-   }
+  & img {
+    align-self: flex-end;
+  }
 }
 
 /* --- bottom shelfs --- */
 
 .double_shelf.bottom {
-   height: 35%;
+  height: 35%;
 }
 
 .shelf.bottom.left {
-   align-items: flex-end;
-   padding-inline: 1rem;
+  align-items: flex-end;
+  padding-inline: 1rem;
 
-   .boardgame {
-      align-items: stretch;
-      flex-direction: row;
-      height: 100%;
-   }
+  .boardgame {
+    align-items: stretch;
+    flex-direction: row;
+    height: 100%;
+  }
 
-   .boardgame .game_box {
-      align-self: center;
-      height: 95%;
-      width: 0.15rem;
-   }
+  .boardgame .game_box {
+    align-self: center;
+    height: 95%;
+    width: 0.15rem;
+  }
 
-   /* header */
-   & a:first-child {
-      height: 90%;
-   }
+  /* header */
+  & a:first-child {
+    height: 90%;
+  }
 
-   /* unlock */
-   & a:nth-child(2) {
-      height: 85%;
+  /* unlock */
+  & a:nth-child(2) {
+    height: 85%;
 
-      .boardgame_image {
-         bottom: 2.75rem;
-      }
-   }
+    .boardgame_image {
+      bottom: 2.75rem;
+    }
+  }
 
-   /* pandemic */
-   & a:nth-child(3) {
-      height: 95%;
+  /* pandemic */
+  & a:nth-child(3) {
+    height: 95%;
 
-      .boardgame_image {
-         bottom: 3.25rem;
-      }
-   }
+    .boardgame_image {
+      bottom: 3.25rem;
+    }
+  }
 }
 
 /* header */
 .shelf.bottom.left .button {
-   .game_lid p {
-      padding-block: 0.125rem 0.125rem;
-      rotate: 180deg;
-      writing-mode: vertical-lr;
-   }
+  .game_lid p {
+    padding-block: 0.125rem 0.125rem;
+    rotate: 180deg;
+    writing-mode: vertical-lr;
+  }
 
-   .game_box {
-      align-self: center;
-      height: 95%;
-      width: 0.15rem;
-   }
+  .game_box {
+    align-self: center;
+    height: 95%;
+    width: 0.15rem;
+  }
 }
 
 /* games */
 .shelf.bottom.left a:not(:first-child) {
-   .game_lid {
-      height: 100%;
-      flex-direction: column-reverse;
-      position: relative;
-      width: 1.75rem;
-   }
+  .game_lid {
+    height: 100%;
+    flex-direction: column-reverse;
+    position: relative;
+    width: 1.75rem;
+  }
 
-   .game_lid .boardgame_image {
-      /* bottom: 3rem; */
-      height: 1.75rem;
-      min-width: fit-content;
-      position: absolute;
-      rotate: -90deg;
-   }
+  .game_lid .boardgame_image {
+    /* bottom: 3rem; */
+    height: 1.75rem;
+    min-width: fit-content;
+    position: absolute;
+    rotate: -90deg;
+  }
 
-   .game_lid .game_info {
-      gap: 0.125rem;
-      min-width: fit-content;
-      position: absolute;
-      rotate: -90deg;
-      top: 0.5rem;
-      white-space: nowrap;
-   }
+  .game_lid .game_info {
+    gap: 0.125rem;
+    min-width: fit-content;
+    position: absolute;
+    rotate: -90deg;
+    top: 0.5rem;
+    white-space: nowrap;
+  }
 
-   .game_info div img {
-      height: 0.375rem;
-      width: 0.375rem;
-   }
+  .game_info div img {
+    height: 0.375rem;
+    width: 0.375rem;
+  }
 
-   .game_info div p {
-      font-size: var(--fontsize4XS);
-   }
+  .game_info div p {
+    font-size: var(--fontsize4XS);
+  }
 }
 
 .shelf.bottom.right {
-   align-items: center;
-   flex-direction: column;
-   justify-content: flex-end;
-   padding-top: 2rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 2rem;
 
-   & a:not(:last-child) {
-      display: flex;
-      max-height: 90%;
-      width: 60%;
-   }
+  & a:not(:last-child) {
+    display: flex;
+    max-height: 90%;
+    width: 60%;
+  }
 
-   & a img {
-      height: 100%;
-      width: 100%;
-   }
+  & a img {
+    height: 100%;
+    width: 100%;
+  }
 
-   & .button {
-      width: 75%;
-   }
+  & .button {
+    width: 75%;
+  }
 
-   .boardgame .game_lid {
-      background-color: var(--blue);
-   }
+  .boardgame .game_lid {
+    background-color: var(--blue);
+  }
 
-   .boardgame .game_lid p {
-      width: 100%;
-   }
+  .boardgame .game_lid p {
+    width: 100%;
+  }
 }
 
 /* --- boardgames --------------------------------------------------------------------------------------------------- */
 
 .inner_bookshelf {
-   background-color: var(--darkBrown);
-   display: flex;
-   flex-direction: column;
-   gap: 1rem;
-   padding: 3.5rem 0.5rem 1rem;
-   min-height: calc(100dvh - var(--marginBottom) - var(--marginTop));
+  background-color: var(--darkBrown);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3.5rem 0.5rem 1rem;
+  min-height: calc(100dvh - var(--marginBottom) - var(--marginTop));
 }
 
 .boardgame {
-   align-items: center;
-   display: flex;
-   flex-direction: column;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .game_lid {
-   align-items: center;
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .game_box {
-   background-color: var(--black);
-   width: 95%;
-   height: 0.25rem;
+  background-color: var(--black);
+  width: 95%;
+  height: 0.25rem;
 }
 
 .boardgame_image {
-   height: 50px;
-   max-width: 75%;
-   object-fit: cover;
-   object-position: left center;
+  height: 50px;
+  max-width: 75%;
+  object-fit: cover;
+  object-position: left center;
 }
 
 .game_info {
-   display: flex;
-   flex-direction: column;
-   width: 20%;
-   gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  gap: 0.25rem;
 }
 
 .game_info div {
-   align-items: center;
-   display: flex;
-   gap: 0.25rem;
+  align-items: center;
+  display: flex;
+  gap: 0.25rem;
 }
 
 .game_info div img {
-   height: 10px;
-   width: 10px;
+  height: 10px;
+  width: 10px;
 }
 
 .game_info div p {
-   font-size: var(--fontsizeXXS);
+  font-size: var(--fontsizeXXS);
 }
 
 /* --- single boardgame page --------------------------------------------------------------------------------------------------- */
 
 .single_boardgame .button .game_box {
-   height: 0.125rem;
+  height: 0.125rem;
 }
 
 .single_boardgame .button .game_box {
-   height: 0.125rem;
+  height: 0.125rem;
 }
 
 .boardgame_info > *:not(:last-child) {
-   margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .boardgame_info article > *:not(:last-child) {
-   padding-bottom: 1rem;
+  padding-bottom: 1rem;
 }
 
 .boardgame_info .icons {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .boardgame_info .icons > div {
-   display: flex;
-   gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .boardgame_info .icons > div > img {
-   width: 1.5rem;
+  width: 1.5rem;
 }
 
 .boardgame_info .carousel {
-   align-items: center;
-   background-color: var(--darkBrown);
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding-block: 2rem;
-   /* padding-top: 2rem; */
+  align-items: center;
+  background-color: var(--darkBrown);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 2rem 0;
+  /* padding-top: 2rem; */
+  overflow: hidden;
 }
 
 .boardgame_info .carousel img {
-   max-height: 30dvh;
-   width: 90%;
+  height: 30dvh;
+  width: 90%;
+  object-fit: contain;
 }
 
 .boardgame_info .carousel .breadcrumbs {
-   align-items: center;
-   display: flex;
-   gap: 1rem;
-   justify-content: center;
-   padding: 2rem 0 1rem;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0 1rem;
 }
 
 .boardgame_info .carousel .breadcrumbs > div {
-   background-color: var(--white);
-   border-radius: 999px;
-   height: 1rem;
-   width: 1rem;
+  background-color: var(--white);
+  border-radius: 999px;
+  height: 1rem;
+  width: 1rem;
 }
 
 .boardgame_info .suggestions .games {
-   flex-direction: column;
-   gap: 0.5rem;
-   padding: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+/* Slider */
+#carousel_img {
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-150dvw);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(150dvw);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
 /* --- inspiration -------------------------------------------------------------------------------------------------- */
 
 .inspiration_main {
-   width: 100dvw;
-   margin-bottom: 0;
-   position: fixed;
-   height: calc(100dvh - var(--marginBottom) - var(--marginTop));
+  width: 100dvw;
+  margin-bottom: 0;
+  position: fixed;
+  height: calc(100dvh - var(--marginBottom) - var(--marginTop));
 }
 
 .inspiration_background {
-   object-fit: cover;
-   width: 100%;
-   object-position: 50% 50%;
-   overflow: hidden;
-   grid-area: 1 / 1 / -1 / -1;
-   justify-self: center;
-   align-self: center;
-   height: 100%;
-   max-width: 520px;
+  object-fit: cover;
+  width: 100%;
+  object-position: 50% 50%;
+  overflow: hidden;
+  grid-area: 1 / 1 / -1 / -1;
+  justify-self: center;
+  align-self: center;
+  height: 100%;
+  max-width: 520px;
 }
 
 .inspiration_grid {
-   min-width: 343px;
-   position: absolute;
-   margin: auto;
-   display: grid;
-   grid-template-columns: repeat(24, 1fr);
-   grid-template-rows: repeat(24, 1fr);
-   left: 50%;
-   transform: translate(-50%);
-   overflow: hidden;
-   min-height: 100%;
+  min-width: 343px;
+  position: absolute;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-template-rows: repeat(24, 1fr);
+  left: 50%;
+  transform: translate(-50%);
+  overflow: hidden;
+  min-height: 100%;
 }
 
 .bowl {
-   width: 130px;
-   grid-area: 9 / 1 / 13 / 10;
-   align-self: end;
-   transform: translateX(calc(-343px / 24));
+  width: 130px;
+  grid-area: 9 / 1 / 13 / 10;
+  align-self: end;
+  transform: translateX(calc(-343px / 24));
 }
 
 .pinboard {
-   width: 130px;
-   grid-area: 6 / 9 / -1 / 19;
-   align-self: start;
-   justify-self: center;
+  width: 130px;
+  grid-area: 6 / 9 / -1 / 19;
+  align-self: start;
+  justify-self: center;
 }
 
 .posters {
-   width: 145px;
-   grid-area: 11 / 9 / -1 / 20;
-   align-self: start;
+  width: 145px;
+  grid-area: 11 / 9 / -1 / 20;
+  align-self: start;
 }
 
 .wheel_high {
-   width: 115px;
-   grid-area: 1 / 16 / 21 / 25;
-   align-self: end;
+  width: 115px;
+  grid-area: 1 / 16 / 21 / 25;
+  align-self: end;
 }
 
 /* --- wheel minigame ----------------------------------------------------------------------------------------------- */
 
 .minigame {
-   background-color: var(--darkBrown);
-   text-align: center;
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: end;
-   padding-top: 2.5rem;
+  background-color: var(--darkBrown);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  padding-top: 2.5rem;
 
-   .button {
-      width: 100%;
-   }
+  .button {
+    width: 100%;
+  }
 }
 
 .inspo_top {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
 
 .inspo_top p {
-   font-size: var(--fontsizeL);
+  font-size: var(--fontsizeL);
 }
 
 .wheel_no_animation {
-   height: 100%;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-   padding-inline: 1rem;
-   width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-inline: 1rem;
+  width: 100%;
 
-   .wheel_low {
-      width: 75%;
-   }
+  .wheel_low {
+    width: 75%;
+  }
 }
 
 .wheel_no_animation .game_lid,
 .container .game_lid {
-   height: 45px;
+  height: 45px;
 }
 
 .inspo_bottom {
-   align-items: center;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
-   width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
 
-   .boardgame.button {
-      width: 90%;
-   }
+  .boardgame.button {
+    width: 90%;
+  }
 
-   .boardgame.button h2 {
-      font-weight: var(--medium);
-      width: 100%;
-   }
+  .boardgame.button h2 {
+    font-weight: var(--medium);
+    width: 100%;
+  }
 
-   .button .game_lid {
-      background-color: var(--darkGreen);
-   }
+  .button .game_lid {
+    background-color: var(--darkGreen);
+  }
 }
 
 .minigame h1 {
-   font-family: "finger paint", sans-serif;
-   font-size: 2.5rem;
+  font-family: "finger paint", sans-serif;
+  font-size: 2.5rem;
 }
 
 .minigame section p {
-   width: 17rem;
+  width: 17rem;
 }
 
 .wheel_low {
-   width: 90%;
+  width: 90%;
 }
 
 .container {
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-between;
-   position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
 .wheelContainer {
-   width: 100%;
-   height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .wheel {
-   position: absolute;
-   top: 7px;
-   width: 320px;
-   height: 320px;
-   border-radius: 50%;
-   transition: transform 5s ease-out;
+  position: absolute;
+  top: 7px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  transition: transform 5s ease-out;
 }
 
 .pointer {
-   position: absolute;
-   top: 0px;
-   left: 46.225%;
-   stroke-width: 0px;
-   width: 0px;
-   height: 0px;
-   border-style: solid;
-   border-width: 42px 12px 0 12px;
-   border-color: #815230 transparent transparent transparent;
-   transform: rotate(0deg);
+  position: absolute;
+  top: 0px;
+  left: 46.225%;
+  stroke-width: 0px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 42px 12px 0 12px;
+  border-color: #815230 transparent transparent transparent;
+  transform: rotate(0deg);
 }
 
 .result {
-   margin-top: 20px;
-   font-size: 18px;
-   font-weight: bold;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .wheel_animation {
-   position: relative;
-   width: 320px;
-   justify-self: flex-end;
+  position: relative;
+  width: 320px;
+  justify-self: flex-end;
 
-   .boardgame.button h2 {
-      font-weight: var(--medium);
-      width: 100%;
-   }
+  .boardgame.button h2 {
+    font-weight: var(--medium);
+    width: 100%;
+  }
 
-   .button .game_lid {
-      background-color: var(--darkGreen);
-   }
+  .button .game_lid {
+    background-color: var(--darkGreen);
+  }
 }
 
 .wheel_animation .wheel_low {
-   width: 100%;
+  width: 100%;
 }
 
 .cls-1 {
-   fill: #4d301c;
+  fill: #4d301c;
 }
 
 .cls-2 {
-   fill: var(--lightGreen);
+  fill: var(--lightGreen);
 }
 
 .cls-3 {
-   fill: var(--purple);
+  fill: var(--purple);
 }
 
 .cls-4 {
-   fill: var(--blue);
+  fill: var(--blue);
 }
 
 .cls-5 {
-   fill: var(--turquoise);
+  fill: var(--turquoise);
 }
 
 .cls-6 {
-   fill: var(--darkGreen);
+  fill: var(--darkGreen);
 }
 
 .cls-7 {
-   fill: var(--magenta);
+  fill: var(--magenta);
 }
 
 .cls-8 {
-   fill: var(--red);
+  fill: var(--red);
 }
 
 .cls-9 {
-   fill: var(--yellow);
+  fill: var(--yellow);
 }
 
 /* --- card --------------------------------------------------------------------------------------------------------- */
 
 .card {
-   background-color: var(--white);
-   width: 264px;
-   border-radius: 10px;
-   display: flex;
-   flex-direction: column;
-   gap: 1.5rem;
-   justify-content: space-between;
-   align-items: center;
-   position: fixed;
-   padding: 1rem;
-   transition: all 1s ease-in-out;
-   min-height: 350px;
+  background-color: var(--white);
+  width: 264px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  padding: 1rem;
+  transition: all 1s ease-in-out;
+  min-height: 350px;
 }
 
 .card_top,
 .card_bottom {
-   display: flex;
-   justify-content: space-between;
-   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .card p,
 .card h2 {
-   color: var(--black);
+  color: var(--black);
 }
 
 .card h2 {
-   font-weight: var(--medium);
+  font-weight: var(--medium);
 }
 
 .width2rem {
-   width: 2rem;
-   display: flex;
-   justify-content: end;
-   align-items: end;
+  width: 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 .width2rem img {
-   width: 100%;
+  width: 100%;
 }
 
 .card_middle {
-   display: flex;
-   flex-direction: column;
-   gap: 1rem;
-   align-items: center;
-   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
 }
 
 .card_middle img {
-   width: 100%;
+  width: 100%;
 }
 
 .card_middle p {
-   color: var(--black);
+  color: var(--black);
 }
 
 .close_button {
-   display: flex;
-   justify-content: end;
-   align-items: start;
+  display: flex;
+  justify-content: end;
+  align-items: start;
 }
 
 .close_button button {
-   background-color: none;
-   border: none;
+  background-color: none;
+  border: none;
 }
 
 /* --- specific to bar order --- */
 .card_order_element {
-   height: 40px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .card_order_element :first-child {
-   font-size: var(--fontsizeS);
+  font-size: var(--fontsizeS);
 }
 
 .card_order_element :last-child {
-   font-size: var(--fontsizeXS);
+  font-size: var(--fontsizeXS);
 }
 
 .card_order_total {
-   display: flex;
-   height: 40px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
+  display: flex;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .card_order_sent {
-   display: flex;
-   height: 40px;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: 100%;
+  display: flex;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .card_order_sent p {
-   background-color: var(--darkGreen);
-   color: var(--white);
+  background-color: var(--darkGreen);
+  color: var(--white);
 }
 
 .card_order_sent img {
-   width: 53px;
-   height: auto;
+  width: 53px;
+  height: auto;
 }
 
 .card_order_plus_minus {
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   background-color: var(--darkBrown);
-   padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--darkBrown);
+  padding: 6px 8px;
 }
 
 .card_order_plus_minus button,
 .card_order_plus_minus p {
-   display: flex;
-   align-items: center;
-   gap: 10px;
-   background-color: transparent;
-   border: none;
-   font-size: var(--fontsizeXXS);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: var(--fontsizeXXS);
 }
 
 .card_order_plus_minus p,
 .card_order_plus_minus button p {
-   color: var(--white);
+  color: var(--white);
 }
 
 /* --- specific to filter --- */
 .card_filter_element {
-   display: flex;
-   flex-direction: column;
-   gap: 0.5rem;
-   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
 }
 
 .card_filter_element img {
-   width: auto;
+  width: auto;
 }
 
 .card_filter_element .title {
-   display: flex;
-   gap: 0.5rem;
-   align-items: center;
-   width: 100%;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
 }
 
 .card_filter_element .options {
-   display: flex;
-   justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .card_filter_element h4 {
-   color: var(--black);
+  color: var(--black);
 }
 
 .card_filter_element button {
-   background-color: var(--red);
-   border: none;
-   width: 65px;
-   height: 25px;
+  background-color: var(--red);
+  border: none;
+  width: 65px;
+  height: 25px;
 }
 
 .card_filter_element .category {
-   width: 106px;
+  width: 106px;
 }
 
 /* --- specific to search --- */
 
 #search_icon {
-   width: 25px;
+  width: 25px;
 }
 
 #spades_icon {
-   width: 17px;
+  width: 17px;
 }
 
 .search {
-   background-color: var(--white);
-   height: 2.25rem;
-   width: 155px;
-   border-radius: 0 0 6px 6px;
-   display: flex;
-   justify-content: space-between;
-   align-items: end;
-   padding: 0 0.5rem 0.5rem;
-   position: fixed;
-   top: var(--marginTop);
-   gap: 0.5rem;
+  background-color: var(--white);
+  height: 2.25rem;
+  width: 155px;
+  border-radius: 0 0 6px 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 0.5rem 0.5rem;
+  position: fixed;
+  top: var(--marginTop);
+  gap: 0.5rem;
 }
 
 .card_input {
-   height: fit-content;
-   width: 100%;
-   border: none;
-   background-color: var(--white);
-   font-size: var(--fontsizeS);
-   color: var(--black);
+  height: fit-content;
+  width: 100%;
+  border: none;
+  background-color: var(--white);
+  font-size: var(--fontsizeS);
+  color: var(--black);
 }
 
 .card_input:focus {
-   outline: none;
+  outline: none;
 }
 
 /* --- specific to game --- */
 .card_game {
-   top: 50%;
-   left: 50%;
-   translate: -50% -50%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 /* --- bar ---------------------------------------------------------------------------------------------------------- */
 
 .bar {
-   background-color: var(--darkBrown);
-   min-height: calc(100dvh - var(--marginTop) - var(--marginBottom));
+  background-color: var(--darkBrown);
+  min-height: calc(100dvh - var(--marginTop) - var(--marginBottom));
 }
 
 .add {
-   display: flex;
-   align-items: center;
-   gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .add button {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 10px;
-   height: 10px;
-   background-color: transparent;
-   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: none;
 }
 
 .bar_lid {
-   padding: 15px 10px;
+  padding: 15px 10px;
 }
 
 .bar_lid p {
-   font-size: var(--fontsizeS);
+  font-size: var(--fontsizeS);
 }
 
 .bar_lid .name {
-   font-size: var(--fontsizeL);
+  font-size: var(--fontsizeL);
 }
 
 .bar_dropdown {
-   display: flex;
-   flex-direction: column;
-   gap: 0.5rem;
-   padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
 }
 
 .bar_overskrifter {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   font-size: var(--fontsizeXL);
-   font-weight: var(--medium);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--fontsizeXL);
+  font-weight: var(--medium);
 }
 
 .bar_items {
-   display: flex;
-   flex-direction: column;
-   gap: 0.5rem;
-   background-color: var(--darkBrown);
-   padding: 0.5rem;
-   height: fit-content;
-   overflow: hidden;
-   transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--darkBrown);
+  padding: 0.5rem;
+  height: fit-content;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
 }
 
 .lukket {
-   padding: 0.5rem 0.5rem 0px 0.5rem;
-   height: 3px;
-   transition: all 0.3s ease-in-out;
+  padding: 0.5rem 0.5rem 0px 0.5rem;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
 }
 
 .confirmation {
-   background-color: var(--white);
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   text-align: center;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   width: calc(264px - 264px / 8);
-   min-height: 300px;
-   border-radius: 10px;
-   padding: 1rem;
-   transition: all 1s ease-in-out;
-   position: fixed;
+  background-color: var(--white);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(264px - 264px / 8);
+  min-height: 300px;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 1s ease-in-out;
+  position: fixed;
 }
 
 .confirmation h2 {
-   color: var(--black);
+  color: var(--black);
 }
 
 /*--- Media queries --------------------------------------------------------------------------------------------------
@@ -1150,43 +1176,43 @@ main.home {
 ----------------------------------------------------------------------------------------------------------------------*/
 
 @media (max-height: 750px) {
-   .shelf.top a:nth-child(5) {
+  .shelf.top a:nth-child(5) {
+    display: none;
+  }
+
+  .inspiration_grid {
+    margin-top: -1.5rem;
+  }
+
+  .inspo_bottom {
+    max-height: 50%;
+  }
+
+  .wheel_no_animation {
+    .wheel_low {
+      max-height: 75%;
+    }
+  }
+
+  .wheel_animation {
+    .wheelContainer {
+      position: absolute;
+      scale: 0.75;
+      top: -300px;
+    }
+
+    .wheel_low {
       display: none;
-   }
-
-   .inspiration_grid {
-      margin-top: -1.5rem;
-   }
-
-   .inspo_bottom {
-      max-height: 50%;
-   }
-
-   .wheel_no_animation {
-      .wheel_low {
-         max-height: 75%;
-      }
-   }
-
-   .wheel_animation {
-      .wheelContainer {
-         position: absolute;
-         scale: 0.75;
-         top: -300px;
-      }
-
-      .wheel_low {
-         display: none;
-      }
-   }
+    }
+  }
 }
 
 @media (max-height: 700px) {
-   .shelf.top a:nth-child(3) {
-      display: none;
-   }
+  .shelf.top a:nth-child(3) {
+    display: none;
+  }
 
-   .inspiration_grid {
-      margin-top: -2.25rem;
-   }
+  .inspiration_grid {
+    margin-top: -2.25rem;
+  }
 }
