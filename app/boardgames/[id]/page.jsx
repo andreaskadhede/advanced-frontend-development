@@ -16,42 +16,50 @@ export default async function BoardgameDetailPage({ params }) {
   // Ensure id is compared as a number
   const boardgame = boardgames.find((game) => game.id === Number(id));
 
+  // Shuffle array around to show new random boardgames with the same criteria
+  const shuffleArray = (array) => {
+    return array
+      .map((value) => ({ value, sortKey: Math.random() })) // Map to objects with random sort keys
+      .sort((a, b) => a.sortKey - b.sortKey) // Sort by random keys
+      .map(({ value }) => value); // Extract original values
+  };
+
   // Filter board games with the same category, excluding the current game's id
   const numericId = Number(id); // Ensure `id` is a number for comparison
   // Exclude the game with ID 33 and filter by category
-  const sameCategoryGames = boardgames
-    .filter(
+  const sameCategoryGames = shuffleArray(
+    boardgames.filter(
       (game) =>
         game.id !== numericId && // Ensure ID is excluded
         game.acf.category.some((category) =>
           boardgame.acf.category.includes(category)
         )
     )
-    .slice(0, 3); // Limit to 3 games
+  ).slice(0, 3); // Limit to 3 games
 
   console.log("Filtered games:", sameCategoryGames);
 
   // Filter board games with the same players
-  const samePlayerGames = boardgames
-    .filter(
+  const samePlayerGames = shuffleArray(
+    boardgames.filter(
       (game) =>
         game.id !== numericId && // Ensure ID is excluded
         game.acf.players_category.some((players) =>
           boardgame.acf.players_category.includes(players)
         )
     )
-    .slice(0, 3); // Limit to 3 games
+  ).slice(0, 3); // Limit to 3 games
 
   // Filter board games with the same time
-  const sameTimeGames = boardgames
-    .filter(
+  const sameTimeGames = shuffleArray(
+    boardgames.filter(
       (game) =>
         game.id !== numericId && // Ensure ID is excluded
         game.acf.time_category.some((time) =>
           boardgame.acf.time_category.includes(time)
         )
     )
-    .slice(0, 3); // Limit to 3 games
+  ).slice(0, 3); // Limit to 3 games
 
   console.log(sameTimeGames);
 
