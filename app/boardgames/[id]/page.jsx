@@ -1,6 +1,7 @@
 import ButtonBack from "@/app/components/ButtonBack";
 import Boardgame from "@/app/components/Boardgame";
 import TextToggle from "@/app/components/TextToggle";
+import Slider from "@/app/components/Slider";
 import Image from "next/image";
 
 export default async function BoardgameDetailPage({ params }) {
@@ -87,7 +88,7 @@ export default async function BoardgameDetailPage({ params }) {
                 width={100}
                 alt="Estimeret spilletid"
               />
-              <p>{boardgame.acf.time}</p>
+              <p>{`${boardgame.acf.time} min`}</p>
             </div>
             <div>
               <Image
@@ -96,7 +97,7 @@ export default async function BoardgameDetailPage({ params }) {
                 width={100}
                 alt="Anbefalet aldersgrænse"
               />
-              <p>{boardgame.acf.age}</p>
+              <p>{`${boardgame.acf.age}+`}</p>
             </div>
             <div>
               <Image
@@ -110,31 +111,7 @@ export default async function BoardgameDetailPage({ params }) {
           </div>
           <p>{boardgame.acf.description}</p>
         </article>
-        <div className="carousel">
-          {/* <Image
-            src={boardgame.acf.images.front}
-            height={400}
-            width={400}
-            alt={boardgame.acf.name}
-          /> */}
-          <Image
-            src={boardgame.acf.images.opened}
-            height={400}
-            width={400}
-            alt={boardgame.acf.name}
-          />
-          {/* <Image
-            src={boardgame.acf.images.back}
-            height={400}
-            width={400}
-            alt={boardgame.acf.name}
-          /> */}
-          {/* <div className="breadcrumbs">
-            <div></div>
-            <div></div>
-            <div></div>
-          </div> */}
-        </div>
+        <Slider></Slider>
         <article className="rules">
           <h2>Regler</h2>
           <TextToggle rules={boardgame.acf.rules}></TextToggle>
