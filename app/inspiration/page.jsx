@@ -58,16 +58,13 @@ export default function Inspiration() {
             />
 
             {delayBowl ? (
-               <video
-                  autoPlay
-                  muted
-                  loop
-                  type="video/webm"
+               <Image
                   className="bowl"
-                  src="/gif/bowl.webm"
+                  src="/gif/bowl.gif"
                   height={400}
                   width={400}
-                  alt="Lodtrækningsskål"></video>
+                  alt="Lodtrækningsskål"
+               />
             ) : (
                <Image
                   className="bowl"
@@ -79,16 +76,13 @@ export default function Inspiration() {
             )}
 
             {delayPinboard ? (
-               <video
-                  autoPlay
-                  muted
-                  loop
-                  type="video/webm"
+               <Image
                   className="pinboard"
-                  src="/gif/pinboard.webm"
+                  src="/gif/pinboard.gif"
                   height={400}
                   width={400}
-                  alt="Opslagstavle"></video>
+                  alt="Opslagstavle"
+               />
             ) : (
                <Image
                   className="pinboard"
@@ -100,16 +94,13 @@ export default function Inspiration() {
             )}
 
             {delayPosters ? (
-               <video
-                  autoPlay
-                  muted
-                  loop
-                  type="video/webm"
+               <Image
                   className="posters"
-                  src="/gif/posters.webm"
+                  src="/gif/posters.gif"
                   height={400}
                   width={400}
-                  alt="Plakater"></video>
+                  alt="Plakater"
+               />
             ) : (
                <Image
                   className="posters"
@@ -122,16 +113,13 @@ export default function Inspiration() {
 
             {delayWheel ? (
                <Link className="wheel_high" href="/inspiration/wheelMiniGame">
-                  <video
-                     autoPlay
-                     muted
-                     loop
-                     type="video/webm"
+                  <Image
                      className="wheel_high"
-                     src="/gif/wheel_legs_high.webm"
+                     src="/gif/wheel_legs_high.gif"
                      height={400}
                      width={400}
-                     alt="Lykkehjul"></video>
+                     alt="Lykkehjul"
+                  />
                </Link>
             ) : (
                <Link className="wheel_high" href="/inspiration/wheelMiniGame">
