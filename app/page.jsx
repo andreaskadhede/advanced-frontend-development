@@ -69,17 +69,13 @@ export default async function Home() {
             </section>
             <section className="shelf bottom right">
                <Link href="/inspiration">
-                  <video
-                     autoPlay
-                     muted
-                     loop
-                     type="video/webm"
-                     className="wheel_high"
+                  <Image
                      src="/gif/wheel_legs_low.gif"
                      height={400}
                      width={400}
                      unoptimized
-                     alt="Lykkehjul"></video>
+                     alt="Lykkehjul"
+                  />
                </Link>
                <Button
                   destination="/inspiration"
